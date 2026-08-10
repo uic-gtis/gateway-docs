@@ -16,17 +16,12 @@ This document is intended for:
 - [Gateway Interface Specifications](gateway-interface-specifications.md) — Gateway connectivity requirements: the use of XML and JSON technologies, Gateway data standards, and publish and subscribe protocols. Covers the use of Data Source Interfaces (DSI) to connect to the Gateway, the ultimate use of agency servers and the security considerations involved, and includes a basic primer on IDL statements.
 - [Locations](locations.md) — the Gateway specifications for roadway locations. Location specifications are the basis of the device reports, incident reports, scheduled event reports and traffic reports set out in the rest of the guide.
 - [Device Station Reports](device-station-reports.md) — field device reports, including Vehicle Detector Station, Weather Sensor Station, Dynamic Message Sign and Highway Advisory Radio reports.
+- [Roadway Events](roadway-events.md) — the roadway event reports: Incident Reports, and the scheduled events covered by Roadwork Reports and Special Event Reports.
 - [Traffic Reports](traffic-reports.md) — Congestion Reports and general Traffic Reports.
 - [Publishing Data to the Gateway](publishing-data-to-the-gateway.md) — how to publish data to the Gateway, with demo clients, schemas, validation rules and troubleshooting.
 - [Receiving Data from the Gateway](receiving-data-from-the-gateway.md) — the reports offered as services of the Gateway.
 - [Versions](versions.md) — interface version history.
 - [Gateway XML Reference](gateway-xml-reference.md) — the XML schema for each of the Gateway traffic reports.
-
-> [!NOTE]
-> This guide describes roadway event reports — Incident Reports, Roadwork Reports and
-> Special Event Reports — but the chapter covering them is not yet part of this copy.
-> Their XML schemas are documented in the
-> [Gateway XML Reference](gateway-xml-reference.md).
 
 ## Related Documents
 
