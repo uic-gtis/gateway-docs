@@ -37,4 +37,21 @@ The first line is a header row that provides field/column labels for the remaini
 | img_url | URL to an image representation of the sign as seen on the [DMS Report](https://travelmidwest.com/lmiga/dmsReport.jsp). |
 | status | Status of the DMS: Unknown, Not available, Operational, Operation but degraded, Non-operational, Communication failure, or Down for maintenance. |
 
+## Sign Images
+
+The `img_url` values above point at the messageSign endpoint, which renders the sign's
+current message as a PNG. It can be requested directly and used as an `<img src>`:
+
+```console
+https://travelmidwest.com/lmiga/messageSign?id=signExternalId
+```
+
+- **id** (required) — the DMS external ID, as in the `id` column above
+- **small** (optional) — set to `true` for a reduced-size rendering
+
+When a sign has several message phases they are stacked vertically into a single image.
+A request for an unknown or missing `id`, or a sign whose image cannot be rendered,
+returns a "not available" placeholder image rather than an error status. Responses are
+cached for one minute and carry an ETag.
+
 Questions and/or comments can be addressed to: [webmaster@travelmidwest.com](mailto:webmaster@travelmidwest.com?subject=dmsInfo.csv)

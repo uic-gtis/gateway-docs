@@ -1772,3 +1772,69 @@ This is a GET request with the following query parameter:
 ### Response
 
 The response is a GeoJSON FeatureCollection containing features for the specified transit routes.
+
+## Rest Areas
+
+> [!NOTE]
+> This endpoint is present in the application but is not yet deployed to
+> travelmidwest.com; it currently returns 404 there.
+
+The restAreaMap.json endpoint provides rest area locations and whether each is open.
+
+### Request
+
+```console
+https://travelmidwest.com/lmiga/restAreaMap.json
+```
+
+GET or POST. The POST body may contain:
+
+- bbox — see [Bounding Box](#bounding-box) section (optional; all rest areas are returned when omitted)
+
+### Response
+
+The response is a GeoJSON FeatureCollection with a Point feature for each rest area.
+Rest areas with no latitude or longitude are omitted. The collection timestamp is the
+last update time of the rest area data. Feature properties:
+
+- externalId — the rest area identifier
+- name — the rest area name
+- address — the street address. Illinois records populate a location field and Iowa
+  records an address field; this property carries whichever is present, preferring
+  address.
+- description — description of the rest area and its facilities
+- open — `"Yes"`, `"No"`, or `"Unknown"` when the operating agency does not report status
+
+Responses are cached for 15 minutes and carry an ETag.
+
+## Weigh Stations
+
+> [!NOTE]
+> This endpoint is present in the application but is not yet deployed to
+> travelmidwest.com; it currently returns 404 there.
+
+The weighStationMap.json endpoint provides commercial vehicle weigh station locations
+and whether each is open.
+
+### Request
+
+```console
+https://travelmidwest.com/lmiga/weighStationMap.json
+```
+
+GET or POST. The POST body may contain:
+
+- bbox — see [Bounding Box](#bounding-box) section (optional; all weigh stations are returned when omitted)
+
+### Response
+
+The response is a GeoJSON FeatureCollection with a Point feature for each weigh station.
+Stations with no latitude or longitude are omitted. Feature properties:
+
+- externalId — the weigh station identifier
+- name — the weigh station name
+- address — the street address
+- description — description of the weigh station
+- open — `"Yes"`, `"No"`, or `"Unknown"` when the operating agency does not report status
+
+Responses are cached for 15 minutes and carry an ETag.

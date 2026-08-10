@@ -22,6 +22,25 @@ Note:
 - Authentication headers with a username + password with XML upload privileges are required. The Gateway will respond with a HTML page containing the word "OK" if the data was accepted.
 - During development, we encourage you to use our testing website: [https://testing.travelmidwest.com/lmiga/publisher](https://testing.travelmidwest.com/lmiga/publisher)
 
+### JSON response variant
+
+The endpoint above answers with an HTML page reading "OK" or "ERROR", which tells you
+whether the report as a whole was accepted but nothing about the individual objects in
+it. A second endpoint publishes exactly the same way — same `report` parameter, same
+processing, same logging — but answers with JSON:
+
+```
+https://travelmidwest.com/lmiga/publisher/publish.json
+```
+
+The response describes each object that was published, along with any per-object errors,
+so a client can tell which items in a multi-object report succeeded. A request with a
+missing or empty `report` parameter returns a validation error rather than an HTML error
+page.
+
+Both endpoints are current; use whichever suits your client. The `datapublisher` role
+and authentication requirements are identical.
+
 ## Schemas
 
 XML schemas for the various types of reports that can be sent to the Gateway via its XML upload service are available in the attachments section at the bottom of this page.

@@ -83,6 +83,25 @@ https://travelmidwest.com/lmiga/snapshot?id=cameraExternalId&direction=direction
 
 The `direction` parameter is required for multi-direction cameras and should be omitted for single-direction cameras (code = `NONE`).
 
+### Thumbnails and reference images
+
+The `/camera` endpoint serves the smaller thumbnail image, and the IDOT reference image
+where one exists. It returns the image bytes directly, so it can be used as an
+`<img src>`.
+
+```console
+https://travelmidwest.com/lmiga/camera?type=thumbnail&id=cameraExternalId&direction=directionCode
+```
+
+- **type** (required) — `thumbnail` for the camera thumbnail, or `reference` for the
+  IDOT reference image showing the camera's normal view
+- **id** (required) — the camera external ID
+- **direction** (required for multi-direction cameras) — the direction code, omitted for
+  single-direction cameras
+
+Responses are cached for one minute and carry an ETag, so a conditional request returns
+304 while the image is unchanged.
+
 ## Error Responses
 
 - **404 Not Found** — returned if no camera exists with the given `id`

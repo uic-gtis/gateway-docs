@@ -373,6 +373,54 @@ The route will be planned and the resulting route is returned. The response incl
 > [!NOTE]
 >   **popup** in incident and roadWork entries contains formatted properties matching the react-ui map popup format (IncidentProperties / ConstructionProperties).
 
+### POST /lmiga/tripRouteCameras.json
+
+Returns the cameras along a planned route, for showing camera views of the route. Like
+routePlanner.json this endpoint is public — no authentication required.
+
+Payload
+
+```json
+{
+  "path": [
+    { "lat": 42.0, "lng": -88.0 },
+    { "lat": 41.9, "lng": -87.9 }
+  ],
+  "incidentDistances": [ 1200.0, 8400.0 ],
+  "congestionDistance": 5300.0
+}
+```
+
+- **path** (required) — the route geometry as an ordered list of points. At least two
+  points are required; a request with fewer returns 400. Long paths are simplified
+  before querying.
+- **incidentDistances** (optional) — distances in metres along the route at which
+  incidents occur, used to choose which camera to feature.
+- **congestionDistance** (optional) — distance in metres along the route to the
+  congestion of interest, used to choose which camera to feature.
+
+Cameras are selected within a fixed buffer either side of the route. Exactly one camera
+may be marked `featured` — the one nearest an incident, else nearest the congestion,
+else nearest the route midpoint, preferring cameras close enough to actually see the
+road.
+
+#### Response
+
+A GeoJSON FeatureCollection of Point features, one per camera. Feature properties:
+
+- id — the camera external ID
+- locDesc — the location description for the camera
+- src — the name of the source agency operating the camera
+- age — the formatted age of the most recent image
+- dis — true if the camera is disabled
+- dirs — the available direction codes for the camera
+- remUrls — direct image URLs for remote cameras, parallel to **dirs**; use the
+  [/snapshot](../show-camera.md#image-urls) endpoint for cameras that are not remote
+- distAlongRoute — the distance in metres from the start of the route to the camera
+- featured — true for the single camera chosen as most relevant to the route
+- xOff, yOff, xJust, yJust — offsets and justification used to place the icon to the
+  side of the road
+
 ### Saved Route Endpoints
 
 The following endpoints require authentication. All are prefixed by:

@@ -66,14 +66,14 @@ fetch('/lmiga/admin/messagelogs/operators.json', {
 
 Retrieves all available message priority levels.
 
-- **URL**: /lmiga/admin/messagelogs/priorties.json
+- **URL**: /lmiga/admin/messagelogs/priorities.json
 - **Method**: GET
 - **Response**: JSON array of priority level names
 
 #### Example Request
 
 ```javascript
-fetch('/lmiga/admin/messagelogs/priorties.json', { 
+fetch('/lmiga/admin/messagelogs/priorities.json', { 
   method: 'GET', 
   credentials: 'include' })
 .then(response => response.json())

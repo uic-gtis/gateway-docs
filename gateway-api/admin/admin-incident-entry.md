@@ -743,7 +743,7 @@ curl -X POST \
     "rightShoulder": "Open",
     "laneType": "Lane"
   }' \
-  https://travelmidwest.com/lmiga/admin/incidentEntry.json
+  https://travelmidwest.com/lmiga/admin/incidentEntry/create.json
 ```
 
 ### Updating an Incident
@@ -762,7 +762,7 @@ curl -X PUT \
       {"laneNumber": 3, "impact": "Open"}
     ]
   }' \
-  https://travelmidwest.com/lmiga/admin/incidentEntry/123.json
+  https://travelmidwest.com/lmiga/admin/incidentEntry/123/update.json
 ```
 
 ### Closing an Incident
