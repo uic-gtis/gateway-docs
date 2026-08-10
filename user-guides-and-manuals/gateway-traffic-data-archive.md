@@ -829,7 +829,9 @@ struct RampSection {
 
 The diagram of this profile shows a ramp from I-355 North to I-90 East. The start point is A and the end point is B.
 
-<!-- TODO(docs): image 'image2017-11-6_8-36-5.png' is referenced here but the attachment no longer exists on the source wiki (404) -->
+> [!NOTE]
+> The figure that belongs here (`image2017-11-6_8-36-5.png`) is unavailable: the image was
+> lost from the source wiki before this documentation was migrated.
 
 #### BetweenStreetPoint and BetweenStreetSection
 
@@ -862,7 +864,9 @@ struct GeometrySection {
 
 The profile is represented as follows:
 
-<!-- TODO(docs): image 'image2017-11-6_8-38-10.png' is referenced here but the attachment no longer exists on the source wiki (404) -->
+> [!NOTE]
+> The figure that belongs here (`image2017-11-6_8-38-10.png`) is unavailable: the image was
+> lost from the source wiki before this documentation was migrated.
 
 #### Text
 

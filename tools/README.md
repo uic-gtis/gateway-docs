@@ -70,8 +70,12 @@ language tags.
 ## Known content gaps
 
 - Three images are referenced by the source pages but no longer exist on the wiki (they
-  404, and their pages report zero attachments). They appear as
-  `<!-- TODO(docs): ... -->` markers.
+  404, and their pages report zero attachments). Each is now a visible "figure
+  unavailable" note in the page — a hidden HTML comment left the surrounding prose
+  referring to something the reader could not see was missing. If the originals turn up,
+  drop them in `images/` and replace the notes.
+- `xwiki2md.py` re-runs will reintroduce the `<!-- TODO(docs) -->` form of those markers;
+  see `MISSING_IMAGES` in that script.
 - The Smart Work Zone Specifications page named individual third-party vendor staff with
   direct e-mail and phone; those are replaced with the GTIS team address (see
   `REDACTIONS` in `xwiki2md.py`). The rules fail the build if they stop matching.
