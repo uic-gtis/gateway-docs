@@ -1,0 +1,1308 @@
+{
+ "pages": {
+  "cameraInfo.csv.xwiki": {
+   "title": "cameraInfo.csv",
+   "segs": [
+    "Web-Services",
+    "cameraInfo.csv"
+   ],
+   "ref": "Web-Services.cameraInfo\\.csv.WebHome",
+   "view_url": "https://wiki.travelmidwest.com/bin/view/Web-Services/cameraInfo.csv/",
+   "anchors": {
+    "HAbout": "About",
+    "HArcGISOnlineIntegration": "ArcGIS Online Integration"
+   },
+   "attachments": {
+    "ArcGIS_Online.Add_Layer_from_Web.2018-7-18_7-29-52.560x300.jpg": "https://wiki.travelmidwest.com/bin/download/Web-Services/cameraInfo.csv/WebHome/ArcGIS_Online.Add_Layer_from_Web.2018-7-18_7-29-52.560x300.jpg",
+    "ArcGIS_Online.point_feature.2018-7-18_7-28-26.593x300.jpg": "https://wiki.travelmidwest.com/bin/download/Web-Services/cameraInfo.csv/WebHome/ArcGIS_Online.point_feature.2018-7-18_7-28-26.593x300.jpg",
+    "camera_pop-up.366x370.jpg": "https://wiki.travelmidwest.com/bin/download/Web-Services/cameraInfo.csv/WebHome/camera_pop-up.366x370.jpg"
+   }
+  },
+  "dmsInfo.csv.xwiki": {
+   "title": "dmsInfo.csv",
+   "segs": [
+    "Web-Services",
+    "dmsInfo.csv"
+   ],
+   "ref": "Web-Services.dmsInfo\\.csv.WebHome",
+   "view_url": "https://wiki.travelmidwest.com/bin/view/Web-Services/dmsInfo.csv/",
+   "anchors": {},
+   "attachments": {}
+  },
+  "Gateway API/Admin/Admin announcements.xwiki": {
+   "title": "Admin announcements",
+   "segs": [
+    "Web-Services",
+    "Gateway-API",
+    "Admin",
+    "announcements"
+   ],
+   "ref": "Web-Services.Gateway-API.Admin.announcements.WebHome",
+   "view_url": "https://wiki.travelmidwest.com/bin/view/Web-Services/Gateway-API/Admin/announcements/",
+   "anchors": {
+    "HAbout": "About",
+    "HAuthentication": "Authentication",
+    "HBaseURL": "Base URL",
+    "HListAnnouncements": "List Announcements",
+    "HGetAnnouncementbyID": "Get Announcement by ID",
+    "HGetAnnouncementLogs": "Get Announcement Logs",
+    "HCreateAnnouncement": "Create Announcement",
+    "HUpdateAnnouncement": "Update Announcement",
+    "HDeleteAnnouncement": "Delete Announcement",
+    "HGetOperators": "Get Operators",
+    "HGetRoadways": "Get Roadways",
+    "HGetStates": "Get States",
+    "HGetAgencies": "Get Agencies",
+    "HGetPriorities": "Get Priorities",
+    "HGetEvents": "Get Events",
+    "HGetLinks": "Get Links",
+    "HReorderHighPriorityAnnouncements": "Reorder High Priority Announcements",
+    "HDataValidation": "Data Validation",
+    "HErrorHandling": "Error Handling",
+    "HNotes": "Notes"
+   },
+   "attachments": {}
+  },
+  "Gateway API/Admin/Admin archive DMS.xwiki": {
+   "title": "Admin archive DMS",
+   "segs": [
+    "Web-Services",
+    "Gateway-API",
+    "Admin",
+    "archive-DMS"
+   ],
+   "ref": "Web-Services.Gateway-API.Admin.archive-DMS.WebHome",
+   "view_url": "https://wiki.travelmidwest.com/bin/view/Web-Services/Gateway-API/Admin/archive-DMS/",
+   "anchors": {
+    "HAbout": "About",
+    "HAuthenticationRequirements": "Authentication Requirements",
+    "HBaseURL": "Base URL",
+    "HAvailableEndpoints": "Available Endpoints",
+    "HGetDMSLocations": "Get DMS Locations",
+    "HGetDMSTextData": "Get DMS Text Data",
+    "HDataTypes": "Data Types",
+    "HDateFormat": "Date Format",
+    "HExampleUsagewithReact": "Example Usage with React",
+    "HTechnicalDetails": "Technical Details",
+    "HArchiveService": "Archive Service",
+    "HResponseFormat": "Response Format",
+    "HContact": "Contact"
+   },
+   "attachments": {}
+  },
+  "Gateway API/Admin/Admin archive heatmap.xwiki": {
+   "title": "Admin archive heatmap",
+   "segs": [
+    "Web-Services",
+    "Gateway-API",
+    "Admin",
+    "archive-heatmap"
+   ],
+   "ref": "Web-Services.Gateway-API.Admin.archive-heatmap.WebHome",
+   "view_url": "https://wiki.travelmidwest.com/bin/view/Web-Services/Gateway-API/Admin/archive-heatmap/",
+   "anchors": {
+    "HAbout": "About",
+    "HAuthenticationRequirements": "Authentication Requirements",
+    "HBaseURL": "Base URL",
+    "HAvailableEndpoints": "Available Endpoints",
+    "HGetFlowLocations": "Get Flow Locations",
+    "HGetHeatMap": "Get Heat Map",
+    "HGetPercentileData": "Get Percentile Data",
+    "HDataTypes": "Data Types",
+    "HLocationQueryFormat": "Location Query Format",
+    "HDateFormat": "Date Format",
+    "HGeoJSONFormat": "GeoJSON Format",
+    "HStatisticsFields": "Statistics Fields",
+    "HExampleUsagewithReact": "Example Usage with React",
+    "HCommonLocationQueryExamples": "Common Location Query Examples",
+    "HTechnicalDetails": "Technical Details",
+    "HLocationResolution": "Location Resolution",
+    "HHeatMapData": "Heat Map Data",
+    "HPercentileCalculations": "Percentile Calculations",
+    "HResponseFormat": "Response Format",
+    "HContact": "Contact"
+   },
+   "attachments": {}
+  },
+  "Gateway API/Admin/Admin archive VDS.xwiki": {
+   "title": "Admin archive VDS",
+   "segs": [
+    "Web-Services",
+    "Gateway-API",
+    "Admin",
+    "archive-VDS"
+   ],
+   "ref": "Web-Services.Gateway-API.Admin.archive-VDS.WebHome",
+   "view_url": "https://wiki.travelmidwest.com/bin/view/Web-Services/Gateway-API/Admin/archive-VDS/",
+   "anchors": {
+    "HAbout": "About",
+    "HAuthenticationRequirements": "Authentication Requirements",
+    "HBaseURL": "Base URL",
+    "HOverview": "Overview",
+    "HAvailableEndpoints": "Available Endpoints",
+    "HGetVDSLocations": "Get VDS Locations",
+    "HGetVDSData": "Get VDS Data",
+    "HGetVDSReport": "Get VDS Report",
+    "HDataTypes": "Data Types",
+    "HFieldDeviceIDFormat": "Field Device ID Format",
+    "HVDSMetrics": "VDS Metrics",
+    "HDateFormats": "Date Formats",
+    "HRoadNameStructure": "Road Name Structure",
+    "HFIPSCodes": "FIPS Codes",
+    "HExampleUsagewithReact": "Example Usage with React",
+    "HTechnicalDetails": "Technical Details",
+    "HArchiveServices": "Archive Services",
+    "HDataCollection": "Data Collection",
+    "HPagination": "Pagination",
+    "HResponseFormat": "Response Format",
+    "HContact": "Contact"
+   },
+   "attachments": {}
+  },
+  "Gateway API/Admin/Admin download users.xwiki": {
+   "title": "Admin download users",
+   "segs": [
+    "Web-Services",
+    "Gateway-API",
+    "Admin",
+    "users"
+   ],
+   "ref": "Web-Services.Gateway-API.Admin.users.WebHome",
+   "view_url": "https://wiki.travelmidwest.com/bin/view/Web-Services/Gateway-API/Admin/users/",
+   "anchors": {
+    "HAbout": "About",
+    "HBaseURL": "Base URL",
+    "HAuthentication": "Authentication",
+    "HAPIEndpoints": "API Endpoints",
+    "HListAllDownloadUsers": "List All Download Users",
+    "HRequest": "Request",
+    "HResponse": "Response",
+    "HGetDownloadUserDetails": "Get Download User Details",
+    "HRequest-1": "Request",
+    "HResponse28Success29": "Response (Success)",
+    "HResponse28Error29": "Response (Error)",
+    "HUpdateDownloadUser": "Update Download User",
+    "HRequest-2": "Request",
+    "HRequestBody": "Request Body",
+    "HResponse28Success29-1": "Response (Success)",
+    "HResponse28Error29-1": "Response (Error)",
+    "HGetAccessRoles": "Get Access Roles",
+    "HRequest-3": "Request",
+    "HResponse-1": "Response",
+    "HDeleteuser": "Delete user",
+    "HRequest-4": "Request",
+    "HResponse-2": "Response",
+    "HSpecialBehaviors": "Special Behaviors",
+    "HPasswordHandling": "Password Handling",
+    "HXMLAccess": "XML Access",
+    "HApprovalWorkflow": "Approval Workflow",
+    "HExamples": "Examples",
+    "HFetchingAllDownloadUsers": "Fetching All Download Users",
+    "HGettingaSpecificDownloadUser": "Getting a Specific Download User",
+    "HUpdatingaDownloadUser": "Updating a Download User"
+   },
+   "attachments": {}
+  },
+  "Gateway API/Admin/Admin incident entry.xwiki": {
+   "title": "Admin incident entry",
+   "segs": [
+    "Web-Services",
+    "Gateway-API",
+    "Admin",
+    "incident-entry"
+   ],
+   "ref": "Web-Services.Gateway-API.Admin.incident-entry.WebHome",
+   "view_url": "https://wiki.travelmidwest.com/bin/view/Web-Services/Gateway-API/Admin/incident-entry/",
+   "anchors": {
+    "HAbout": "About",
+    "HAuthentication": "Authentication",
+    "HBaseURL": "Base URL",
+    "HGetDropdownData": "Get Dropdown Data",
+    "HGetNewIncidentForm": "Get New Incident Form",
+    "HGetIncidentbyID": "Get Incident by ID",
+    "HGetIncidentsList": "Get Incidents List",
+    "HResolveLocation": "Resolve Location",
+    "HCreateIncident": "Create Incident",
+    "HUpdateIncident": "Update Incident",
+    "HCloseIncident": "Close Incident",
+    "HRequestFieldDescriptions": "Request Field Descriptions",
+    "HLocationFields": "Location Fields",
+    "HIncidentDetails": "Incident Details",
+    "HVehicleCounts": "Vehicle Counts",
+    "HIncidentFeatures": "Incident Features",
+    "HTimeFields": "Time Fields",
+    "HDataValidation": "Data Validation",
+    "HErrorHandling": "Error Handling",
+    "HExampleUsage": "Example Usage",
+    "HCreatinganIncident": "Creating an Incident",
+    "HUpdatinganIncident": "Updating an Incident",
+    "HClosinganIncident": "Closing an Incident",
+    "HNotes": "Notes"
+   },
+   "attachments": {}
+  },
+  "Gateway API/Admin/Admin message logs.xwiki": {
+   "title": "Admin message logs",
+   "segs": [
+    "Web-Services",
+    "Gateway-API",
+    "Admin",
+    "message-logs"
+   ],
+   "ref": "Web-Services.Gateway-API.Admin.message-logs.WebHome",
+   "view_url": "https://wiki.travelmidwest.com/bin/view/Web-Services/Gateway-API/Admin/message-logs/",
+   "anchors": {
+    "HAbout": "About",
+    "HBaseURL": "Base URL",
+    "HAuthentication": "Authentication",
+    "HAvailableEndpoints": "Available Endpoints",
+    "HGetAllOperators": "Get All Operators",
+    "HExampleRequest": "Example Request",
+    "HExampleResponse": "Example Response",
+    "HGetAllPriorities": "Get All Priorities",
+    "HExampleRequest-1": "Example Request",
+    "HExampleResponse-1": "Example Response",
+    "HSearchMessageLogs": "Search Message Logs",
+    "HFilterParameters": "Filter Parameters",
+    "HExampleRequest-2": "Example Request",
+    "HExampleResponse-2": "Example Response"
+   },
+   "attachments": {}
+  },
+  "Gateway API/Admin/Admin messages.xwiki": {
+   "title": "Admin messages",
+   "segs": [
+    "Web-Services",
+    "Gateway-API",
+    "Admin",
+    "MOTD"
+   ],
+   "ref": "Web-Services.Gateway-API.Admin.MOTD.WebHome",
+   "view_url": "https://wiki.travelmidwest.com/bin/view/Web-Services/Gateway-API/Admin/MOTD/",
+   "anchors": {
+    "HAbout": "About",
+    "HAuthenticationRequirements": "Authentication Requirements",
+    "HBaseURL": "Base URL",
+    "HAvailableEndpoints": "Available Endpoints",
+    "HGetAllMessages": "Get All Messages",
+    "HCreateNewMessage": "Create New Message",
+    "HUpdateExistingMessage": "Update Existing Message",
+    "HDeleteMessage": "Delete Message",
+    "HGetIncidents": "Get Incidents",
+    "HGetMetroAreas": "Get Metro Areas",
+    "HGetPriorityLevels": "Get Priority Levels",
+    "HDataTypes": "Data Types",
+    "HMessagePriority": "Message Priority",
+    "HDateFormat": "Date Format",
+    "HExampleUsagewithReact": "Example Usage with React",
+    "HContact": "Contact"
+   },
+   "attachments": {}
+  },
+  "Gateway API/Admin/Admin my routes users.xwiki": {
+   "title": "Admin my routes users",
+   "segs": [
+    "Web-Services",
+    "Gateway-API",
+    "Admin",
+    "my-routes-users"
+   ],
+   "ref": "Web-Services.Gateway-API.Admin.my-routes-users.WebHome",
+   "view_url": "https://wiki.travelmidwest.com/bin/view/Web-Services/Gateway-API/Admin/my-routes-users/",
+   "anchors": {
+    "HAbout": "About",
+    "HBaseURL": "Base URL",
+    "HAuthentication": "Authentication",
+    "HAPIEndpoints": "API Endpoints",
+    "HListAllTripUsers": "List All Trip Users",
+    "HRequest": "Request",
+    "HResponse": "Response",
+    "HFieldDescriptions": "Field Descriptions",
+    "HBecomeUser28Masquerade29": "Become User (Masquerade)",
+    "HRequest-1": "Request",
+    "HResponse28Success29": "Response (Success)",
+    "HResponse28Error29": "Response (Error)",
+    "HExamples": "Examples",
+    "HFetchingAllAlertsUsers": "Fetching All Alerts Users",
+    "HMasqueradingasanAlertsUser": "Masquerading as an Alerts User"
+   },
+   "attachments": {}
+  },
+  "Gateway API/Admin/Admin operator users.xwiki": {
+   "title": "Admin operator users",
+   "segs": [
+    "Web-Services",
+    "Gateway-API",
+    "Admin",
+    "operator"
+   ],
+   "ref": "Web-Services.Gateway-API.Admin.operator.WebHome",
+   "view_url": "https://wiki.travelmidwest.com/bin/view/Web-Services/Gateway-API/Admin/operator/",
+   "anchors": {
+    "HAbout": "About",
+    "HAuthentication": "Authentication",
+    "HBaseURL": "Base URL",
+    "HResponseFormat": "Response Format",
+    "HEndpoints": "Endpoints",
+    "HListAllOperators": "List All Operators",
+    "HResponse": "Response",
+    "HGetOperatorDetails": "Get Operator Details",
+    "HURLParameters": "URL Parameters",
+    "HResponse-1": "Response",
+    "HCreateOperator": "Create Operator",
+    "HRequestBody": "Request Body",
+    "HResponse-2": "Response",
+    "HUpdateOperator": "Update Operator",
+    "HURLParameters-1": "URL Parameters",
+    "HRequestBody-1": "Request Body",
+    "HResponse-3": "Response",
+    "HDeleteOperator": "Delete Operator",
+    "HURLParameters-2": "URL Parameters",
+    "HResponse-4": "Response",
+    "HGetRoles": "Get Roles",
+    "HResponse-5": "Response",
+    "HGetAgencies": "Get Agencies",
+    "HResponse-6": "Response",
+    "HErrorCodes": "Error Codes",
+    "HImplementationNotes": "Implementation Notes"
+   },
+   "attachments": {}
+  },
+  "Gateway API/Admin/Admin web files.xwiki": {
+   "title": "Admin web files",
+   "segs": [
+    "Web-Services",
+    "Gateway-API",
+    "Admin",
+    "webfiles"
+   ],
+   "ref": "Web-Services.Gateway-API.Admin.webfiles.WebHome",
+   "view_url": "https://wiki.travelmidwest.com/bin/view/Web-Services/Gateway-API/Admin/webfiles/",
+   "anchors": {
+    "HAbout": "About",
+    "HAuthentication": "Authentication",
+    "HBaseURL": "Base URL",
+    "HEndpoints": "Endpoints",
+    "HGetRootDirectory": "Get Root Directory",
+    "HGetFileorDirectorybyPath": "Get File or Directory by Path",
+    "HAlternativeGETbyRequestParameter": "Alternative GET by Request Parameter",
+    "HCreateFileorDirectory": "Create File or Directory",
+    "HUpdateFile": "Update File",
+    "HRenameorMoveFile2FDirectory": "Rename or Move File/Directory",
+    "HDeleteFileorDirectory": "Delete File or Directory",
+    "HDataTransferObjects": "Data Transfer Objects",
+    "HWebFileDto": "WebFileDto",
+    "HFileMetadataDto": "FileMetadataDto",
+    "HRenameDto": "RenameDto",
+    "HUsageExamples": "Usage Examples",
+    "HFetchDirectoryMetadatainReact": "Fetch Directory Metadata in React",
+    "HDownloadaFile": "Download a File",
+    "HCreateaSub-directory": "Create a Sub-directory",
+    "HRenameaFile": "Rename a File",
+    "HErrorHandling": "Error Handling",
+    "HPublicURLs": "Public URLs"
+   },
+   "attachments": {}
+  },
+  "Gateway API/Admin/Incident notification response.xwiki": {
+   "title": "Incident notification response",
+   "segs": [
+    "Web-Services",
+    "Gateway-API",
+    "Admin",
+    "incident-notification-response"
+   ],
+   "ref": "Web-Services.Gateway-API.Admin.incident-notification-response.WebHome",
+   "view_url": "https://wiki.travelmidwest.com/bin/view/Web-Services/Gateway-API/Admin/incident-notification-response/",
+   "anchors": {
+    "HAbout": "About",
+    "HResponse": "Response"
+   },
+   "attachments": {}
+  },
+  "Gateway API/Admin.xwiki": {
+   "title": "Admin",
+   "segs": [
+    "Web-Services",
+    "Gateway-API",
+    "Admin"
+   ],
+   "ref": "Web-Services.Gateway-API.Admin.WebHome",
+   "view_url": "https://wiki.travelmidwest.com/bin/view/Web-Services/Gateway-API/Admin/",
+   "anchors": {},
+   "attachments": {}
+  },
+  "Gateway API/Announcements.xwiki": {
+   "title": "Announcements",
+   "segs": [
+    "Web-Services",
+    "Gateway-API",
+    "Announcements"
+   ],
+   "ref": "Web-Services.Gateway-API.Announcements.WebHome",
+   "view_url": "https://wiki.travelmidwest.com/bin/view/Web-Services/Gateway-API/Announcements/",
+   "anchors": {
+    "HAbout": "About",
+    "HAnnouncements": "Announcements",
+    "HRequest": "Request",
+    "HResponse": "Response",
+    "HExample": "Example"
+   },
+   "attachments": {}
+  },
+  "Gateway API/Chicago Quick Traffic.xwiki": {
+   "title": "Chicago Quick Traffic",
+   "segs": [
+    "Web-Services",
+    "Gateway-API",
+    "Chicago-Quick-Traffic"
+   ],
+   "ref": "Web-Services.Gateway-API.Chicago-Quick-Traffic.WebHome",
+   "view_url": "https://wiki.travelmidwest.com/bin/view/Web-Services/Gateway-API/Chicago-Quick-Traffic/",
+   "anchors": {
+    "HAbout": "About",
+    "HchicagoQuickTraffic.json": "chicagoQuickTraffic.json",
+    "HRequest": "Request",
+    "HResponse": "Response",
+    "HchicagoQuickTrafficDetail.json": "chicagoQuickTrafficDetail.json",
+    "HRequest-1": "Request"
+   },
+   "attachments": {}
+  },
+  "Gateway API/IDOT Incidents.xwiki": {
+   "title": "IDOT Incidents",
+   "segs": [
+    "Web-Services",
+    "Gateway-API",
+    "IDOT-Incidents"
+   ],
+   "ref": "Web-Services.Gateway-API.IDOT-Incidents.WebHome",
+   "view_url": "https://wiki.travelmidwest.com/bin/view/Web-Services/Gateway-API/IDOT-Incidents/",
+   "anchors": {
+    "HAbout": "About",
+    "HRequest": "Request",
+    "HResponse": "Response",
+    "HExamples": "Examples",
+    "HencodeLines3Dfalse": "encodeLines=false",
+    "HencodeLines3Dtrue": "encodeLines=true"
+   },
+   "attachments": {}
+  },
+  "Gateway API/Locate City.xwiki": {
+   "title": "Locate City",
+   "segs": [
+    "Web-Services",
+    "Gateway-API",
+    "Locate-City"
+   ],
+   "ref": "Web-Services.Gateway-API.Locate-City.WebHome",
+   "view_url": "https://wiki.travelmidwest.com/bin/view/Web-Services/Gateway-API/Locate-City/",
+   "anchors": {
+    "HAbout": "About",
+    "HRequest": "Request",
+    "HResponse": "Response",
+    "HExample": "Example"
+   },
+   "attachments": {}
+  },
+  "Gateway API/Map Data.xwiki": {
+   "title": "Map Data",
+   "segs": [
+    "Web-Services",
+    "Gateway-API",
+    "Map-Data"
+   ],
+   "ref": "Web-Services.Gateway-API.Map-Data.WebHome",
+   "view_url": "https://wiki.travelmidwest.com/bin/view/Web-Services/Gateway-API/Map-Data/",
+   "anchors": {
+    "HAbout": "About",
+    "HBoundingBox": "Bounding Box",
+    "HTravelTimes": "Travel Times",
+    "HRequest": "Request",
+    "HResponse": "Response",
+    "HExample": "Example",
+    "HCongestion": "Congestion",
+    "HCongestionLines": "Congestion Lines",
+    "HRequest-1": "Request",
+    "HResponse-1": "Response",
+    "HExample-1": "Example",
+    "HCongestionUpdate": "Congestion Update",
+    "HRequest-2": "Request",
+    "HResponse-2": "Response",
+    "HExample-2": "Example",
+    "HCongestionPopupData": "Congestion Popup Data",
+    "HRequest-3": "Request",
+    "HResponse-3": "Response",
+    "HExample-3": "Example",
+    "HReal-timeCongestionData": "Real-time Congestion Data",
+    "HEncodedLines": "Encoded Lines",
+    "HUpdate": "Update",
+    "HPopup": "Popup",
+    "HIncidents": "Incidents",
+    "HRequest-4": "Request",
+    "HResponse-4": "Response",
+    "HExample-4": "Example",
+    "HConstruction": "Construction",
+    "HRequest-5": "Request",
+    "HResponse-5": "Response",
+    "HExample-5": "Example",
+    "HCameras": "Cameras",
+    "HcameraMap.json": "cameraMap.json",
+    "HRequest-6": "Request",
+    "HResponse-6": "Response",
+    "HImageURLs": "Image URLs",
+    "HExample-6": "Example",
+    "Hcameras.json": "cameras.json",
+    "HRequest-7": "Request",
+    "HResponse-7": "Response",
+    "HMessageSigns": "Message Signs",
+    "HRequest-8": "Request",
+    "HResponse-8": "Response",
+    "HExample-7": "Example",
+    "HSpecialEvents": "Special Events",
+    "HRequest-9": "Request",
+    "HResponse-9": "Response",
+    "HExample-8": "Example",
+    "HWeatherStations": "Weather Stations",
+    "HRequest-10": "Request",
+    "HResponse-10": "Response",
+    "HExample-9": "Example",
+    "HWeatherWarnings": "Weather Warnings",
+    "HRequest-11": "Request",
+    "HResponse-11": "Response",
+    "HExample-10": "Example",
+    "HMileMarkers": "Mile Markers",
+    "HRequest-12": "Request",
+    "HResponse-12": "Response",
+    "HRoadLabels": "Road Labels",
+    "HRequest-13": "Request",
+    "HResponse-13": "Response",
+    "HExample-11": "Example",
+    "HTransitEvents": "Transit Events",
+    "HRequest-14": "Request",
+    "HResponse-14": "Response",
+    "HExample-12": "Example",
+    "HTruckParking": "Truck Parking",
+    "HRequest-15": "Request",
+    "HResponse-15": "Response",
+    "HExample-13": "Example",
+    "HWinterRoadConditions": "Winter Road Conditions",
+    "HRequest-16": "Request",
+    "HQueryParameters": "Query Parameters",
+    "HPOSTBody": "POST Body",
+    "HResponse-16": "Response",
+    "HFeatureProperties": "Feature Properties",
+    "HGeometry": "Geometry",
+    "HExample-14": "Example",
+    "HNotes": "Notes",
+    "HRecommendedColors": "Recommended Colors",
+    "HAlerts": "Alerts",
+    "HRequest-17": "Request",
+    "HResponse-17": "Response",
+    "HEventsbyID": "Events by ID",
+    "HRequest-18": "Request",
+    "HResponse-18": "Response",
+    "HFerry": "Ferry",
+    "HRequest-19": "Request",
+    "HResponse-19": "Response",
+    "HConstruction28WZDx29": "Construction (WZDx)",
+    "HRequest-20": "Request",
+    "HQueryParameters-1": "Query Parameters",
+    "HPOSTBody-1": "POST Body",
+    "HResponse-20": "Response",
+    "HWZDxDataFeed": "WZDx Data Feed",
+    "HRequest-21": "Request",
+    "HQueryParameters-2": "Query Parameters",
+    "HPOSTBody-2": "POST Body",
+    "HResponse-21": "Response",
+    "HIllinoisWZDxFeed": "Illinois WZDx Feed",
+    "HRequest-22": "Request",
+    "HQueryParameters-3": "Query Parameters",
+    "HPOSTBody-3": "POST Body",
+    "HResponse-22": "Response",
+    "HVehicleDetectionStations": "Vehicle Detection Stations",
+    "HMapData": "Map Data",
+    "HRequest-23": "Request",
+    "HResponse-23": "Response",
+    "HMetadata": "Metadata",
+    "HRequest-24": "Request",
+    "HResponse-24": "Response",
+    "HTransitStops": "Transit Stops",
+    "HRequest-25": "Request",
+    "HResponse-25": "Response",
+    "HTransitRoutes": "Transit Routes",
+    "HRequest-26": "Request",
+    "HResponse-26": "Response"
+   },
+   "attachments": {}
+  },
+  "Gateway API/Message Alerts.xwiki": {
+   "title": "Message Alerts",
+   "segs": [
+    "Web-Services",
+    "Gateway-API",
+    "Message-Alerts"
+   ],
+   "ref": "Web-Services.Gateway-API.Message-Alerts.WebHome",
+   "view_url": "https://wiki.travelmidwest.com/bin/view/Web-Services/Gateway-API/Message-Alerts/",
+   "anchors": {
+    "HAbout": "About",
+    "Hmessages.json": "messages.json",
+    "HRequest": "Request",
+    "HResponse": "Response",
+    "HExample": "Example",
+    "Halerts.json": "alerts.json",
+    "HRequest-1": "Request",
+    "HResponse-1": "Response",
+    "HExample-1": "Example"
+   },
+   "attachments": {}
+  },
+  "Gateway API/Mileposts.xwiki": {
+   "title": "Mileposts",
+   "segs": [
+    "Web-Services",
+    "Gateway-API",
+    "Mileposts"
+   ],
+   "ref": "Web-Services.Gateway-API.Mileposts.WebHome",
+   "view_url": "https://wiki.travelmidwest.com/bin/view/Web-Services/Gateway-API/Mileposts/",
+   "anchors": {
+    "HAbout": "About",
+    "HResponseFormat": "Response Format",
+    "HSuccessResponse": "Success Response",
+    "HErrorResponse": "Error Response",
+    "HEndpoints": "Endpoints",
+    "HGET2Fmileposts2Fexpressways.json": "GET /mileposts/expressways.json",
+    "HGET2Fmileposts2Fmileposts.json": "GET /mileposts/mileposts.json",
+    "HCompleteReactIntegrationExample": "Complete React Integration Example",
+    "HTypeScriptInterfaces": "TypeScript Interfaces",
+    "HErrorHandling": "Error Handling"
+   },
+   "attachments": {}
+  },
+  "Gateway API/Projects.xwiki": {
+   "title": "Projects",
+   "segs": [
+    "Web-Services",
+    "Gateway-API",
+    "Projects"
+   ],
+   "ref": "Web-Services.Gateway-API.Projects.WebHome",
+   "view_url": "https://wiki.travelmidwest.com/bin/view/Web-Services/Gateway-API/Projects/",
+   "anchors": {
+    "HAbout": "About",
+    "HprojectsMenuItems.json": "projectsMenuItems.json",
+    "HRequest": "Request",
+    "HResponse": "Response",
+    "HExample": "Example"
+   },
+   "attachments": {}
+  },
+  "Gateway API/Report Data.xwiki": {
+   "title": "Report Data",
+   "segs": [
+    "Web-Services",
+    "Gateway-API",
+    "Report-Data"
+   ],
+   "ref": "Web-Services.Gateway-API.Report-Data.WebHome",
+   "view_url": "https://wiki.travelmidwest.com/bin/view/Web-Services/Gateway-API/Report-Data/",
+   "anchors": {
+    "HAbout": "About",
+    "H22path22ParameterandReportLocations": "\"path\" Parameter and Report Locations",
+    "HRequest": "Request",
+    "HResponse": "Response",
+    "HExample": "Example",
+    "HNearestReportLocation": "Nearest Report Location",
+    "HRequest-1": "Request",
+    "HResponse-1": "Response",
+    "HTravelTimes": "Travel Times",
+    "HRequest-2": "Request",
+    "HResponse-2": "Response",
+    "HExample-1": "Example",
+    "HIncidents": "Incidents",
+    "HRequest-3": "Request",
+    "HResponse-3": "Response",
+    "HExample-2": "Example",
+    "HConstruction": "Construction",
+    "HRequest-4": "Request",
+    "HResponse-4": "Response",
+    "HExample-3": "Example",
+    "HSpecialEvents": "Special Events",
+    "HRequest-5": "Request",
+    "HResponse-5": "Response",
+    "HCongestion": "Congestion",
+    "HRequest-6": "Request",
+    "HResponse-6": "Response",
+    "HExample-4": "Example",
+    "HCameraLocationsandReport": "Camera Locations and Report",
+    "HCameraReportLocations": "Camera Report Locations",
+    "HRequest-7": "Request",
+    "HResponse-7": "Response",
+    "HCameraReport": "Camera Report",
+    "HRequest-8": "Request",
+    "HResponse-8": "Response",
+    "HDMSReport": "DMS Report",
+    "HRequest-9": "Request",
+    "HResponse-9": "Response",
+    "HVDSReport": "VDS Report",
+    "HRequest-10": "Request",
+    "HResponse-10": "Response",
+    "HWeatherStationReport": "Weather Station Report",
+    "HRequest-11": "Request",
+    "HResponse-11": "Response"
+   },
+   "attachments": {}
+  },
+  "Gateway API/Show Camera.xwiki": {
+   "title": "Show Camera",
+   "segs": [
+    "Web-Services",
+    "Gateway-API",
+    "Show-Camera"
+   ],
+   "ref": "Web-Services.Gateway-API.Show-Camera.WebHome",
+   "view_url": "https://wiki.travelmidwest.com/bin/view/Web-Services/Gateway-API/Show-Camera/",
+   "anchors": {
+    "HAbout": "About",
+    "HRequest": "Request",
+    "HResponse": "Response",
+    "HImageURLs": "Image URLs",
+    "HErrorResponses": "Error Responses",
+    "HShowCameraPage": "ShowCamera Page"
+   },
+   "attachments": {
+    "1773264511401-584.png": "https://wiki.travelmidwest.com/bin/download/Web-Services/Gateway-API/Show-Camera/WebHome/1773264511401-584.png"
+   }
+  },
+  "Gateway API/Travel Time Statistics Graph.xwiki": {
+   "title": "Travel Time Statistics Graph",
+   "segs": [
+    "Web-Services",
+    "Gateway-API",
+    "Travel-Time-Statistics-Graph"
+   ],
+   "ref": "Web-Services.Gateway-API.Travel-Time-Statistics-Graph.WebHome",
+   "view_url": "https://wiki.travelmidwest.com/bin/view/Web-Services/Gateway-API/Travel-Time-Statistics-Graph/",
+   "anchors": {
+    "HAbout": "About",
+    "HRequest": "Request",
+    "HResponse": "Response"
+   },
+   "attachments": {
+    "travel_time_statistics_graph.389x357.jpg": "https://wiki.travelmidwest.com/bin/download/Web-Services/Gateway-API/Travel-Time-Statistics-Graph/WebHome/travel_time_statistics_graph.389x357.jpg"
+   }
+  },
+  "Gateway API/Truck Parking Reports.xwiki": {
+   "title": "Truck Parking Reports",
+   "segs": [
+    "Web-Services",
+    "Gateway-API",
+    "Truck-Parking-Reports"
+   ],
+   "ref": "Web-Services.Gateway-API.Truck-Parking-Reports.WebHome",
+   "view_url": "https://wiki.travelmidwest.com/bin/view/Web-Services/Gateway-API/Truck-Parking-Reports/",
+   "anchors": {
+    "HAbout": "About",
+    "HTruckParkingGPSReport": "Truck Parking GPS Report",
+    "HRequest": "Request",
+    "HResponse": "Response",
+    "HExample": "Example",
+    "HTruckParkingReport": "Truck Parking Report",
+    "HRequest-1": "Request",
+    "HResponse-1": "Response"
+   },
+   "attachments": {}
+  },
+  "Gateway API/Trucker Reports.xwiki": {
+   "title": "Trucker Reports",
+   "segs": [
+    "Web-Services",
+    "Gateway-API",
+    "Trucker-Reports"
+   ],
+   "ref": "Web-Services.Gateway-API.Trucker-Reports.WebHome",
+   "view_url": "https://wiki.travelmidwest.com/bin/view/Web-Services/Gateway-API/Trucker-Reports/",
+   "anchors": {
+    "HAbout": "About",
+    "HTruckerConstruction": "Trucker Construction",
+    "HRequestURL": "Request URL",
+    "HResponse": "Response",
+    "HExample": "Example",
+    "HTruckerIncidents": "Trucker Incidents",
+    "HRequest": "Request",
+    "HResponse-1": "Response",
+    "HExample-1": "Example",
+    "HTruckerTravelTimes": "Trucker Travel Times",
+    "HRequest-1": "Request",
+    "HResponse-2": "Response",
+    "HExample-2": "Example",
+    "HTruckerAnnouncements": "Trucker Announcements",
+    "HRequest-2": "Request",
+    "HResponse-3": "Response",
+    "HExample-3": "Example"
+   },
+   "attachments": {}
+  },
+  "Gateway API/User API/Authentication.xwiki": {
+   "title": "Authentication",
+   "segs": [
+    "Web-Services",
+    "Gateway-API",
+    "User",
+    "Login"
+   ],
+   "ref": "Web-Services.Gateway-API.User.Login.WebHome",
+   "view_url": "https://wiki.travelmidwest.com/bin/view/Web-Services/Gateway-API/User/Login/",
+   "anchors": {
+    "HAbout": "About",
+    "HBaseURL": "Base URL",
+    "HLogin": "Login",
+    "HRequest": "Request",
+    "HFields": "Fields",
+    "HResponse": "Response",
+    "HSuccessfulAuthentication": "Successful Authentication",
+    "HFailedAuthentication": "Failed Authentication",
+    "HUserTypesandContextPaths": "User Types and Context Paths",
+    "HIntegrationExample": "Integration Example",
+    "HLogout": "Logout",
+    "HSessionManagement": "Session Management",
+    "HSessionStatus": "Session Status",
+    "HRequest-1": "Request",
+    "HResponse-1": "Response",
+    "HAuthenticatedUser": "Authenticated User",
+    "HUnauthenticatedUser": "Unauthenticated User",
+    "HAlertsUser28NoSessionTimeout29": "Alerts User (No Session Timeout)",
+    "HResponseFields": "Response Fields",
+    "HSessionRenewal": "Session Renewal",
+    "HRequest-2": "Request",
+    "HResponse-2": "Response",
+    "HSuccessfulRenewal": "Successful Renewal",
+    "HAlertsUserRenewal": "Alerts User Renewal",
+    "HNoActiveSession": "No Active Session",
+    "HResponseFields-1": "Response Fields",
+    "HReactIntegrationExample": "React Integration Example",
+    "HSessionTimeoutWarningComponent": "Session Timeout Warning Component",
+    "HSessionImplementationNotes": "Session Implementation Notes",
+    "HSessionManagementBestPractices": "Session Management Best Practices",
+    "HSecurityConsiderations": "Security Considerations",
+    "HRateLimitingandBruteForceProtection": "Rate Limiting and Brute Force Protection",
+    "HTroubleshooting": "Troubleshooting",
+    "HCommonIssues": "Common Issues",
+    "HSupport": "Support"
+   },
+   "attachments": {}
+  },
+  "Gateway API/User API/Download User Account.xwiki": {
+   "title": "Download User Account",
+   "segs": [
+    "Web-Services",
+    "Gateway-API",
+    "User",
+    "Download"
+   ],
+   "ref": "Web-Services.Gateway-API.User.Download.WebHome",
+   "view_url": "https://wiki.travelmidwest.com/bin/view/Web-Services/Gateway-API/User/Download/",
+   "anchors": {
+    "HAbout": "About",
+    "HAuthentication": "Authentication",
+    "HBaseURL": "Base URL",
+    "HEndpoints": "Endpoints",
+    "HRegistration": "Registration",
+    "HRequestBody": "Request Body",
+    "HResponse": "Response",
+    "HConfirmationEmail": "Confirmation Email",
+    "HGetUserAccountInformation": "Get User Account Information",
+    "HResponse-1": "Response",
+    "HUpdateUserAccountInformation": "Update User Account Information",
+    "HRequest": "Request",
+    "HResponse-2": "Response",
+    "HDeleteUserAccount": "Delete User Account",
+    "HResponse-3": "Response",
+    "HCheckLoginAvailability": "Check Login Availability",
+    "HParameters": "Parameters",
+    "HResponse-4": "Response",
+    "HValidatePassword": "Validate Password",
+    "HPostBody28application2Fjson29": "Post Body (application/json)",
+    "HResponse-5": "Response",
+    "HPasswordRequirements": "Password Requirements",
+    "HPasswordStrengthIndicator": "Password Strength Indicator",
+    "HRequestPasswordReset": "Request Password Reset",
+    "HRequestBody-1": "Request Body",
+    "HResponse-6": "Response",
+    "HResetPasswordwithToken": "Reset Password with Token",
+    "HRequestBody-2": "Request Body",
+    "HResponse-7": "Response",
+    "HErrorResponses": "Error Responses",
+    "HExampleUsage": "Example Usage"
+   },
+   "attachments": {}
+  },
+  "Gateway API/User API/Operator Account.xwiki": {
+   "title": "Operator Account",
+   "segs": [
+    "Web-Services",
+    "Gateway-API",
+    "User",
+    "Operator"
+   ],
+   "ref": "Web-Services.Gateway-API.User.Operator.WebHome",
+   "view_url": "https://wiki.travelmidwest.com/bin/view/Web-Services/Gateway-API/User/Operator/",
+   "anchors": {
+    "HAbout": "About",
+    "HBaseURL": "Base URL",
+    "HAuthentication": "Authentication",
+    "HCommonResponseFormat": "Common Response Format",
+    "HSuccessResponseStructure": "Success Response Structure",
+    "HErrorResponseStructure": "Error Response Structure",
+    "HAPIEndpoints": "API Endpoints",
+    "HGetOperatorAccountInformation": "Get Operator Account Information",
+    "HRequest": "Request",
+    "HResponse": "Response",
+    "HUpdateOperatorAccountInformation": "Update Operator Account Information",
+    "HPostRequest": "Post Request",
+    "HResponse-1": "Response",
+    "HDeleteOperatorAccount": "Delete Operator Account",
+    "HRequest-1": "Request",
+    "HResponse-2": "Response",
+    "HCheckLoginAvailability": "Check Login Availability",
+    "HRequestParameters": "Request Parameters",
+    "HResponse-3": "Response",
+    "HCheckPasswordSecurity": "Check Password Security",
+    "HPostBody": "Post Body",
+    "HResponse-4": "Response",
+    "HGetAvailableAgencies": "Get Available Agencies",
+    "HRequest-2": "Request",
+    "HResponse-5": "Response",
+    "HImplementationNotes": "Implementation Notes",
+    "HErrorHandling": "Error Handling",
+    "HExampleReactImplementation": "Example React Implementation"
+   },
+   "attachments": {}
+  },
+  "Gateway API/User API/Route Alert User API.xwiki": {
+   "title": "Route Alert User API",
+   "segs": [
+    "Web-Services",
+    "Gateway-API",
+    "User",
+    "Trip-Alert-User-API"
+   ],
+   "ref": "Web-Services.Gateway-API.User.Trip-Alert-User-API.WebHome",
+   "view_url": "https://wiki.travelmidwest.com/bin/view/Web-Services/Gateway-API/User/Trip-Alert-User-API/",
+   "anchors": {
+    "HAbout": "About",
+    "HAlertsUserRegistration-2Fuser": "Alerts User Registration - /user",
+    "HPOSTtrip-register.json": "POST trip-register.json",
+    "HPOSTtrip-check-email.json": "POST trip-check-email.json",
+    "HPOSTtrip-password-reset-request.json": "POST trip-password-reset-request.json",
+    "HPOSTtrip-password-reset.json": "POST trip-password-reset.json",
+    "HGETtrip-verify.json": "GET trip-verify.json",
+    "HAlertsUserAccountMaintenance-2Fuser2Ftrip": "Alerts User Account Maintenance - /user/trip",
+    "HPOSTresend-verification.json": "POST resend-verification.json",
+    "HGETaccount.json": "GET account.json",
+    "HPUTaccount.json": "PUT account.json",
+    "HDELETEaccount.json": "DELETE account.json",
+    "HCustomRoutes": "Custom Routes",
+    "HPOST2Flmiga2FroutePlanner.json": "POST /lmiga/routePlanner.json",
+    "HSavedRouteEndpoints": "Saved Route Endpoints",
+    "HGETroutes.json": "GET routes.json",
+    "HPOSTcreate.json": "POST create.json",
+    "HGET7Bid7D2Froute.json": "GET {id}/route.json",
+    "HGET7Bid7D2FrouteMap.json": "GET {id}/routeMap.json",
+    "HGET7Bid7D2FrouteTraffic.json": "GET {id}/routeTraffic.json",
+    "HGET7Bid7D2FrouteWeather.json": "GET {id}/routeWeather.json",
+    "HPUT7Bid7D2Froute.json": "PUT {id}/route.json",
+    "HDELETE7Bid7D2Froute.json": "DELETE {id}/route.json",
+    "HPOST7Bid7D2Fsend-now.json": "POST {id}/send-now.json"
+   },
+   "attachments": {}
+  },
+  "Gateway API/User API.xwiki": {
+   "title": "User API",
+   "segs": [
+    "Web-Services",
+    "Gateway-API",
+    "User"
+   ],
+   "ref": "Web-Services.Gateway-API.User.WebHome",
+   "view_url": "https://wiki.travelmidwest.com/bin/view/Web-Services/Gateway-API/User/",
+   "anchors": {},
+   "attachments": {}
+  },
+  "Gateway API.xwiki": {
+   "title": "Gateway API",
+   "segs": [
+    "Web-Services",
+    "Gateway-API"
+   ],
+   "ref": "Web-Services.Gateway-API.WebHome",
+   "view_url": "https://wiki.travelmidwest.com/bin/view/Web-Services/Gateway-API/",
+   "anchors": {},
+   "attachments": {}
+  },
+  "incidentInfo.csv.xwiki": {
+   "title": "incidentInfo.csv",
+   "segs": [
+    "Web-Services",
+    "incidentInfo.csv"
+   ],
+   "ref": "Web-Services.incidentInfo\\.csv.WebHome",
+   "view_url": "https://wiki.travelmidwest.com/bin/view/Web-Services/incidentInfo.csv/",
+   "anchors": {},
+   "attachments": {}
+  },
+  "RSS Feeds.xwiki": {
+   "title": "RSS Feeds",
+   "segs": [
+    "Web-Services",
+    "RSS"
+   ],
+   "ref": "Web-Services.RSS.WebHome",
+   "view_url": "https://wiki.travelmidwest.com/bin/view/Web-Services/RSS/",
+   "anchors": {
+    "HStandardFields": "Standard Fields",
+    "HNews26Alerts": "News & Alerts",
+    "HLaneClosures": "Lane Closures"
+   },
+   "attachments": {}
+  },
+  "travelTimeService.json.xwiki": {
+   "title": "travelTimeService.json",
+   "segs": [
+    "Web-Services",
+    "travelTimeService.json"
+   ],
+   "ref": "Web-Services.travelTimeService\\.json.WebHome",
+   "view_url": "https://wiki.travelmidwest.com/bin/view/Web-Services/travelTimeService.json/",
+   "anchors": {
+    "HIntroduction": "Introduction",
+    "HRequest": "Request",
+    "HRequestParameters": "Request Parameters",
+    "HLocations": "Locations",
+    "HMilePostFormat": "Mile Post Format",
+    "HCrossStreetFormat": "Cross Street Format",
+    "HLat2FLongFormat": "Lat/Long Format",
+    "HJSONRequestBody": "JSON Request Body",
+    "HSectionFormat": "Section Format",
+    "HPointLocationFormat": "Point Location Format",
+    "HCredentials": "Credentials",
+    "HResponse": "Response",
+    "HExample": "Example"
+   },
+   "attachments": {}
+  },
+  "User Guides and Manuals/Camera Upload Manual.xwiki": {
+   "title": "Camera Upload Manual",
+   "segs": [
+    "User-Guides-Manuals",
+    "Camera-Upload-Manual"
+   ],
+   "ref": "User-Guides-Manuals.Camera-Upload-Manual.WebHome",
+   "view_url": "https://wiki.travelmidwest.com/bin/view/User-Guides-Manuals/Camera-Upload-Manual/",
+   "anchors": {
+    "HAbout": "About",
+    "HcctvSnapshots.xml": "cctvSnapshots.xml",
+    "HTransferMethods": "Transfer Methods",
+    "HUploadsviaSyncthing": "Uploads via Syncthing",
+    "HUploadsviaFTPS": "Uploads via FTPS",
+    "HDownloadsviaFTP2FHTTP": "Downloads via FTP/HTTP"
+   },
+   "attachments": {}
+  },
+  "User Guides and Manuals/Gateway External Interface User Guide.xwiki": {
+   "title": "Gateway External Interface User Guide",
+   "segs": [
+    "User-Guides-Manuals",
+    "Gateway-External-Interface-User-Guide"
+   ],
+   "ref": "User-Guides-Manuals.Gateway-External-Interface-User-Guide.WebHome",
+   "view_url": "https://wiki.travelmidwest.com/bin/view/User-Guides-Manuals/Gateway-External-Interface-User-Guide/",
+   "anchors": {},
+   "attachments": {}
+  },
+  "User Guides and Manuals/Gateway Traffic Data Archive.xwiki": {
+   "title": "Gateway Traffic Data Archive",
+   "segs": [
+    "User-Guides-Manuals",
+    "Gateway-Traffic-Data-Archive"
+   ],
+   "ref": "User-Guides-Manuals.Gateway-Traffic-Data-Archive.WebHome",
+   "view_url": "https://wiki.travelmidwest.com/bin/view/User-Guides-Manuals/Gateway-Traffic-Data-Archive/",
+   "anchors": {
+    "HPreamble": "Preamble",
+    "HAvailability": "Availability",
+    "HReal-TimeData": "Real-Time Data",
+    "HArchivedData": "Archived Data",
+    "HDataDefinitions": "Data Definitions",
+    "HRoadwayEvent": "RoadwayEvent",
+    "Htype": "type",
+    "HconfidenceLevel": "confidenceLevel",
+    "Hdescription": "description",
+    "HroadwayEventID": "roadwayEventID",
+    "HrawIDs": "rawIDs",
+    "HmergedWith": "mergedWith",
+    "Hlocations": "locations",
+    "Hseverity": "severity",
+    "HlastUpdateTime": "lastUpdateTime",
+    "Hstate": "state",
+    "HlocStatus": "locStatus",
+    "HdataStatus": "dataStatus",
+    "Hoperators": "operators",
+    "Hcom.gcmtravel.IncidentReport": "com.gcmtravel.IncidentReport",
+    "Hcom.gcmtravel.IncidentReportElement": "com.gcmtravel.IncidentReportElement",
+    "Hcounts": "counts",
+    "Htype-1": "type",
+    "Hfeatures": "features",
+    "Hcondition": "condition",
+    "Hparent": "parent",
+    "Htimes": "times",
+    "Hverification": "verification",
+    "Hweather": "weather",
+    "HFieldDevice": "FieldDevice",
+    "HdeviceStatus": "deviceStatus",
+    "HfieldDeviceID": "fieldDeviceID",
+    "Htype-2": "type",
+    "Hlocation": "location",
+    "HowningAgencyID": "owningAgencyID",
+    "HlocStatus-1": "locStatus",
+    "HdataStatus-1": "dataStatus",
+    "HlastUpdateTime-1": "lastUpdateTime",
+    "HlocationTimeStamp": "locationTimeStamp",
+    "Hcom.gcmtravel.VDSReport": "com.gcmtravel.VDSReport",
+    "Hcom.gcmtravel.VDSReportElement": "com.gcmtravel.VDSReportElement",
+    "HvdsType": "vdsType",
+    "Hvolume": "volume",
+    "Hoccupancy": "occupancy",
+    "Hspeed": "speed",
+    "HisSpeedTrap": "isSpeedTrap",
+    "HdetectorizationRatio": "detectorizationRatio",
+    "Hparent-1": "parent",
+    "HLocations": "Locations",
+    "HCommonelementsoflocations": "Common elements of locations",
+    "HLatLongPointandLatLongSection": "LatLongPoint and LatLongSection",
+    "HLandmarkPointandLandmarkSection": "LandmarkPoint and LandmarkSection",
+    "HAddressPointandAddressSection": "AddressPoint and AddressSection",
+    "HMilePointPointandMilePointSection": "MilePointPoint and MilePointSection",
+    "HCrossStreetPointandCrossStreetSection": "CrossStreetPoint and CrossStreetSection",
+    "HRampPointandRampSection": "RampPoint and RampSection",
+    "HBetweenStreetPointandBetweenStreetSection": "BetweenStreetPoint and BetweenStreetSection",
+    "HGeometryPointandGeometrySection": "GeometryPoint and GeometrySection",
+    "HText": "Text",
+    "HLanedescriptions": "Lane descriptions",
+    "HLinearLocation": "LinearLocation",
+    "HRoadwayLocation": "RoadwayLocation"
+   },
+   "attachments": {}
+  },
+  "User Guides and Manuals/GTIS Smart Work Zone Specifications for Construction Contractors and Vendors.xwiki": {
+   "title": "GTIS Smart Work Zone Specifications for Construction Contractors and Vendors",
+   "segs": [
+    "User-Guides-Manuals",
+    "GTIS-Smart-Work-Zone-Specifications-for-Construction-Contractors-and-Vendors"
+   ],
+   "ref": "User-Guides-Manuals.GTIS-Smart-Work-Zone-Specifications-for-Construction-Contractors-and-Vendors.WebHome",
+   "view_url": "https://wiki.travelmidwest.com/bin/view/User-Guides-Manuals/GTIS-Smart-Work-Zone-Specifications-for-Construction-Contractors-and-Vendors/",
+   "anchors": {
+    "HIntroduction": "Introduction",
+    "HDevicesSupported": "Devices Supported",
+    "HSupportedIntegrationMethods": "Supported Integration Methods",
+    "HUploadtoTravelMidwest.com": "Upload to TravelMidwest.com",
+    "HUploadtoJamLogic": "Upload to JamLogic",
+    "HUploadtoiConeTraffic": "Upload to iConeTraffic"
+   },
+   "attachments": {}
+  },
+  "User Guides and Manuals/XML and Camera Image Download Manual.xwiki": {
+   "title": "XML and Camera Image Download Manual",
+   "segs": [
+    "User-Guides-Manuals",
+    "XML-and-Camera-Image-Download-Manual"
+   ],
+   "ref": "User-Guides-Manuals.XML-and-Camera-Image-Download-Manual.WebHome",
+   "view_url": "https://wiki.travelmidwest.com/bin/view/User-Guides-Manuals/XML-and-Camera-Image-Download-Manual/",
+   "anchors": {
+    "HIntroduction": "Introduction",
+    "HAbout": "About",
+    "HPurpose": "Purpose",
+    "HObtaininganAccount": "Obtaining an Account",
+    "HXMLTrafficData": "XML Traffic Data",
+    "HGatewayDataTypes": "Gateway Data Types",
+    "HXMLVersion": "XML Version",
+    "HXMLGeneration": "XML Generation",
+    "HDownloadingGatewayXMLData": "Downloading Gateway XML Data",
+    "HWebBrowser": "Web Browser",
+    "HWget": "Wget",
+    "HJava": "Java",
+    "HPython": "Python",
+    "HCheckingforNewData": "Checking for New Data",
+    "HCameraImages": "Camera Images",
+    "Hcctv.travelmidwest.com": "cctv.travelmidwest.com",
+    "HDMSImages": "DMS Images"
+   },
+   "attachments": {
+    "DMS.2018-11-9_15-47-26.png": "https://wiki.travelmidwest.com/bin/download/User-Guides-Manuals/XML-and-Camera-Image-Download-Manual/WebHome/DMS.2018-11-9_15-47-26.png",
+    "dms_report.py": "https://wiki.travelmidwest.com/bin/download/User-Guides-Manuals/XML-and-Camera-Image-Download-Manual/WebHome/dms_report.py",
+    "vds_report.py": "https://wiki.travelmidwest.com/bin/download/User-Guides-Manuals/XML-and-Camera-Image-Download-Manual/WebHome/vds_report.py",
+    "wss_report.py": "https://wiki.travelmidwest.com/bin/download/User-Guides-Manuals/XML-and-Camera-Image-Download-Manual/WebHome/wss_report.py"
+   }
+  },
+  "XMl Upload Manual.xwiki": {
+   "title": "XML Upload Manual",
+   "segs": [
+    "Web-Services",
+    "XML-Upload-Manual"
+   ],
+   "ref": "Web-Services.XML-Upload-Manual.WebHome",
+   "view_url": "https://wiki.travelmidwest.com/bin/view/Web-Services/XML-Upload-Manual/",
+   "anchors": {
+    "HIntroduction": "Introduction",
+    "HWebService": "Web Service",
+    "HSchemas": "Schemas",
+    "HExamples": "Examples",
+    "HUploadaLinkTrafficReporttotheGateway": "Upload a LinkTrafficReport to the Gateway",
+    "HPerldemoclient": "Perl demo client",
+    "HJavademoclient:": "Java demo client:",
+    "HExampleLinkTrafficReportXML": "Example LinkTrafficReport XML",
+    "HExampleDMSReport": "Example DMSReport",
+    "HValidations": "Validations",
+    "HLinkTrafficReport": "LinkTrafficReport",
+    "HVDSReport": "VDSReport",
+    "HTroubleshooting": "Troubleshooting",
+    "HHTTPoverTLS": "HTTP over TLS",
+    "HHTTPStatusCode:413PayloadTooLarge": "HTTP Status Code: 413 Payload Too Large"
+   },
+   "attachments": {
+    "IncidentReport.xsd": "https://wiki.travelmidwest.com/bin/download/Web-Services/XML-Upload-Manual/WebHome/IncidentReport.xsd",
+    "LinkCongestionReport.xsd": "https://wiki.travelmidwest.com/bin/download/Web-Services/XML-Upload-Manual/WebHome/LinkCongestionReport.xsd",
+    "LinkTrafficReport.xsd": "https://wiki.travelmidwest.com/bin/download/Web-Services/XML-Upload-Manual/WebHome/LinkTrafficReport.xsd",
+    "RoadWorkReport.xsd": "https://wiki.travelmidwest.com/bin/download/Web-Services/XML-Upload-Manual/WebHome/RoadWorkReport.xsd",
+    "SpecialEventReport.xsd": "https://wiki.travelmidwest.com/bin/download/Web-Services/XML-Upload-Manual/WebHome/SpecialEventReport.xsd",
+    "VDSReport.xsd": "https://wiki.travelmidwest.com/bin/download/Web-Services/XML-Upload-Manual/WebHome/VDSReport.xsd",
+    "WSSReport.xsd": "https://wiki.travelmidwest.com/bin/download/Web-Services/XML-Upload-Manual/WebHome/WSSReport.xsd",
+    "DMSReport.xsd": "https://wiki.travelmidwest.com/bin/download/Web-Services/XML-Upload-Manual/WebHome/DMSReport.xsd",
+    "HARReport.xsd": "https://wiki.travelmidwest.com/bin/download/Web-Services/XML-Upload-Manual/WebHome/HARReport.xsd"
+   }
+  }
+ },
+ "diagrams": {
+  "FieldDeviceClassDiagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" style=\"background-color: rgb(255, 255, 255);\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"384px\" height=\"205px\" version=\"1.1\"><defs/><g transform=\"translate(0.5,0.5)\"><rect x=\"101\" y=\"1\" width=\"140\" height=\"70\" fill=\"#000000\" stroke=\"#000000\" stroke-width=\"2\" transform=\"translate(2,3)\" opacity=\"0.25\"/><rect x=\"101\" y=\"1\" width=\"140\" height=\"70\" fill=\"#ffffff\" stroke=\"#000000\" stroke-width=\"2\" pointer-events=\"none\"/><g transform=\"translate(104.5,28.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"133\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 134px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 133.0px ; height: auto\"><div align=\"center\"><span style=\"font-weight: bold ; font-family: &quot;arial&quot; ; font-size: 12px ; text-decoration: none ; line-height: 0\"><span style=\"text-decoration: none ; line-height: 14px\" class=\"\">FieldDevice</span></span></div></div></div></div></foreignObject><text x=\"67\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><rect x=\"1\" y=\"151\" width=\"80\" height=\"50\" fill=\"#000000\" stroke=\"#000000\" stroke-width=\"2\" transform=\"translate(2,3)\" opacity=\"0.25\"/><rect x=\"1\" y=\"151\" width=\"80\" height=\"50\" fill=\"#ffffff\" stroke=\"#000000\" stroke-width=\"2\" pointer-events=\"none\"/><g transform=\"translate(3.5,168.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"75\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 76px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 74.71429px ; height: auto\"><div align=\"center\"><span style=\"font-weight: bold ; font-family: &quot;arial&quot; ; font-size: 12px ; text-decoration: none ; line-height: 0\"><span style=\"text-decoration: none ; line-height: 14px\">WSS</span></span></div></div></div></div></foreignObject><text x=\"38\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><rect x=\"101\" y=\"151\" width=\"80\" height=\"50\" fill=\"#000000\" stroke=\"#000000\" stroke-width=\"2\" transform=\"translate(2,3)\" opacity=\"0.25\"/><rect x=\"101\" y=\"151\" width=\"80\" height=\"50\" fill=\"#ffffff\" stroke=\"#000000\" stroke-width=\"2\" pointer-events=\"none\"/><g transform=\"translate(103.5,168.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"75\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 76px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 74.71429px ; height: auto\"><div align=\"center\"><span style=\"font-weight: bold ; font-family: &quot;arial&quot; ; font-size: 12px ; text-decoration: none ; line-height: 0\"><span style=\"text-decoration: none ; line-height: 14px\">DMS</span></span></div></div></div></div></foreignObject><text x=\"38\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><rect x=\"201\" y=\"151\" width=\"80\" height=\"50\" fill=\"#000000\" stroke=\"#000000\" stroke-width=\"2\" transform=\"translate(2,3)\" opacity=\"0.25\"/><rect x=\"201\" y=\"151\" width=\"80\" height=\"50\" fill=\"#ffffff\" stroke=\"#000000\" stroke-width=\"2\" pointer-events=\"none\"/><g transform=\"translate(203.5,168.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"75\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 76px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 74.71429px ; height: auto\"><div align=\"center\"><span style=\"font-weight: bold ; font-family: &quot;arial&quot; ; font-size: 12px ; text-decoration: none ; line-height: 14px\">VDS</span></div></div></div></div></foreignObject><text x=\"38\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><rect x=\"301\" y=\"151\" width=\"80\" height=\"50\" fill=\"#000000\" stroke=\"#000000\" stroke-width=\"2\" transform=\"translate(2,3)\" opacity=\"0.25\"/><rect x=\"301\" y=\"151\" width=\"80\" height=\"50\" fill=\"#ffffff\" stroke=\"#000000\" stroke-width=\"2\" pointer-events=\"none\"/><g transform=\"translate(303.5,168.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"75\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 76px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 74.71429px ; height: auto\"><div align=\"center\"><span style=\"font-weight: bold ; font-family: &quot;arial&quot; ; font-size: 12px ; text-decoration: none ; line-height: 14px\">HAR</span></div></div></div></div></foreignObject><text x=\"38\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><path d=\"M 171 71 L 171 101 Q 171 111 161 111 L 51 111 Q 41 111 41 121 L 41 151\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 141 151 L 141 121 Q 141 111 151 111 L 161 111 Q 171 111 171 101 L 171 71\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 241 151 L 241 121 Q 241 111 231 111 L 181 111 Q 171 111 171 101 L 171 71\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 341 151 L 341 121 Q 341 111 331 111 L 181 111 Q 171 111 171 101 L 171 71\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/></g></svg>",
+  "RoadwayEventClassHierarchyDiagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" style=\"background-color: rgb(255, 255, 255);\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"574px\" height=\"330px\" version=\"1.1\"><defs/><g transform=\"translate(0.5,0.5)\"><rect x=\"191\" y=\"1\" width=\"140\" height=\"75\" fill=\"none\" stroke=\"none\" transform=\"translate(2,3)\" opacity=\"0.25\"/><rect x=\"191\" y=\"1\" width=\"140\" height=\"18\" fill=\"#000000\" stroke=\"#000000\" stroke-width=\"2\" transform=\"translate(2,3)\" opacity=\"0.25\"/><rect x=\"191\" y=\"1\" width=\"140\" height=\"18\" fill=\"#ffffff\" stroke=\"#000000\" stroke-width=\"2\" pointer-events=\"none\"/><g transform=\"translate(191.5,3.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"137\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 138px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 137.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; font-weight: bold ; text-decoration: none ; line-height: 14px\">RoadwayEvent</span></div></div></div></div></foreignObject><text x=\"69\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><rect x=\"191\" y=\"19\" width=\"140\" height=\"18\" fill=\"#000000\" stroke=\"#000000\" stroke-width=\"2\" transform=\"translate(2,3)\" opacity=\"0.25\"/><rect x=\"191\" y=\"19\" width=\"140\" height=\"18\" fill=\"#ffffff\" stroke=\"#000000\" stroke-width=\"2\" pointer-events=\"none\"/><g transform=\"translate(193.5,21.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"137\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 138px; white-space: nowrap; overflow-wrap: normal;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 137.0px ; height: auto\"><div align=\"left\"><span class=\"gliffy-placeholder-text\" style=\"font-family: &quot;arial&quot; ; font-size: 12px ; font-weight: normal ; text-decoration: none ; line-height: 14px ; color: rgb(0 , 0 , 0)\">Attribute</span></div></div></div></div></foreignObject><text x=\"69\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><rect x=\"191\" y=\"37\" width=\"140\" height=\"39\" fill=\"#000000\" stroke=\"#000000\" stroke-width=\"2\" transform=\"translate(2,3)\" opacity=\"0.25\"/><rect x=\"191\" y=\"37\" width=\"140\" height=\"39\" fill=\"#ffffff\" stroke=\"#000000\" stroke-width=\"2\" pointer-events=\"none\"/><g transform=\"translate(193.5,39.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"137\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 138px; white-space: nowrap; overflow-wrap: normal;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 137.0px ; height: auto\"><div align=\"left\"><span class=\"gliffy-placeholder-text\" style=\"font-family: &quot;arial&quot; ; font-size: 12px ; font-weight: normal ; text-decoration: none ; line-height: 14px ; color: rgb(0 , 0 , 0)\">Method</span></div></div></div></div></foreignObject><text x=\"69\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><rect x=\"121\" y=\"131\" width=\"140\" height=\"75\" fill=\"none\" stroke=\"none\" transform=\"translate(2,3)\" opacity=\"0.25\"/><rect x=\"121\" y=\"131\" width=\"140\" height=\"18\" fill=\"#000000\" stroke=\"#000000\" stroke-width=\"2\" transform=\"translate(2,3)\" opacity=\"0.25\"/><rect x=\"121\" y=\"131\" width=\"140\" height=\"18\" fill=\"#ffffff\" stroke=\"#000000\" stroke-width=\"2\" pointer-events=\"none\"/><g transform=\"translate(121.5,133.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"137\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 138px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 137.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; font-weight: bold ; text-decoration: none ; line-height: 14px\" class=\"\">ScheduledEvent</span></div></div></div></div></foreignObject><text x=\"69\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><rect x=\"121\" y=\"149\" width=\"140\" height=\"18\" fill=\"#000000\" stroke=\"#000000\" stroke-width=\"2\" transform=\"translate(2,3)\" opacity=\"0.25\"/><rect x=\"121\" y=\"149\" width=\"140\" height=\"18\" fill=\"#ffffff\" stroke=\"#000000\" stroke-width=\"2\" pointer-events=\"none\"/><g transform=\"translate(123.5,151.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"137\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 138px; white-space: nowrap; overflow-wrap: normal;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 137.0px ; height: auto\"><div align=\"left\"><span class=\"gliffy-placeholder-text\" style=\"font-family: &quot;arial&quot; ; font-size: 12px ; font-weight: normal ; text-decoration: none ; line-height: 14px ; color: rgb(0 , 0 , 0)\">Attribute</span></div></div></div></div></foreignObject><text x=\"69\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><rect x=\"121\" y=\"167\" width=\"140\" height=\"39\" fill=\"#000000\" stroke=\"#000000\" stroke-width=\"2\" transform=\"translate(2,3)\" opacity=\"0.25\"/><rect x=\"121\" y=\"167\" width=\"140\" height=\"39\" fill=\"#ffffff\" stroke=\"#000000\" stroke-width=\"2\" pointer-events=\"none\"/><g transform=\"translate(123.5,169.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"137\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 138px; white-space: nowrap; overflow-wrap: normal;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 137.0px ; height: auto\"><div align=\"left\"><span class=\"gliffy-placeholder-text\" style=\"font-family: &quot;arial&quot; ; font-size: 12px ; font-weight: normal ; text-decoration: none ; line-height: 14px ; color: rgb(0 , 0 , 0)\">Method</span></div></div></div></div></foreignObject><text x=\"69\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><path d=\"M 191 131 L 191 104 L 261 104 L 261 88.12\" fill=\"none\" stroke=\"#000000\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 261 77.12 L 266.5 88.12 L 255.5 88.12 Z\" fill=\"none\" stroke=\"#000000\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><rect x=\"1\" y=\"251\" width=\"140\" height=\"75\" fill=\"none\" stroke=\"none\" transform=\"translate(2,3)\" opacity=\"0.25\"/><rect x=\"1\" y=\"251\" width=\"140\" height=\"18\" fill=\"#000000\" stroke=\"#000000\" stroke-width=\"2\" transform=\"translate(2,3)\" opacity=\"0.25\"/><rect x=\"1\" y=\"251\" width=\"140\" height=\"18\" fill=\"#ffffff\" stroke=\"#000000\" stroke-width=\"2\" pointer-events=\"none\"/><g transform=\"translate(1.5,253.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"137\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 138px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 137.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; font-weight: bold ; text-decoration: none ; line-height: 14px\" class=\"\">RoadWork</span></div></div></div></div></foreignObject><text x=\"69\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><rect x=\"1\" y=\"269\" width=\"140\" height=\"18\" fill=\"#000000\" stroke=\"#000000\" stroke-width=\"2\" transform=\"translate(2,3)\" opacity=\"0.25\"/><rect x=\"1\" y=\"269\" width=\"140\" height=\"18\" fill=\"#ffffff\" stroke=\"#000000\" stroke-width=\"2\" pointer-events=\"none\"/><g transform=\"translate(3.5,271.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"137\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 138px; white-space: nowrap; overflow-wrap: normal;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 137.0px ; height: auto\"><div align=\"left\"><span class=\"gliffy-placeholder-text\" style=\"font-family: &quot;arial&quot; ; font-size: 12px ; font-weight: normal ; text-decoration: none ; line-height: 14px ; color: rgb(0 , 0 , 0)\">Attribute</span></div></div></div></div></foreignObject><text x=\"69\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><rect x=\"1\" y=\"287\" width=\"140\" height=\"39\" fill=\"#000000\" stroke=\"#000000\" stroke-width=\"2\" transform=\"translate(2,3)\" opacity=\"0.25\"/><rect x=\"1\" y=\"287\" width=\"140\" height=\"39\" fill=\"#ffffff\" stroke=\"#000000\" stroke-width=\"2\" pointer-events=\"none\"/><g transform=\"translate(3.5,289.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"137\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 138px; white-space: nowrap; overflow-wrap: normal;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 137.0px ; height: auto\"><div align=\"left\"><span class=\"gliffy-placeholder-text\" style=\"font-family: &quot;arial&quot; ; font-size: 12px ; font-weight: normal ; text-decoration: none ; line-height: 14px ; color: rgb(0 , 0 , 0)\">Method</span></div></div></div></div></foreignObject><text x=\"69\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><rect x=\"211\" y=\"251\" width=\"140\" height=\"75\" fill=\"none\" stroke=\"none\" transform=\"translate(2,3)\" opacity=\"0.25\"/><rect x=\"211\" y=\"251\" width=\"140\" height=\"18\" fill=\"#000000\" stroke=\"#000000\" stroke-width=\"2\" transform=\"translate(2,3)\" opacity=\"0.25\"/><rect x=\"211\" y=\"251\" width=\"140\" height=\"18\" fill=\"#ffffff\" stroke=\"#000000\" stroke-width=\"2\" pointer-events=\"none\"/><g transform=\"translate(211.5,253.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"137\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 138px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 137.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; font-weight: bold ; text-decoration: none ; line-height: 14px\" class=\"\">SpecialEvent</span></div></div></div></div></foreignObject><text x=\"69\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><rect x=\"211\" y=\"269\" width=\"140\" height=\"18\" fill=\"#000000\" stroke=\"#000000\" stroke-width=\"2\" transform=\"translate(2,3)\" opacity=\"0.25\"/><rect x=\"211\" y=\"269\" width=\"140\" height=\"18\" fill=\"#ffffff\" stroke=\"#000000\" stroke-width=\"2\" pointer-events=\"none\"/><g transform=\"translate(213.5,271.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"137\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 138px; white-space: nowrap; overflow-wrap: normal;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 137.0px ; height: auto\"><div align=\"left\"><span class=\"gliffy-placeholder-text\" style=\"font-family: &quot;arial&quot; ; font-size: 12px ; font-weight: normal ; text-decoration: none ; line-height: 14px ; color: rgb(0 , 0 , 0)\">Attribute</span></div></div></div></div></foreignObject><text x=\"69\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><rect x=\"211\" y=\"287\" width=\"140\" height=\"39\" fill=\"#000000\" stroke=\"#000000\" stroke-width=\"2\" transform=\"translate(2,3)\" opacity=\"0.25\"/><rect x=\"211\" y=\"287\" width=\"140\" height=\"39\" fill=\"#ffffff\" stroke=\"#000000\" stroke-width=\"2\" pointer-events=\"none\"/><g transform=\"translate(213.5,289.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"137\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 138px; white-space: nowrap; overflow-wrap: normal;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 137.0px ; height: auto\"><div align=\"left\"><span class=\"gliffy-placeholder-text\" style=\"font-family: &quot;arial&quot; ; font-size: 12px ; font-weight: normal ; text-decoration: none ; line-height: 14px ; color: rgb(0 , 0 , 0)\">Method</span></div></div></div></div></foreignObject><text x=\"69\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><rect x=\"431\" y=\"131\" width=\"140\" height=\"75\" fill=\"none\" stroke=\"none\" transform=\"translate(2,3)\" opacity=\"0.25\"/><rect x=\"431\" y=\"131\" width=\"140\" height=\"18\" fill=\"#000000\" stroke=\"#000000\" stroke-width=\"2\" transform=\"translate(2,3)\" opacity=\"0.25\"/><rect x=\"431\" y=\"131\" width=\"140\" height=\"18\" fill=\"#ffffff\" stroke=\"#000000\" stroke-width=\"2\" pointer-events=\"none\"/><g transform=\"translate(431.5,133.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"137\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 138px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 137.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; font-weight: bold ; text-decoration: none ; line-height: 14px\" class=\"\">Incident</span></div></div></div></div></foreignObject><text x=\"69\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><rect x=\"431\" y=\"149\" width=\"140\" height=\"18\" fill=\"#000000\" stroke=\"#000000\" stroke-width=\"2\" transform=\"translate(2,3)\" opacity=\"0.25\"/><rect x=\"431\" y=\"149\" width=\"140\" height=\"18\" fill=\"#ffffff\" stroke=\"#000000\" stroke-width=\"2\" pointer-events=\"none\"/><g transform=\"translate(433.5,151.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"137\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 138px; white-space: nowrap; overflow-wrap: normal;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 137.0px ; height: auto\"><div align=\"left\"><span class=\"gliffy-placeholder-text\" style=\"font-family: &quot;arial&quot; ; font-size: 12px ; font-weight: normal ; text-decoration: none ; line-height: 14px ; color: rgb(0 , 0 , 0)\">Attribute</span></div></div></div></div></foreignObject><text x=\"69\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><rect x=\"431\" y=\"167\" width=\"140\" height=\"39\" fill=\"#000000\" stroke=\"#000000\" stroke-width=\"2\" transform=\"translate(2,3)\" opacity=\"0.25\"/><rect x=\"431\" y=\"167\" width=\"140\" height=\"39\" fill=\"#ffffff\" stroke=\"#000000\" stroke-width=\"2\" pointer-events=\"none\"/><g transform=\"translate(433.5,169.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"137\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 138px; white-space: nowrap; overflow-wrap: normal;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 137.0px ; height: auto\"><div align=\"left\"><span class=\"gliffy-placeholder-text\" style=\"font-family: &quot;arial&quot; ; font-size: 12px ; font-weight: normal ; text-decoration: none ; line-height: 14px ; color: rgb(0 , 0 , 0)\">Method</span></div></div></div></div></foreignObject><text x=\"69\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><path d=\"M 501 131 L 501 104 L 261 104 L 261 88.12\" fill=\"none\" stroke=\"#000000\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 261 77.12 L 266.5 88.12 L 255.5 88.12 Z\" fill=\"none\" stroke=\"#000000\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><g transform=\"translate(471.5,109.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"29\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; white-space: nowrap; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;background-color:#FFFFFF;\"><div style=\"width: 29.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; line-height: 14px\">0..*</span></div></div></div></div></foreignObject><text x=\"15\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><path d=\"M 71 251 L 71 229 L 191 229 L 191 218.12\" fill=\"none\" stroke=\"#000000\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 191 207.12 L 196.5 218.12 L 185.5 218.12 Z\" fill=\"none\" stroke=\"#000000\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 281 251 L 281 229 L 191 229 L 191 218.12\" fill=\"none\" stroke=\"#000000\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 191 207.12 L 196.5 218.12 L 185.5 218.12 Z\" fill=\"none\" stroke=\"#000000\" stroke-miterlimit=\"10\" pointer-events=\"none\"/></g></svg>",
+  "RoadwayLocationsBreakdownWithLanesAndWithoutDiagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" style=\"background-color: rgb(255, 255, 255);\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"652px\" height=\"357px\" version=\"1.1\"><defs/><g transform=\"translate(0.5,0.5)\"><rect x=\"301\" y=\"1\" width=\"100\" height=\"75\" fill=\"#ffffff\" stroke=\"#333333\" stroke-width=\"2\" pointer-events=\"none\"/><g transform=\"translate(304.5,30.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"93\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 94px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 93.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; text-decoration: none ; line-height: 0\"><span style=\"text-decoration: none ; line-height: 14px\" class=\"\">Roadway Locations</span></span></div></div></div></div></foreignObject><text x=\"47\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><rect x=\"121\" y=\"151\" width=\"100\" height=\"75\" fill=\"#ffffff\" stroke=\"#333333\" stroke-width=\"2\" pointer-events=\"none\"/><g transform=\"translate(124.5,180.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"93\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 94px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 93.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; text-decoration: none ; line-height: 0\"><span style=\"text-decoration: none ; line-height: 14px\" class=\"\">Linear Locations</span></span></div></div></div></div></foreignObject><text x=\"47\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><rect x=\"421\" y=\"151\" width=\"100\" height=\"75\" fill=\"#ffffff\" stroke=\"#333333\" stroke-width=\"2\" pointer-events=\"none\"/><g transform=\"translate(424.5,180.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"93\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 94px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 93.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; text-decoration: none ; line-height: 0\"><span style=\"text-decoration: none ; line-height: 14px\" class=\"\">Linear + Lanes</span></span></div></div></div></div></foreignObject><text x=\"47\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><rect x=\"1\" y=\"281\" width=\"100\" height=\"75\" fill=\"#ffffff\" stroke=\"#333333\" stroke-width=\"2\" pointer-events=\"none\"/><g transform=\"translate(4.5,310.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"93\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 94px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 93.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; text-decoration: none ; line-height: 0\"><span style=\"text-decoration: none ; line-height: 14px\" class=\"\">Points</span></span></div></div></div></div></foreignObject><text x=\"47\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><rect x=\"201\" y=\"281\" width=\"100\" height=\"75\" fill=\"#ffffff\" stroke=\"#333333\" stroke-width=\"2\" pointer-events=\"none\"/><g transform=\"translate(204.5,310.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"93\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 94px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 93.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; text-decoration: none ; line-height: 0\"><span style=\"text-decoration: none ; line-height: 14px\" class=\"\">Sections</span></span></div></div></div></div></foreignObject><text x=\"47\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><rect x=\"371\" y=\"281\" width=\"100\" height=\"75\" fill=\"#ffffff\" stroke=\"#333333\" stroke-width=\"2\" pointer-events=\"none\"/><g transform=\"translate(374.5,310.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"93\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 94px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 93.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; text-decoration: none ; line-height: 0\"><span style=\"text-decoration: none ; line-height: 14px\" class=\"\">Points with Lanes</span></span></div></div></div></div></foreignObject><text x=\"47\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><rect x=\"551\" y=\"281\" width=\"100\" height=\"75\" fill=\"#ffffff\" stroke=\"#333333\" stroke-width=\"2\" pointer-events=\"none\"/><g transform=\"translate(554.5,310.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"93\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 94px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 93.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; text-decoration: none ; line-height: 0\"><span style=\"text-decoration: none ; line-height: 14px\" class=\"\">Sections with Lanes</span></span></div></div></div></div></foreignObject><text x=\"47\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><path d=\"M 351 76 L 351 104 Q 351 114 341 114 L 181 114 Q 171 114 171 124 L 171 151\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 171 226 L 171 244 Q 171 254 161 254 L 61 254 Q 51 254 51 264 L 51 281\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 171 226 L 171 244 Q 171 254 181 254 L 241 254 Q 251 254 251 264 L 251 281\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 351 76 L 351 104 Q 351 114 361 114 L 461 114 Q 471 114 471 124 L 471 151\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 471 226 L 471 244 Q 471 254 461 254 L 431 254 Q 421 254 421 264 L 421 281\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 471 226 L 471 244 Q 471 254 481 254 L 591 254 Q 601 254 601 264 L 601 281\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/></g></svg>",
+  "LatLongDiagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" style=\"background-color: rgb(255, 255, 255);\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"614px\" height=\"47px\" version=\"1.1\"><defs/><g transform=\"translate(0.5,0.5)\"><path d=\"M 8 15 L 593.78 15\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 601.78 15 L 593.78 19 L 593.78 11 Z\" fill=\"#000000\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><ellipse cx=\"92\" cy=\"14\" rx=\"10\" ry=\"10\" fill=\"#ffffff\" stroke=\"#000000\" pointer-events=\"none\"/><ellipse cx=\"482\" cy=\"14\" rx=\"10\" ry=\"10\" fill=\"#ffffff\" stroke=\"#000000\" pointer-events=\"none\"/><g transform=\"translate(18.5,31.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"147\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 148px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 147.0px ; height: auto\"><div align=\"center\"><span style=\"font-size: 12px ; font-family: &quot;arial&quot; ; line-height: 0\"><span style=\"line-height: 14px\">startLatLong</span></span></div></div></div></div></foreignObject><text x=\"74\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><g transform=\"translate(408.5,31.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"147\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 148px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 147.0px ; height: auto\"><div align=\"center\"><span style=\"font-size: 12px ; font-family: &quot;arial&quot; ; line-height: 0\"><span style=\"line-height: 14px\">endLatLong</span></span></div></div></div></div></foreignObject><text x=\"74\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><rect x=\"194\" y=\"0.5\" width=\"162\" height=\"27\" fill=\"#ffffff\" stroke=\"#000000\" pointer-events=\"none\"/><g transform=\"translate(198.5,6.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"155\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 156px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 155.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; text-decoration: none ; line-height: 14px\">roadwayName</span></div></div></div></div></foreignObject><text x=\"78\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g></g></svg>",
+  "LandmarkSectionDiagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" style=\"background-color: rgb(255, 255, 255);\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"861px\" height=\"135px\" version=\"1.1\"><defs/><g transform=\"translate(0.5,0.5)\"><path d=\"M 50 45 L 807.76 45\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 815.76 45 L 807.76 49 L 807.76 41 Z\" fill=\"#000000\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><ellipse cx=\"220\" cy=\"44\" rx=\"10\" ry=\"10\" fill=\"#ffffff\" stroke=\"#000000\" pointer-events=\"none\"/><ellipse cx=\"600\" cy=\"44\" rx=\"10\" ry=\"10\" fill=\"#ffffff\" stroke=\"#000000\" pointer-events=\"none\"/><path d=\"M 60 80 L 70 80 L 70 80 L 90 90 L 70 100 L 70 100 L 60 100 L 60 90 Z\" fill=\"#ffffff\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" transform=\"rotate(270,75,90)\" pointer-events=\"none\"/><rect x=\"72.5\" y=\"92.5\" width=\"5\" height=\"20\" fill=\"#ffffff\" stroke=\"none\" transform=\"rotate(270,75,102.5)\" pointer-events=\"none\"/><rect x=\"72.5\" y=\"92.5\" width=\"5\" height=\"20\" fill=\"#ffffff\" stroke=\"none\" transform=\"rotate(270,75,102.5)\" pointer-events=\"none\"/><path d=\"M 72.5 92.5 L 77.5 92.5\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" transform=\"rotate(270,75,102.5)\" pointer-events=\"none\"/><path d=\"M 77.5 112.5 L 72.5 112.5\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" transform=\"rotate(270,75,102.5)\" pointer-events=\"none\"/><path d=\"M 72.5 112.5 L 72.5 92.5\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" transform=\"rotate(270,75,102.5)\" pointer-events=\"none\"/><g transform=\"translate(74.5,87.5)rotate(270,0,6)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"2\" height=\"12\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; white-space: nowrap; width: 3px;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 2.0px ; height: auto\"><div align=\"left\"><span style=\"text-decoration: none ; line-height: 14px\"> </span></div></div></div></div></foreignObject><text x=\"1\" y=\"12\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><g transform=\"translate(136.5,-0.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"147\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 148px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 147.0px ; height: auto\"><div align=\"center\"><span style=\"font-size: 12px ; font-family: &quot;arial&quot; ; line-height: 0\"><span style=\"line-height: 14px\">Section Start</span></span></div></div></div></div></foreignObject><text x=\"74\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><g transform=\"translate(516.5,-0.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"147\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 148px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 147.0px ; height: auto\"><div align=\"center\"><span style=\"font-size: 12px ; font-family: &quot;arial&quot; ; line-height: 0\"><span style=\"line-height: 14px\">Section End</span></span></div></div></div></div></foreignObject><text x=\"74\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><path d=\"M 222 59 L 222 107\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 602 59 L 602 107\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 85 90 L 213.53 90\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 207.76 94 L 215.76 90 L 207.76 86\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 770.01 87 L 608.47 87\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 614.24 83 L 606.24 87 L 614.24 91\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><g transform=\"translate(61.5,67.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"147\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 148px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 147.0px ; height: auto\"><div align=\"center\"><span style=\"font-size: 12px ; font-family: &quot;arial&quot; ; line-height: 0\"><span style=\"line-height: 14px\">startOffset</span></span></div></div></div></div></foreignObject><text x=\"74\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><g transform=\"translate(601.5,67.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"147\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 148px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 147.0px ; height: auto\"><div align=\"center\"><span style=\"font-size: 12px ; font-family: &quot;arial&quot; ; line-height: 0\"><span style=\"line-height: 14px\">endOffset (negative dir)</span></span></div></div></div></div></foreignObject><text x=\"74\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><rect x=\"320\" y=\"30\" width=\"150\" height=\"30\" fill=\"#ffffff\" stroke=\"#000000\" pointer-events=\"none\"/><g transform=\"translate(323.5,37.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"144\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 145px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 144.27272px ; height: auto\"><div align=\"center\"><span style=\"font-size: 12px ; text-decoration: none ; font-family: &quot;arial&quot; ; line-height: 14px\">roadwayName</span></div></div></div></div></foreignObject><text x=\"72\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><path d=\"M 770 80 L 780 80 L 780 80 L 800 90 L 780 100 L 780 100 L 770 100 L 770 90 Z\" fill=\"#ffffff\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" transform=\"rotate(270,785,90)\" pointer-events=\"none\"/><rect x=\"782.5\" y=\"92.5\" width=\"5\" height=\"20\" fill=\"#ffffff\" stroke=\"none\" transform=\"rotate(270,785,102.5)\" pointer-events=\"none\"/><rect x=\"782.5\" y=\"92.5\" width=\"5\" height=\"20\" fill=\"#ffffff\" stroke=\"none\" transform=\"rotate(270,785,102.5)\" pointer-events=\"none\"/><path d=\"M 782.5 92.5 L 787.5 92.5\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" transform=\"rotate(270,785,102.5)\" pointer-events=\"none\"/><path d=\"M 787.5 112.5 L 782.5 112.5\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" transform=\"rotate(270,785,102.5)\" pointer-events=\"none\"/><path d=\"M 782.5 112.5 L 782.5 92.5\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" transform=\"rotate(270,785,102.5)\" pointer-events=\"none\"/><g transform=\"translate(784.5,87.5)rotate(270,0,6)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"2\" height=\"12\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; white-space: nowrap; width: 3px;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 2.0px ; height: auto\"><div align=\"left\"><span style=\"text-decoration: none ; line-height: 14px\"> </span></div></div></div></div></foreignObject><text x=\"1\" y=\"12\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><g transform=\"translate(1.5,119.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"147\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 148px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 147.0px ; height: auto\"><div align=\"center\"><span style=\"font-size: 12px ; font-family: &quot;arial&quot; ; line-height: 0\"><span style=\"line-height: 14px\">startLandmarkName</span></span></div></div></div></div></foreignObject><text x=\"74\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><g transform=\"translate(711.5,112.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"147\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 148px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 147.0px ; height: auto\"><div align=\"center\"><span style=\"font-size: 12px ; font-family: &quot;arial&quot; ; line-height: 0\"><span style=\"line-height: 14px\">endLandmarkName</span></span></div></div></div></div></foreignObject><text x=\"74\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g></g></svg>",
+  "CrossStreetSectionDiagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" style=\"background-color: rgb(255, 255, 255);\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"846px\" height=\"151px\" version=\"1.1\"><defs/><g transform=\"translate(0.5,0.5)\"><path d=\"M 8 57 L 831.53 57\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 825.77 61 L 833.77 57 L 825.77 53\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><rect x=\"258\" y=\"46\" width=\"230\" height=\"20\" fill=\"#ffffff\" stroke=\"#000000\" pointer-events=\"none\"/><g transform=\"translate(262.5,48.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"223\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 224px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 223.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; text-decoration: none ; line-height: 14px\">roadName</span></div></div></div></div></foreignObject><text x=\"112\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><path d=\"M 54 11 L 54 133\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 758 11 L 758 135.02\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><g transform=\"translate(-30.5,67.5)rotate(270,73.5,7)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"147\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 148px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 147.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; line-height: 0\"><span style=\"line-height: 14px\" class=\"\">fromCrossStreetName</span></span></div></div></div></div></foreignObject><text x=\"74\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><g transform=\"translate(699.5,67.5)rotate(90,73.5,7)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"147\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 148px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 147.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; line-height: 0\"><span style=\"line-height: 14px\" class=\"\">toCrossStreetName</span></span></div></div></div></div></foreignObject><text x=\"74\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><path d=\"M 56 79 L 193.65 79\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-dasharray=\"4 4\" pointer-events=\"none\"/><path d=\"M 187.89 83 L 195.89 79 L 187.89 75\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><ellipse cx=\"198\" cy=\"56\" rx=\"10\" ry=\"10\" fill=\"#ffffff\" stroke=\"#000000\" pointer-events=\"none\"/><ellipse cx=\"598\" cy=\"56\" rx=\"10\" ry=\"10\" fill=\"#ffffff\" stroke=\"#000000\" pointer-events=\"none\"/><path d=\"M 606.46 79 L 758.13 79\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-dasharray=\"4 4\" pointer-events=\"none\"/><path d=\"M 612.22 75 L 604.22 79 L 612.22 83\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><g transform=\"translate(49.5,85.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"147\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 148px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 147.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; line-height: 0\"><span style=\"line-height: 14px\" class=\"\">startOffset</span></span></div></div></div></div></foreignObject><text x=\"74\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><g transform=\"translate(124.5,15.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"147\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 148px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 147.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; line-height: 0\"><span style=\"line-height: 14px\" class=\"\">start</span></span></div></div></div></div></foreignObject><text x=\"74\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><g transform=\"translate(524.5,15.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"147\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 148px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 147.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; line-height: 14px\">end</span></div></div></div></div></foreignObject><text x=\"74\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><g transform=\"translate(599.5,85.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"147\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 148px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 147.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; line-height: 0\"><span style=\"line-height: 14px\" class=\"\">endOffset (neg. dir.)</span></span></div></div></div></div></foreignObject><text x=\"74\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g></g></svg>",
+  "RoadwayLocationClassesDiagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" style=\"background-color: rgb(255, 255, 255);\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"761px\" height=\"347px\" version=\"1.1\"><defs/><g transform=\"translate(0.5,0.5)\"><rect x=\"340\" y=\"1\" width=\"100\" height=\"75\" fill=\"#ffffff\" stroke=\"#333333\" stroke-width=\"2\" pointer-events=\"none\"/><g transform=\"translate(343.5,23.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"93\" height=\"29\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 94px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 93.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; text-decoration: none ; line-height: 0\"><span style=\"text-decoration: none ; line-height: 14px\" class=\"\">Roadway</span></span></div><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; text-decoration: none ; line-height: 0\"><span style=\"text-decoration: none ; line-height: 14px\" class=\"\">Locations</span></span></div></div></div></div></foreignObject><text x=\"47\" y=\"21\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><rect x=\"170\" y=\"121\" width=\"100\" height=\"75\" fill=\"#ffffff\" stroke=\"#333333\" stroke-width=\"2\" pointer-events=\"none\"/><g transform=\"translate(173.5,150.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"93\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 94px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 93.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; text-decoration: none ; line-height: 0\"><span style=\"text-decoration: none ; line-height: 14px\" class=\"\">Linear Locations</span></span></div></div></div></div></foreignObject><text x=\"47\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><rect x=\"510\" y=\"121\" width=\"100\" height=\"75\" fill=\"#ffffff\" stroke=\"#333333\" stroke-width=\"2\" pointer-events=\"none\"/><g transform=\"translate(513.5,150.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"93\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 94px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 93.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; text-decoration: none ; line-height: 0\"><span style=\"text-decoration: none ; line-height: 14px\" class=\"\">Linear &amp; Lanes</span></span></div></div></div></div></foreignObject><text x=\"47\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><rect x=\"100\" y=\"271\" width=\"100\" height=\"75\" fill=\"#ffffff\" stroke=\"#333333\" stroke-width=\"2\" pointer-events=\"none\"/><g transform=\"translate(103.5,300.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"93\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 94px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 93.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; text-decoration: none ; line-height: 0\"><span style=\"text-decoration: none ; line-height: 14px\" class=\"\">Points</span></span></div></div></div></div></foreignObject><text x=\"47\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><rect x=\"270\" y=\"271\" width=\"100\" height=\"75\" fill=\"#ffffff\" stroke=\"#333333\" stroke-width=\"2\" pointer-events=\"none\"/><g transform=\"translate(273.5,300.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"93\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 94px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 93.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; text-decoration: none ; line-height: 0\"><span style=\"text-decoration: none ; line-height: 14px\" class=\"\">Sections</span></span></div></div></div></div></foreignObject><text x=\"47\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><rect x=\"440\" y=\"271\" width=\"100\" height=\"75\" fill=\"#ffffff\" stroke=\"#333333\" stroke-width=\"2\" pointer-events=\"none\"/><g transform=\"translate(443.5,285.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"93\" height=\"45\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 94px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 93.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; text-decoration: none ; line-height: 0\"><span style=\"text-decoration: none ; line-height: 14px\" class=\"\">Points</span></span></div><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; text-decoration: none ; line-height: 0\"><span style=\"text-decoration: none ; line-height: 14px\" class=\"\">with</span></span></div><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; text-decoration: none ; line-height: 0\"><span style=\"text-decoration: none ; line-height: 14px\" class=\"\">Lanes</span></span></div></div></div></div></foreignObject><text x=\"47\" y=\"29\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><rect x=\"610\" y=\"271\" width=\"100\" height=\"75\" fill=\"#ffffff\" stroke=\"#333333\" stroke-width=\"2\" pointer-events=\"none\"/><g transform=\"translate(613.5,285.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"93\" height=\"45\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 94px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 93.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; text-decoration: none ; line-height: 0\"><span style=\"text-decoration: none ; line-height: 14px\" class=\"\">Sections</span></span></div><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; text-decoration: none ; line-height: 0\"><span style=\"text-decoration: none ; line-height: 14px\" class=\"\">with</span></span></div><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; text-decoration: none ; line-height: 0\"><span style=\"text-decoration: none ; line-height: 14px\" class=\"\">Lanes</span></span></div></div></div></div></foreignObject><text x=\"47\" y=\"29\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><path d=\"M 390 76 L 390 89 Q 390 99 380 99 L 230 99 Q 220 99 220 109 L 220 121\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 560 121 L 560 109 Q 560 99 550 99 L 400 99 Q 390 99 390 89 L 390 76\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 150 271 L 150 244 Q 150 234 160 234 L 210 234 Q 220 234 220 224 L 220 196\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 320 271 L 320 244 Q 320 234 310 234 L 230 234 Q 220 234 220 224 L 220 196\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 490 271 L 490 244 Q 490 234 500 234 L 550 234 Q 560 234 560 224 L 560 196\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 660 271 L 660 244 Q 660 234 650 234 L 570 234 Q 560 234 560 224 L 560 196\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><g transform=\"translate(1.5,120.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"147\" height=\"29\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 148px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 147.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; line-height: 0\"><span style=\"line-height: 14px\" class=\"\">One</span></span></div><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; line-height: 0\"><span style=\"line-height: 14px\" class=\"\">Dimensional</span></span></div></div></div></div></foreignObject><text x=\"74\" y=\"21\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><g transform=\"translate(611.5,120.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"147\" height=\"29\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 148px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 147.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; line-height: 0\"><span style=\"line-height: 14px\" class=\"\">Two </span></span></div><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; line-height: 0\"><span style=\"line-height: 14px\" class=\"\">Dimensional</span></span></div></div></div></div></foreignObject><text x=\"74\" y=\"21\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g></g></svg>",
+  "LatLongSectionProfileDiagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" style=\"background-color: rgb(255, 255, 255);\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"411px\" height=\"70px\" version=\"1.1\"><defs/><g transform=\"translate(0.5,0.5)\"><path d=\"M 53 17.02 L 375.79 17.02\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 383.79 17.02 L 375.79 21.02 L 375.79 13.02 Z\" fill=\"#000000\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><ellipse cx=\"75\" cy=\"17\" rx=\"10\" ry=\"10\" fill=\"#ffffff\" stroke=\"#000000\" pointer-events=\"none\"/><ellipse cx=\"335\" cy=\"17\" rx=\"10\" ry=\"10\" fill=\"#ffffff\" stroke=\"#000000\" pointer-events=\"none\"/><g transform=\"translate(1.5,39.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"147\" height=\"29\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 148px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 147.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; line-height: 0\"><span style=\"line-height: 14px\" class=\"\">Start</span></span></div><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; line-height: 0\"><span style=\"line-height: 14px\" class=\"\">LatLong1</span></span></div></div></div></div></foreignObject><text x=\"74\" y=\"21\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><g transform=\"translate(261.5,39.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"147\" height=\"29\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 148px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 147.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; line-height: 0\"><span style=\"line-height: 14px\" class=\"\">End</span></span></div><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; line-height: 0\"><span style=\"line-height: 14px\" class=\"\">LatLong2</span></span></div></div></div></div></foreignObject><text x=\"74\" y=\"21\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><g transform=\"translate(126.5,-0.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"147\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 148px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 147.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; line-height: 0\"><span style=\"line-height: 14px\" class=\"\">roadwayName</span></span></div></div></div></div></foreignObject><text x=\"74\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g></g></svg>",
+  "LandMarkSectionProfileDiagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" style=\"background-color: rgb(255, 255, 255);\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"551px\" height=\"94px\" version=\"1.1\"><defs/><g transform=\"translate(0.5,0.5)\"><path d=\"M 40 29.02 L 492.77 29.02\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 500.77 29.02 L 492.77 33.02 L 492.77 25.02 Z\" fill=\"#000000\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><g transform=\"translate(227.5,22.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"89\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; white-space: nowrap; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;background-color:#FFFFFF;\"><div style=\"width: 89.0px ; height: auto\"><div align=\"center\"><span style=\"font-size: 12px ; font-family: &quot;arial&quot; ; line-height: 14px\">roadwayName</span></div></div></div></div></foreignObject><text x=\"45\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><ellipse cx=\"120\" cy=\"28\" rx=\"10\" ry=\"10\" fill=\"#ffffff\" stroke=\"#000000\" pointer-events=\"none\"/><g transform=\"translate(373.5,38.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"147\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 148px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 147.0px ; height: auto\"><div align=\"center\"><span style=\"font-size: 12px ; font-family: &quot;arial&quot; ; text-decoration: none ; line-height: 0\"><span style=\"text-decoration: none ; line-height: normal\"><br /></span></span></div></div></div></div></foreignObject><text x=\"74\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><ellipse cx=\"400\" cy=\"28\" rx=\"10\" ry=\"10\" fill=\"#ffffff\" stroke=\"#000000\" pointer-events=\"none\"/><g transform=\"translate(46.5,-0.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"147\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 148px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 147.0px ; height: auto\"><div align=\"center\"><span style=\"font-size: 12px ; font-family: &quot;arial&quot; ; line-height: 0\"><span style=\"line-height: 14px\">start</span></span></div></div></div></div></foreignObject><text x=\"74\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><g transform=\"translate(326.5,-0.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"147\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 148px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 147.0px ; height: auto\"><div align=\"center\"><span style=\"font-size: 12px ; font-family: &quot;arial&quot; ; line-height: 0\"><span style=\"line-height: 14px\">end</span></span></div></div></div></div></foreignObject><text x=\"74\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><path d=\"M 50 43 L 70 58 L 50 73 Z\" fill=\"#ffffff\" stroke=\"#333333\" stroke-width=\"2\" stroke-miterlimit=\"10\" transform=\"rotate(270,60,58)\" pointer-events=\"none\"/><path d=\"M 465 43 L 485 58 L 465 73 Z\" fill=\"#ffffff\" stroke=\"#333333\" stroke-width=\"2\" stroke-miterlimit=\"10\" transform=\"rotate(270,475,58)\" pointer-events=\"none\"/><path d=\"M 60 58 L 113.76 58\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 121.76 58 L 113.76 62 L 113.76 54 Z\" fill=\"#000000\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 475 58 L 413.24 58\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 405.24 58 L 413.24 54 L 413.24 62 Z\" fill=\"#000000\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><g transform=\"translate(1.5,74.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"147\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 148px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 147.0px ; height: auto\"><div align=\"center\"><span style=\"font-size: 12px ; font-family: &quot;arial&quot; ; line-height: 0\"><span style=\"line-height: 14px\">startLandmarkName</span></span></div></div></div></div></foreignObject><text x=\"74\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><g transform=\"translate(401.5,77.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"147\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 148px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 147.0px ; height: auto\"><div align=\"center\"><span style=\"font-size: 12px ; font-family: &quot;arial&quot; ; line-height: 0\"><span style=\"line-height: 14px\">endLandmarkName</span></span></div></div></div></div></foreignObject><text x=\"74\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><g transform=\"translate(21.5,40.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"147\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 148px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 147.0px ; height: auto\"><div align=\"center\"><span style=\"font-size: 12px ; font-family: &quot;arial&quot; ; line-height: 0\"><span style=\"line-height: 14px\">startOffset</span></span></div></div></div></div></foreignObject><text x=\"74\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><g transform=\"translate(361.5,40.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"147\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 148px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 147.0px ; height: auto\"><div align=\"center\"><span style=\"font-size: 12px ; font-family: &quot;arial&quot; ; line-height: 0\"><span style=\"line-height: 14px\">endOffset</span></span></div></div></div></div></foreignObject><text x=\"74\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g></g></svg>",
+  "AddressProfileDiagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" style=\"background-color: rgb(255, 255, 255);\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"427px\" height=\"39px\" version=\"1.1\"><defs/><g transform=\"translate(0.5,0.5)\"><path d=\"M 34 27.02 L 406.78 27.02\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 414.78 27.02 L 406.78 31.02 L 406.78 23.02 Z\" fill=\"#000000\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><g transform=\"translate(181.5,20.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"89\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; white-space: nowrap; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;background-color:#FFFFFF;\"><div style=\"width: 89.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; line-height: 14px\">roadwayName</span></div></div></div></div></foreignObject><text x=\"45\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><ellipse cx=\"75\" cy=\"27\" rx=\"10\" ry=\"10\" fill=\"#ffffff\" stroke=\"#000000\" pointer-events=\"none\"/><ellipse cx=\"355\" cy=\"27\" rx=\"10\" ry=\"10\" fill=\"#ffffff\" stroke=\"#000000\" pointer-events=\"none\"/><g transform=\"translate(1.5,-0.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"147\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 148px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 147.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; line-height: 0\"><span style=\"line-height: 14px\">startAddressNumber</span></span></div></div></div></div></foreignObject><text x=\"74\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><g transform=\"translate(271.5,-0.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"147\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 148px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 147.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; line-height: 0\"><span style=\"line-height: 14px\">endAddressNumber</span></span></div></div></div></div></foreignObject><text x=\"74\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g></g></svg>",
+  "MilePointSectionProfileDiagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" style=\"background-color: rgb(255, 255, 255);\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"491px\" height=\"39px\" version=\"1.1\"><defs/><g transform=\"translate(0.5,0.5)\"><path d=\"M 58 29.02 L 469.77 29.02\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 477.77 29.02 L 469.77 33.02 L 469.77 25.02 Z\" fill=\"#000000\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><g transform=\"translate(224.5,22.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"89\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; white-space: nowrap; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;background-color:#FFFFFF;\"><div style=\"width: 89.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; line-height: 14px\">roadwayName</span></div></div></div></div></foreignObject><text x=\"45\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><ellipse cx=\"75\" cy=\"27\" rx=\"10\" ry=\"10\" fill=\"#ffffff\" stroke=\"#000000\" pointer-events=\"none\"/><ellipse cx=\"415\" cy=\"27\" rx=\"10\" ry=\"10\" fill=\"#ffffff\" stroke=\"#000000\" pointer-events=\"none\"/><g transform=\"translate(1.5,2.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"147\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 148px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 147.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; line-height: 0\"><span style=\"line-height: 14px\" class=\"\">startMilePoint</span></span></div></div></div></div></foreignObject><text x=\"74\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><g transform=\"translate(341.5,-0.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"147\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 148px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 147.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; line-height: 0\"><span style=\"line-height: 14px\" class=\"\">endMilePoint</span></span></div></div></div></div></foreignObject><text x=\"74\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g></g></svg>",
+  "CrossStreetSectionProfileDiagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" style=\"background-color: rgb(255, 255, 255);\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"561px\" height=\"113px\" version=\"1.1\"><defs/><g transform=\"translate(0.5,0.5)\"><path d=\"M 50 37.02 L 522.8 37.02\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 530.8 37.02 L 522.8 41.02 L 522.8 33.02 Z\" fill=\"#000000\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><g transform=\"translate(258.5,30.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"67\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; white-space: nowrap; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;background-color:#FFFFFF;\"><div style=\"width: 67.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; line-height: 14px\">roadName</span></div></div></div></div></foreignObject><text x=\"34\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><path d=\"M 71 3.02 L 71 94.1\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 489 0.02 L 489 86.02\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><g transform=\"translate(1.5,96.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"147\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 148px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 147.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; line-height: 0\"><span style=\"line-height: 14px\" class=\"\">fromCrossStreetName</span></span></div></div></div></div></foreignObject><text x=\"74\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><g transform=\"translate(411.5,89.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"147\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 148px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 147.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; line-height: 0\"><span style=\"line-height: 14px\">toCrossStreetName</span></span></div></div></div></div></foreignObject><text x=\"74\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><ellipse cx=\"140\" cy=\"37\" rx=\"10\" ry=\"10\" fill=\"#ffffff\" stroke=\"#000000\" pointer-events=\"none\"/><ellipse cx=\"430\" cy=\"37\" rx=\"10\" ry=\"10\" fill=\"#ffffff\" stroke=\"#000000\" pointer-events=\"none\"/><path d=\"M 75 66.02 L 133.54 66.02\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 127.77 70.02 L 135.77 66.02 L 127.77 62.02\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 484 62.02 L 434.47 62.02\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 440.24 58.02 L 432.24 62.02 L 440.24 66.02\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><g transform=\"translate(31.5,73.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"147\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 148px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 147.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; line-height: 0\"><span style=\"line-height: 14px\" class=\"\">startOffset</span></span></div></div></div></div></foreignObject><text x=\"74\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><g transform=\"translate(384.5,68.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"147\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 148px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 147.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; line-height: 0\"><span style=\"line-height: 14px\" class=\"\">endOffset</span></span></div></div></div></div></foreignObject><text x=\"74\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><g transform=\"translate(66.5,5.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"147\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 148px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 147.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; line-height: 0\"><span style=\"line-height: 14px\" class=\"\">start</span></span></div></div></div></div></foreignObject><text x=\"74\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><g transform=\"translate(356.5,5.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"147\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 148px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 147.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; line-height: 0\"><span style=\"line-height: 14px\" class=\"\">end</span></span></div></div></div></div></foreignObject><text x=\"74\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g></g></svg>",
+  "RampSectionProfileDiagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" style=\"background-color: rgb(255, 255, 255);\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"489px\" height=\"401px\" version=\"1.1\"><defs/><g transform=\"translate(0.5,0.5)\"><path d=\"M 90 390.02 L 90 17.25\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 90 9.25 L 94 17.25 L 86 17.25 Z\" fill=\"#000000\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><g transform=\"translate(31.5,319.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"117\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; white-space: nowrap; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;background-color:#FFFFFF;\"><div style=\"width: 117.0px ; height: auto\"><div align=\"center\"><span style=\"font-size: 12px ; font-family: &quot;arial&quot; ; line-height: 14px\">fromRoadwayName</span></div></div></div></div></foreignObject><text x=\"59\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><path d=\"M 7 73.02 L 467.77 73.02\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 475.77 73.02 L 467.77 77.02 L 467.77 69.02 Z\" fill=\"#000000\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><g transform=\"translate(191.5,66.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"103\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; white-space: nowrap; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;background-color:#FFFFFF;\"><div style=\"width: 103.0px ; height: auto\"><div align=\"center\"><span style=\"font-size: 12px ; font-family: &quot;arial&quot; ; line-height: 14px\">toRoadwayName</span></div></div></div></div></foreignObject><text x=\"52\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><path d=\"M 91 303 Q 91 192 192 192 Q 293 192 293 91.24\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 293 83.24 L 297 91.24 L 289 91.24 Z\" fill=\"#000000\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><ellipse cx=\"110\" cy=\"231\" rx=\"10\" ry=\"10\" fill=\"#ffffff\" stroke=\"#000000\" pointer-events=\"none\"/><ellipse cx=\"289\" cy=\"121\" rx=\"10\" ry=\"10\" fill=\"#ffffff\" stroke=\"#000000\" pointer-events=\"none\"/><path d=\"M 119 306.02 L 135.95 251.79\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-dasharray=\"4 4\" pointer-events=\"none\"/><path d=\"M 138.33 244.15 L 139.76 252.98 L 132.13 250.59 Z\" fill=\"#000000\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><g transform=\"translate(96.5,266.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"66\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; white-space: nowrap; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;background-color:#FFFFFF;\"><div style=\"width: 66.0px ; height: auto\"><div align=\"center\"><span style=\"font-size: 12px ; font-family: &quot;arial&quot; ; line-height: 14px\">startOffset</span></div></div></div></div></foreignObject><text x=\"33\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><path d=\"M 136 306.02 L 298.83 140.32\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-dasharray=\"4 4\" pointer-events=\"none\"/><path d=\"M 304.43 134.61 L 301.68 143.12 L 295.97 137.51 Z\" fill=\"#000000\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><g transform=\"translate(189.5,212.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"63\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; white-space: nowrap; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;background-color:#FFFFFF;\"><div style=\"width: 63.0px ; height: auto\"><div align=\"center\"><span style=\"font-size: 12px ; font-family: &quot;arial&quot; ; line-height: 14px\">endOffset</span></div></div></div></div></foreignObject><text x=\"32\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><path d=\"M 93 309.02 L 179.21 309.02\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-dasharray=\"4 4\" pointer-events=\"none\"/><g transform=\"translate(26.5,206.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"147\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 148px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 147.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; line-height: 0\"><span style=\"line-height: 14px\" class=\"\">A</span></span></div></div></div></div></foreignObject><text x=\"74\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><g transform=\"translate(194.5,110.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"147\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 148px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 147.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; line-height: 0\"><span style=\"line-height: 14px\" class=\"\">B</span></span></div></div></div></div></foreignObject><text x=\"74\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g></g></svg>",
+  "GeometrySectionProfileDiagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" style=\"background-color: rgb(255, 255, 255);\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"551px\" height=\"138px\" version=\"1.1\"><defs/><g transform=\"translate(0.5,0.5)\"><path d=\"M 7 39.02 L 154.77 39.02\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 162.77 39.02 L 154.77 43.02 L 154.77 35.02 Z\" fill=\"#000000\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 167 38.02 L 311.79 49.23\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 319.77 49.84 L 311.49 53.21 L 312.1 45.24 Z\" fill=\"#000000\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 324 50.02 L 531.05 99.63\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 538.83 101.49 L 530.11 103.52 L 531.98 95.74 Z\" fill=\"#000000\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><ellipse cx=\"115\" cy=\"39\" rx=\"10\" ry=\"10\" fill=\"#ffffff\" stroke=\"#000000\" pointer-events=\"none\"/><ellipse cx=\"439\" cy=\"79\" rx=\"10\" ry=\"10\" fill=\"#ffffff\" stroke=\"#000000\" pointer-events=\"none\"/><g transform=\"translate(41.5,14.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"147\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 148px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 147.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; line-height: 0\"><span style=\"line-height: 14px\" class=\"\">start</span></span></div></div></div></div></foreignObject><text x=\"74\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><g transform=\"translate(360.5,50.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"147\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 148px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 147.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; line-height: 0\"><span style=\"line-height: 14px\" class=\"\">end</span></span></div></div></div></div></foreignObject><text x=\"74\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><path d=\"M 12.24 74.02 L 161.79 74.02\" fill=\"none\" stroke=\"#000000\" stroke-miterlimit=\"10\" stroke-dasharray=\"1 1\" pointer-events=\"none\"/><path d=\"M 18.12 70.52 L 11.12 74.02 L 18.12 77.52\" fill=\"none\" stroke=\"#000000\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 155.91 77.52 L 162.91 74.02 L 155.91 70.52\" fill=\"none\" stroke=\"#000000\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><g transform=\"translate(45.5,67.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"84\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; white-space: nowrap; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;background-color:#FFFFFF;\"><div style=\"width: 84.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; line-height: 14px\">start segment</span></div></div></div></div></foreignObject><text x=\"42\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><path d=\"M 321.18 78.52 L 527.85 126.51\" fill=\"none\" stroke=\"#000000\" stroke-miterlimit=\"10\" stroke-dasharray=\"1 1\" pointer-events=\"none\"/><path d=\"M 327.7 76.44 L 320.09 78.27 L 326.12 83.26\" fill=\"none\" stroke=\"#000000\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 521.33 128.59 L 528.94 126.76 L 522.91 121.77\" fill=\"none\" stroke=\"#000000\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><g transform=\"translate(384.5,95.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"80\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; white-space: nowrap; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;background-color:#FFFFFF;\"><div style=\"width: 80.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; line-height: 14px\">end segment</span></div></div></div></div></foreignObject><text x=\"40\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><path d=\"M 7 8.02 L 112.77 8.02\" fill=\"none\" stroke=\"#000000\" stroke-miterlimit=\"10\" stroke-dasharray=\"1 1\" pointer-events=\"none\"/><path d=\"M 106.89 11.52 L 113.89 8.02 L 106.89 4.52\" fill=\"none\" stroke=\"#000000\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><g transform=\"translate(28.5,1.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"66\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; white-space: nowrap; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;background-color:#FFFFFF;\"><div style=\"width: 66.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; line-height: 14px\">startOffset</span></div></div></div></div></foreignObject><text x=\"33\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><path d=\"M 4 0.02 L 4 84.07\" fill=\"none\" stroke=\"#000000\" stroke-miterlimit=\"10\" stroke-dasharray=\"1 1\" pointer-events=\"none\"/><path d=\"M 334 19.02 L 438.84 46.45\" fill=\"none\" stroke=\"#000000\" stroke-miterlimit=\"10\" stroke-dasharray=\"1 1\" pointer-events=\"none\"/><path d=\"M 432.26 48.35 L 439.92 46.73 L 434.03 41.57\" fill=\"none\" stroke=\"#000000\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><g transform=\"translate(355.5,25.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"63\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; white-space: nowrap; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;background-color:#FFFFFF;\"><div style=\"width: 63.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; line-height: 14px\">endOffset</span></div></div></div></div></foreignObject><text x=\"32\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><path d=\"M 334 8.02 L 317 94.02\" fill=\"none\" stroke=\"#000000\" stroke-miterlimit=\"10\" stroke-dasharray=\"1 1\" pointer-events=\"none\"/></g></svg>",
+  "RoadwayEventClassDiagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" style=\"background-color: rgb(255, 255, 255);\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"494px\" height=\"345px\" version=\"1.1\"><defs/><g transform=\"translate(0.5,0.5)\"><rect x=\"171\" y=\"1\" width=\"140\" height=\"70\" fill=\"#000000\" stroke=\"#000000\" stroke-width=\"2\" transform=\"translate(2,3)\" opacity=\"0.25\"/><rect x=\"171\" y=\"1\" width=\"140\" height=\"70\" fill=\"#ffffff\" stroke=\"#000000\" stroke-width=\"2\" pointer-events=\"none\"/><g transform=\"translate(174.5,29.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"133\" height=\"12\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 134px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 133.0px ; height: auto\"><div align=\"center\"><span style=\"font-weight: bold ; line-height: 14px\">RoadwayEvent</span></div><div align=\"center\"></div></div></div></div></foreignObject><text x=\"67\" y=\"12\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><rect x=\"71\" y=\"121\" width=\"140\" height=\"70\" fill=\"#000000\" stroke=\"#000000\" stroke-width=\"2\" transform=\"translate(2,3)\" opacity=\"0.25\"/><rect x=\"71\" y=\"121\" width=\"140\" height=\"70\" fill=\"#ffffff\" stroke=\"#000000\" stroke-width=\"2\" pointer-events=\"none\"/><g transform=\"translate(74.5,148.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"133\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 134px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 133.0px ; height: auto\"><div align=\"center\"><span style=\"font-weight: bold ; font-family: &quot;arial&quot; ; font-size: 12px ; text-decoration: none ; line-height: 0\"><span style=\"text-decoration: none ; line-height: 14px\" class=\"\">ScheduledEvent</span></span></div></div></div></div></foreignObject><text x=\"67\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><rect x=\"1\" y=\"271\" width=\"140\" height=\"70\" fill=\"#000000\" stroke=\"#000000\" stroke-width=\"2\" transform=\"translate(2,3)\" opacity=\"0.25\"/><rect x=\"1\" y=\"271\" width=\"140\" height=\"70\" fill=\"#ffffff\" stroke=\"#000000\" stroke-width=\"2\" pointer-events=\"none\"/><g transform=\"translate(4.5,298.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"133\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 134px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 133.0px ; height: auto\"><div align=\"center\"><span style=\"font-weight: bold ; font-family: &quot;arial&quot; ; font-size: 12px ; text-decoration: none ; line-height: 0\"><span style=\"text-decoration: none ; line-height: 14px\" class=\"\">Roadwork</span></span></div></div></div></div></foreignObject><text x=\"67\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><rect x=\"211\" y=\"271\" width=\"140\" height=\"70\" fill=\"#000000\" stroke=\"#000000\" stroke-width=\"2\" transform=\"translate(2,3)\" opacity=\"0.25\"/><rect x=\"211\" y=\"271\" width=\"140\" height=\"70\" fill=\"#ffffff\" stroke=\"#000000\" stroke-width=\"2\" pointer-events=\"none\"/><g transform=\"translate(214.5,298.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"133\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 134px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 133.0px ; height: auto\"><div align=\"center\"><span style=\"font-weight: bold ; font-family: &quot;arial&quot; ; font-size: 12px ; text-decoration: none ; line-height: 0\"><span style=\"text-decoration: none ; line-height: 14px\" class=\"\">SpecialEvent</span></span></div></div></div></div></foreignObject><text x=\"67\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><rect x=\"351\" y=\"121\" width=\"140\" height=\"70\" fill=\"#000000\" stroke=\"#000000\" stroke-width=\"2\" transform=\"translate(2,3)\" opacity=\"0.25\"/><rect x=\"351\" y=\"121\" width=\"140\" height=\"70\" fill=\"#ffffff\" stroke=\"#000000\" stroke-width=\"2\" pointer-events=\"none\"/><g transform=\"translate(354.5,148.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"133\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 134px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 133.0px ; height: auto\"><div align=\"center\"><span style=\"font-weight: bold ; font-family: &quot;arial&quot; ; font-size: 12px ; text-decoration: none ; line-height: 0\"><span style=\"text-decoration: none ; line-height: 14px\" class=\"\">Incident</span></span></div></div></div></div></foreignObject><text x=\"67\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><path d=\"M 241 71 L 241 86 Q 241 96 231 96 L 151 96 Q 141 96 141 106 L 141 121\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 241 71 L 241 86 Q 241 96 251 96 L 411 96 Q 421 96 421 106 L 421 121\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 141 191 L 141 221 Q 141 231 131 231 L 81 231 Q 71 231 71 241 L 71 271\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 141 191 L 141 221 Q 141 231 151 231 L 271 231 Q 281 231 281 241 L 281 271\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\" stroke-miterlimit=\"10\" pointer-events=\"none\"/></g></svg>",
+  "UnidirectionalCameraDiagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" style=\"background-color: rgb(255, 255, 255);\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"676px\" height=\"122px\" version=\"1.1\"><defs/><g transform=\"translate(0.5,0.5)\"><path d=\"M 28.21 9.76 L 664.5 18.5\" fill=\"none\" stroke=\"#000000\" stroke-width=\"6\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 16.21 9.59 L 28.29 3.76 L 28.12 15.76 Z\" fill=\"#000000\" stroke=\"#000000\" stroke-width=\"6\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><g transform=\"translate(349.5,7.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"40\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; white-space: nowrap; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;background-color:#FFFFFF;\"><div style=\"width: 40.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; line-height: 0\"><span style=\"line-height: 14px\" class=\"\">Road</span></span></div></div></div></div></foreignObject><text x=\"20\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><rect x=\"298.29\" y=\"40.03\" width=\"62.5\" height=\"40\" fill=\"#ffffff\" stroke=\"#333333\" stroke-width=\"2\" transform=\"rotate(356.48,329.54,60.03)\" pointer-events=\"none\"/><g transform=\"translate(302.5,52.5)rotate(356.4798,27.5,7)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"55\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 56px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 55.4375px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; text-decoration: none ; line-height: 14px\">Camera</span></div></div></div></div></foreignObject><text x=\"28\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><path d=\"M 362.08 45.66 L 378.08 57.54 L 362.08 69.41 Z\" fill=\"#ffffff\" stroke=\"#333333\" stroke-width=\"2\" stroke-miterlimit=\"10\" transform=\"rotate(896.48,370.08,57.54)\" pointer-events=\"none\"/><g transform=\"translate(255.5,99.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"147\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 148px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 147.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; line-height: 0\"><span style=\"line-height: 14px\" class=\"\">(latidude, longitude, image.jpg)</span></span></div></div></div></div></foreignObject><text x=\"74\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g></g></svg>",
+  "MultidirectionCameraDiagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" style=\"background-color: rgb(255, 255, 255);\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"676px\" height=\"142px\" version=\"1.1\"><defs/><g transform=\"translate(0.5,0.5)\"><rect x=\"274.16\" y=\"66.89\" width=\"62.5\" height=\"40\" fill=\"#ffffff\" stroke=\"#333333\" stroke-width=\"2\" transform=\"rotate(187.75,305.41,86.89)\" pointer-events=\"none\"/><g transform=\"translate(276.5,79.5)rotate(187.74524,27.5,7)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"55\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 56px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 55.4375px ; height: auto\"><div align=\"center\"><span style=\"text-decoration: none ; font-family: &quot;arial&quot; ; font-size: 12px ; line-height: 14px\">Camera</span></div></div></div></div></foreignObject><text x=\"28\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><path d=\"M 257.16 69.54 L 273.16 81.41 L 257.16 93.29 Z\" fill=\"#ffffff\" stroke=\"#333333\" stroke-width=\"2\" stroke-miterlimit=\"10\" transform=\"rotate(727.75,265.16,81.41)\" pointer-events=\"none\"/><path d=\"M 28.21 38.76 L 664.5 47.5\" fill=\"none\" stroke=\"#000000\" stroke-width=\"6\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 16.21 38.59 L 28.29 32.76 L 28.12 44.76 Z\" fill=\"#000000\" stroke=\"#000000\" stroke-width=\"6\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><g transform=\"translate(349.5,36.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"40\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; white-space: nowrap; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;background-color:#FFFFFF;\"><div style=\"width: 40.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; line-height: 0\"><span style=\"line-height: 14px\">Road</span></span></div></div></div></div></foreignObject><text x=\"20\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><rect x=\"298.29\" y=\"69.03\" width=\"62.5\" height=\"40\" fill=\"#ffffff\" stroke=\"#333333\" stroke-width=\"2\" transform=\"rotate(356.48,329.54,89.03)\" pointer-events=\"none\"/><g transform=\"translate(302.5,81.5)rotate(356.4798,27.5,7)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"55\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 56px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 55.4375px ; height: auto\"><div align=\"center\"><span style=\"text-decoration: none ; font-family: &quot;arial&quot; ; font-size: 12px ; line-height: 14px\">Camera</span></div></div></div></div></foreignObject><text x=\"28\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><path d=\"M 362.08 74.66 L 378.08 86.54 L 362.08 98.41 Z\" fill=\"#ffffff\" stroke=\"#333333\" stroke-width=\"2\" stroke-miterlimit=\"10\" transform=\"rotate(896.48,370.08,86.54)\" pointer-events=\"none\"/><g transform=\"translate(200.5,111.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"257\" height=\"29\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 258px; white-space: nowrap; overflow-wrap: normal; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;\"><div style=\"width: 257.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; line-height: 0\"><span style=\"line-height: 14px\">(latidude, longitude, image_east.jpg)</span></span></div><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; line-height: 0\"><span style=\"line-height: 14px\">(latitude,longitude,image_west.jpg)</span></span></div></div></div></div></foreignObject><text x=\"129\" y=\"21\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g><path d=\"M 9.5 9.5 L 645.79 18.24\" fill=\"none\" stroke=\"#000000\" stroke-width=\"6\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><path d=\"M 657.79 18.41 L 645.71 24.24 L 645.88 12.24 Z\" fill=\"#000000\" stroke=\"#000000\" stroke-width=\"6\" stroke-miterlimit=\"10\" pointer-events=\"none\"/><g transform=\"translate(349.5,7.5)\"><switch><foreignObject style=\"overflow:visible;\" pointer-events=\"all\" width=\"40\" height=\"14\" requiredFeatures=\"http://www.w3.org/TR/SVG11/feature#Extensibility\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; white-space: nowrap; text-align: center;\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"display:inline-block;text-align:inherit;text-decoration:inherit;background-color:#FFFFFF;\"><div style=\"width: 40.0px ; height: auto\"><div align=\"center\"><span style=\"font-family: &quot;arial&quot; ; font-size: 12px ; line-height: 0\"><span style=\"line-height: 14px\">Road</span></span></div></div></div></div></foreignObject><text x=\"20\" y=\"13\" fill=\"#000000\" text-anchor=\"middle\" font-size=\"12px\" font-family=\"Helvetica\">[Not supported by viewer]</text></switch></g></g></svg>"
+ }
+}

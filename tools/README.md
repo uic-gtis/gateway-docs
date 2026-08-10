@@ -1,0 +1,52 @@
+# Migration tooling
+
+These scripts produced this repository from the GTIS internal wiki
+(`wiki.travelmidwest.com`, XWiki 2.1 syntax). They are kept so the conversion is
+reproducible and auditable, not because they need to run again — **this repository is
+now the source of truth**, and the documents should be edited directly from here.
+
+## Pipeline
+
+```
+python tools/fetch_wiki_meta.py   # network: page map, heading anchors, diagram SVGs
+python tools/xwiki2md.py          # offline: .xwiki -> .md, rewrites every link
+python tools/fetch_assets.py      # network: images and file attachments
+python tools/verify.py            # offline: links, anchors, fences, leftovers, secrets
+```
+
+`fetch_wiki_meta.py` writes `wiki-meta.json`, which is committed so `xwiki2md.py` and
+`verify.py` run without network access.
+
+## Why a custom converter
+
+Pandoc has no XWiki *reader* (XWiki is output-only). Converting via the wiki's rendered
+HTML also fails: XWiki renders code blocks as `<div class="code">` with per-token
+`<span style="color:…">` and `<br/>`, so all 286 code blocks would lose their fences and
+language tags.
+
+## Things that bit us, recorded so they don't again
+
+- **Dots in space names are literal in REST URLs.** Escaping them as `%5C.` (the form
+  used in a page *reference*) makes the endpoint answer 200 with nothing. That silently
+  dropped the `cameraInfo.csv` diagrams and images on the first pass.
+- **`WebPreferences` children report their parent's path**, so a naive tree walk
+  recurses forever. Only descend into `.WebHome` pages.
+- **Attachment URLs need `/WebHome/`**: `/bin/download/<space path>/WebHome/<file>`.
+- **A `{{diagram}}` macro stores only draw.io XML**, and a diagram page rendered on its
+  own emits no SVG — the SVG appears only on the page that *embeds* the macro. The
+  diagram index is therefore built wiki-wide and keyed by diagram name.
+- **The REST attachments endpoint under-reports.** `fetch_assets.py` also scrapes
+  `<img src>` from rendered pages.
+- **Tilde escapes are stored double-escaped**: `~~/` means `/`.
+- **XWiki heading anchors (`HFooBar`) are not GitHub slugs.** They are resolved via the
+  rendered heading ids, then re-slugified, in a second pass so duplicate headings get
+  the right `-1` suffix.
+
+## Known content gaps
+
+- Three images are referenced by the source pages but no longer exist on the wiki (they
+  404, and their pages report zero attachments). They appear as
+  `<!-- TODO(docs): ... -->` markers.
+- The Smart Work Zone Specifications page named individual third-party vendor staff with
+  direct e-mail and phone; those are replaced with the GTIS team address (see
+  `REDACTIONS` in `xwiki2md.py`). The rules fail the build if they stop matching.
