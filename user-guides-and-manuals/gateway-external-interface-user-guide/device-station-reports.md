@@ -363,7 +363,9 @@ The Dynamic Message Sign Report consists of a dynamic message sign list, a repor
 
 A message set is a logical unit of information, which may consist of multiple lines. In practice, no more than three lines may be presented to the viewer since a driver can take in a limited amount of content while passing by. A maximum of twelve lines is allowed for in the XSD. More than one message can be showing at a time on the same DMS on a rotational basis. For example, a sign may have the following message sets:
 
-<!-- TODO(docs): image 'DMS.2019-2-25_12-18-5.382x200.png' is referenced here but the attachment no longer exists on the source wiki (404) -->
+> [!NOTE]
+> The figure that belongs here (`DMS.2019-2-25_12-18-5.382x200.png`) is unavailable: the image was
+> lost from the source wiki before this documentation was migrated.
 
 Depending on the DMS device and the length of the message, one message set can be displayed in a single frame, or more than one message set can be displayed in a single frame. For example, the above two message sets can be displayed in a single frame on a three-line DMS device, or displayed in rotation in two frames on a 2-line DMS device.
 

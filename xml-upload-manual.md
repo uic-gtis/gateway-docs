@@ -64,8 +64,8 @@ use LWP::UserAgent;
 use HTTP::Request::Common qw(POST);
 use MIME::Base64;
 
-# TO DO: place production server name here
-my $uri = "https://192.168.1.20/gcm/publisher";
+# Use testing.travelmidwest.com while developing, travelmidwest.com in production
+my $uri = "https://travelmidwest.com/lmiga/publisher";
 my $userAgent = LWP::UserAgent->new(agent => 'Perl');
 
 #READ TEST DATA XML

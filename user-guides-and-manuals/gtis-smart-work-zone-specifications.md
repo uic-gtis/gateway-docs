@@ -34,11 +34,11 @@ JamLogic can be used to integrate CCTV cameras, variable message signs, and spee
 
 - Contact [support@travelmidwest.com](mailto:support@travelmidwest.com?subject=GTIS%20Smart%20Work%20Zone%20%2F%20JamLogic) and the GTIS team will put you in touch with the vendor.
 
-The XML format specification is available online at:
+The XML format specification was published at
+`https://www.jamlogic.com/download/XML+Secure+Interface/`, which no longer resolves.
+Request the current specification from [JamLogic](https://www.jamlogic.com/).
 
-- (dead link) https://www.jamlogic.com/download/XML+Secure+Interface/
-
-Once the vendor has established an XML feed through JamLogic using their XML format specification, [support@travelmidwest.com](mailto:support@travelmidwest.com?subject=GTIS%20Smart%20Work%20Zone%20%2F%20JamLogic%20XML%20file) should be contacted and provided the XML file URL. The URL will be in the format (dead link) https://public.jamlogic.com/WorkZoneFeed/secure/code_du_flux.
+Once the vendor has established an XML feed through JamLogic using their XML format specification, [support@travelmidwest.com](mailto:support@travelmidwest.com?subject=GTIS%20Smart%20Work%20Zone%20%2F%20JamLogic%20XML%20file) should be contacted and provided the XML file URL. The URL takes the form `https://public.jamlogic.com/WorkZoneFeed/secure/<feed code>`, where the feed code identifies your feed.
 
 ### Upload to iConeTraffic
 
