@@ -17,6 +17,31 @@ python tools/verify.py            # offline: links, anchors, fences, leftovers, 
 `fetch_wiki_meta.py` writes `wiki-meta.json`, which is committed so `xwiki2md.py` and
 `verify.py` run without network access.
 
+## Keeping the docs honest
+
+`check_coverage.py` is the ongoing one — it diffs this repository against the endpoints
+the gateway actually serves, in both directions:
+
+```
+python tools/check_coverage.py --gateway /path/to/gateway     # add -v to list coverage
+```
+
+Endpoints deliberately not documented go in its `INTERNAL` map with a reason, so
+"nobody has documented this yet" and "this is intentionally not public API" stay
+distinct states and a green run means something.
+
+Two matching subtleties, both learned the hard way:
+
+- **Match on endpoint filename, not full path.** The docs write endpoints
+  inconsistently — `https://travelmidwest.com/lmiga/foo.json`, `### POST /lmiga/foo.json`,
+  `#### GET {id}/routeTraffic.json` beneath a stated base path. Matching full paths
+  reported ~70 endpoints as undocumented that were documented all along.
+- **Endpoints with no filename** (`/camera`, `/snapshot`, `/messageSign`) cannot be
+  matched that way, and searching the prose for the literal path is far too noisy —
+  `/camera` matches every `</camera>` XML closing tag, `/messageSign` matches the
+  `img_url` column of the dmsInfo.csv sample rows. Those are listed in `DOCUMENTED_IN`
+  instead, hand-verified once, naming the file that documents each.
+
 ## Why a custom converter
 
 Pandoc has no XWiki *reader* (XWiki is output-only). Converting via the wiki's rendered
