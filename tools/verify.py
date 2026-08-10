@@ -161,6 +161,21 @@ def main():
                 if not EMAIL_PLACEHOLDER.search(m.group(0)):
                     review.append("%s: %s" % (p.relative_to(ROOT), m.group(0)))
 
+    # 6. no invisible characters that break copy-paste
+    #
+    # The wiki export was full of these. U+00A0 is not legal JSON whitespace and is not
+    # a shell word separator, so a reader copying a JSON body or a curl command out of
+    # the docs got a parse error with nothing visibly wrong. U+200B is worse, being
+    # invisible everywhere. Neither has any legitimate use here.
+    for p, t in text.items():
+        for ch, name in ((u" ", "non-breaking space"),
+                         (u"​", "zero-width space"),
+                         (u"﻿", "byte-order mark")):
+            n = t.count(ch)
+            if n:
+                fails.append("%s: %d %s(s) - breaks copy-paste, use a plain space"
+                             % (p.relative_to(ROOT), n, name))
+
     print("%d markdown files, %d internal links, %d images checked"
           % (len(files), n_links, n_img))
     if review:

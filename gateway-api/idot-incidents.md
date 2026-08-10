@@ -12,7 +12,7 @@ https://travelmidwest.com/lmiga/stationOne.json?encodeLines=true/false
 
 ## Response
 
-The returned file is in GeoJSON format with both polyline and point features depending on the closure type. The feature properties for each incident are as follows:
+The returned file is in GeoJSON format with both polyline and point features depending on the closure type. The feature properties for each incident are as follows:
 
 - id - unique identifier for the incident
 - desc - textual description, usually from Station One email

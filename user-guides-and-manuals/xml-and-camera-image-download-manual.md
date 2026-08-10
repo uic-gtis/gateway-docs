@@ -4,7 +4,7 @@
 
 ### About
 
-The **Gateway Traveler Information System (GTIS)** provides access to raw data for traffic, incident, closure and roadway device information via a [XML interface](gateway-external-interface-user-guide.md).
+The **Gateway Traveler Information System (GTIS)** provides access to raw data for traffic, incident, closure and roadway device information via a [XML interface](gateway-external-interface-user-guide.md).
 
 In addition, the Gateway system also supports downloading data in [GeoJSON](../gateway-api/README.md) format and roadside camera images.
 
@@ -25,7 +25,7 @@ You will receive an email notification stating whether your request for access h
 
 As stated in the IDOT Traffic Information Access/Reuse Policy, you must keep your account information up to date, and must update your account at least annually:
 
-1. Go to the administrative login page: [https://go.travelmidwest.com/login](https://go.travelmidwest.com/login)
+1. Go to the administrative login page: [https://go.travelmidwest.com/login](https://go.travelmidwest.com/login)
 1. Sign in with your login credentials.
 1. Update any information as-needed and click the save/update button (even if there are no changes).
 
@@ -251,7 +251,7 @@ Example Python scripts:
 
 A HTTP HEAD request can be used to retrieve the `Last-Modified` and `Content-Length` headers for a Gateway XML file. The `Last-Modified` timestamp can then be used to determine if the data has changed since your last download. Since a HTTP HEAD request and response use less network bandwidth and system resources, they can be performed more frequently. Alternatively, the `If-Modified-Since` HTTP header can be used on a GET request. If the file on the Gateway is not newer than the date given in the `If-Modified-Since` header, then no content plus a 304 (Not Modified) status code is returned.
 
-Another way to avoid downloading data that has not changed is to use the `~-~-timestamping` option for the [wget](https://en.wikipedia.org/wiki/Wget) utility program. The option checks the time of the file on the local system against the `Last-Modified` header obtained with a HEAD request and only downloads the file if the `Last-Modfied` date/time is newer than the local file's date/time. For example:
+Another way to avoid downloading data that has not changed is to use the `~-~-timestamping` option for the [wget](https://en.wikipedia.org/wiki/Wget) utility program. The option checks the time of the file on the local system against the `Last-Modified` header obtained with a HEAD request and only downloads the file if the `Last-Modfied` date/time is newer than the local file's date/time. For example:
 
 ```bash
 $ wget --timestamping --http-user=<login> --http-password=<password> https://travelmidwest.com/lmiga/LinkTrafficReport.xml.gz
@@ -261,7 +261,7 @@ The example above replaces the local `LinkTrafficReport.xml.gz` file only if new
 
 ## Camera Images
 
-Camera images are available via various reports on the [Travel Midwest website](https://go.travelmidwest.com/cameras) and also via direct download.
+Camera images are available via various reports on the [Travel Midwest website](https://go.travelmidwest.com/cameras) and also via direct download.
 
 The Gateway Traveler Information System (GTIS) does not maintain any of the cameras displayed on travelmidwest.com — maintenance, construction, weather and/or unforeseen circumstances may impact availability at any time.
 
@@ -302,7 +302,7 @@ https://cctv.travelmidwest.com/snapshots/IL-IDOTD1_1_Cook_EB_Harrison_4187371_-8
 
 The list of valid camera image URLs is available via our [cameraInfo.csv](../camera-info-csv.md) web service and our [JSON Traffic Information Download Manual](../gateway-api/README.md) has more information about other available formats for camera metadata.
 
-For bulk downloads, we highly recommend first making a [HTTP HEAD](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/HEAD) request to see if an image has changed before downloading because there can be quite a lot of variance in refresh rates between camera sources. The [ETag](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag), [Last-Modified](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Last-Modified) and/or [Content-Length](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Length) HTTP headers can be used in various combinations to quickly determine if an image has changed (ETag is generally the most reliable option).
+For bulk downloads, we highly recommend first making a [HTTP HEAD](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/HEAD) request to see if an image has changed before downloading because there can be quite a lot of variance in refresh rates between camera sources. The [ETag](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag), [Last-Modified](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Last-Modified) and/or [Content-Length](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Length) HTTP headers can be used in various combinations to quickly determine if an image has changed (ETag is generally the most reliable option).
 
 Using the example URL above, here is a sample HTTP HEAD request response:
 

@@ -1020,7 +1020,7 @@ The response for a Weather Warning request is a GeoJSON FeatureCollection with a
     - type — "Polygon"
     - coordinates — an array of array [long, lat]s giving the vertices, the first and last are equal
 
-Note that some sections have a blank ("") heading field.  These sections mostly occur as the first element of the array because there is some preamble text with the asterisk list following it.  Very rarely, there will be an empty heading field in the middle or end of the sections array.
+Note that some sections have a blank ("") heading field.  These sections mostly occur as the first element of the array because there is some preamble text with the asterisk list following it.  Very rarely, there will be an empty heading field in the middle or end of the sections array.
 
 ### Example
 
@@ -1134,7 +1134,7 @@ Leaflet Javascript Code to Compute Zoom Parameter:
 
 ```javascript
 var bounds = map.getBounds();
-var mercatorWidth = L.Projection.Mercator.project(bounds.getNorthEast()).x — L.Projection.Mercator.project(bounds.getNorthWest()).x;
+var mercatorWidth = L.Projection.Mercator.project(bounds.getNorthEast()).x - L.Projection.Mercator.project(bounds.getNorthWest()).x;
 var zoom = map.getSize().x / mercatorWidth;
 ```
 
@@ -1432,7 +1432,7 @@ Each Feature in the FeatureCollection contains a `properties` object with the fo
   Identifier provided by the source agency.
 
 - **conditionType**
-  String describing the reported winter road condition classification.  Examples include:
+  String describing the reported winter road condition classification.  Examples include:
   - Clear
   - Partially Covered
   - Mostly Covered by Snow or Ice
@@ -1522,15 +1522,15 @@ The following is a simplified example excerpt of the response structure:
 
 The following colors are recommended for consistent rendering across multiple traffic information web portals.
 
-- Seasonal (green / not displayed) - matches IDOT Clear
-- Partially Covered (blue) - matches IDOT Partly covered by snow or ice
-- Partially Covered with Ice (blue with white dots) - IaDOT only
+- Seasonal (green / not displayed) - matches IDOT Clear
+- Partially Covered (blue) - matches IDOT Partly covered by snow or ice
+- Partially Covered with Ice (blue with white dots) - IaDOT only
 - Mostly covered by snow or ice (dark blue?) - IDOT only
-- Completely Covered (pink) - matches IDOT Covered by snow or ice
-- Completely Covered with Ice (pink with white dots) - IaDOT only
-- Travel Not Advised (purple) - IaDOT only
-- Impassable or Closed (red with black dots) - IaDOT only
-- Towing Not Recommended (light blue shaded county shape) - IaDOT only
+- Completely Covered (pink) - matches IDOT Covered by snow or ice
+- Completely Covered with Ice (pink with white dots) - IaDOT only
+- Travel Not Advised (purple) - IaDOT only
+- Impassable or Closed (red with black dots) - IaDOT only
+- Towing Not Recommended (light blue shaded county shape) - IaDOT only
 
 ## Alerts
 

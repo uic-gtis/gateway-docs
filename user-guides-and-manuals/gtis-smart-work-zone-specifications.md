@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The **Gateway Traveler Information System (GTIS)**, and its associated website [TravelMidwest.com](https://TravelMidwest.com), support one standard and two proprietary smart work zone data formats. Vendors who wish to integrate smart work zone devices with the GTIS should follow the protocols and procedures in this document to ensure compatibility. Vendors can contact [support@travelmidwest.com](mailto:support@travelmidwest.com?subject=GTIS%20Smart%20Work%20Zone) for additional assistance with integration.
+The **Gateway Traveler Information System (GTIS)**, and its associated website [TravelMidwest.com](https://TravelMidwest.com), support one standard and two proprietary smart work zone data formats. Vendors who wish to integrate smart work zone devices with the GTIS should follow the protocols and procedures in this document to ensure compatibility. Vendors can contact [support@travelmidwest.com](mailto:support@travelmidwest.com?subject=GTIS%20Smart%20Work%20Zone) for additional assistance with integration.
 
 ## Devices Supported
 
@@ -26,7 +26,7 @@ Each of these integration methods is discussed below.
 
 ### Upload to TravelMidwest.com
 
-XML upload to TravelMidwest.com requires an approved account along with its username and password (see the [XML Upload Manual](../xml-upload-manual.md) for details). This is the recommended integration method because it ensures the vendor has complete control over the data being transmitted.
+XML upload to TravelMidwest.com requires an approved account along with its username and password (see the [XML Upload Manual](../xml-upload-manual.md) for details). This is the recommended integration method because it ensures the vendor has complete control over the data being transmitted.
 
 ### Upload to JamLogic
 
@@ -38,7 +38,7 @@ The XML format specification is available online at:
 
 - (dead link) https://www.jamlogic.com/download/XML+Secure+Interface/
 
-Once the vendor has established an XML feed through JamLogic using their XML format specification, [support@travelmidwest.com](mailto:support@travelmidwest.com?subject=GTIS%20Smart%20Work%20Zone%20%2F%20JamLogic%20XML%20file) should be contacted and provided the XML file URL. The URL will be in the format (dead link) https://public.jamlogic.com/WorkZoneFeed/secure/code_du_flux.
+Once the vendor has established an XML feed through JamLogic using their XML format specification, [support@travelmidwest.com](mailto:support@travelmidwest.com?subject=GTIS%20Smart%20Work%20Zone%20%2F%20JamLogic%20XML%20file) should be contacted and provided the XML file URL. The URL will be in the format (dead link) https://public.jamlogic.com/WorkZoneFeed/secure/code_du_flux.
 
 ### Upload to iConeTraffic
 

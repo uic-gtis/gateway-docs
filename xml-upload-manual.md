@@ -5,7 +5,7 @@
 Historically, the **Gateway Traveler Information System (GTIS)** has been providing CORBA publish/subscribe and HTTP/XML download based external interfaces for exchanging information with data source systems and data user systems. This document describes an external interface that supports XML uploads.
 
 > [!NOTE]
-> The "datapublisher" role must be granted to your account to upload XML data via the publisher.  Contact [webmaster@travelmidwest.com](mailto:webmaster@travelmidwest.com) for more information.
+> The "datapublisher" role must be granted to your account to upload XML data via the publisher.  Contact [webmaster@travelmidwest.com](mailto:webmaster@travelmidwest.com) for more information.
 
 ## Web Service
 
@@ -18,7 +18,7 @@ https://travelmidwest.com/lmiga/publisher
 Note:
 
 - The report parameter is an XML document containing a LinkTrafficReport, LinkCongestionReport, IncidentReport, RoadWorkReport, HARReport, SpecialEventReport, DMSReport or HARReport.
-- The report objects may, in turn, contain one or more element objects. The report objects will be processed by the Gateway, published to its subscribers and displayed on the Gateway website at [travelmidwest.com](https://travelmidwest.com/) (or [testing.travelmidwest.com](https://testing.travelmidwest.com/) when testing).
+- The report objects may, in turn, contain one or more element objects. The report objects will be processed by the Gateway, published to its subscribers and displayed on the Gateway website at [travelmidwest.com](https://travelmidwest.com/) (or [testing.travelmidwest.com](https://testing.travelmidwest.com/) when testing).
 - Authentication headers with a username + password with XML upload privileges are required. The Gateway will respond with a HTML page containing the word "OK" if the data was accepted.
 - During development, we encourage you to use our testing website: [https://testing.travelmidwest.com/lmiga/publisher](https://testing.travelmidwest.com/lmiga/publisher)
 
@@ -470,39 +470,39 @@ The GTIS will validate uploads to make sure the uploaded data is consistent with
 
 ### LinkTrafficReport
 
-The following must be true or the uploaded travel times will not be displayed by TravelMidwest.com. This applies to each *dataElement* tag separately of the LinkTrafficReport:
+The following must be true or the uploaded travel times will not be displayed by TravelMidwest.com. This applies to each *dataElement* tag separately of the LinkTrafficReport:
 
-- There must be at least one *linkElement* tag in the *link* tag
-- The *linkID* must be formatted as state-sourcename-id (there must be at least two dash characters)
-- The *speed* and the *length/travelTime* must not differ by more than +/- 20%
-- The *speed* must be less than 35.76 meters per second (80 MPH)
-- The *lastUpdateTime* must be less than than 2 minutes ahead of the current clock time
-- The *lastUpdateTime* must be less than 7.5 minutes old
-- The *occupancy* must be less than 90 (percent)
-- The *volume* must be less than 8,800 (vehicles/lane/hr)
-- The //length / travelTime //must be greater than 2.2352 meters per second (5 MPH)
+- There must be at least one *linkElement* tag in the *link* tag
+- The *linkID* must be formatted as state-sourcename-id (there must be at least two dash characters)
+- The *speed* and the *length/travelTime* must not differ by more than +/- 20%
+- The *speed* must be less than 35.76 meters per second (80 MPH)
+- The *lastUpdateTime* must be less than than 2 minutes ahead of the current clock time
+- The *lastUpdateTime* must be less than 7.5 minutes old
+- The *occupancy* must be less than 90 (percent)
+- The *volume* must be less than 8,800 (vehicles/lane/hr)
+- The //length / travelTime //must be greater than 2.2352 meters per second (5 MPH)
 - None of the following:
-  - The *congestionLevel //is not UNKNOWN_CONGESTION_LEVEL and the //speed* is greater than 0
-  - The *congestionLevel* is NON_CONGESTION and the *speed* is less than 24.14 meters per second (54 MPH)
-  - The *congestionLevel* is LIGHT_CONGESTION and the *speed* is less than 15.2 meters per second (34 MPH) or the *speed* is greater than 25.03 meters per second (56 MPH)
-  - The *congestionLevel* is MEDIUM_CONGESTION and the *speed* is less than 6.3 meters per second (14 MPH) or the *speed* is greater than 16.1 meters per second (36 MPH)
-  - The *congestionLevel* is HEAVY_CONGESTION and the *speed* is greater than 7.1 meters per second (16 MPH)
+  - The *congestionLevel //is not UNKNOWN_CONGESTION_LEVEL and the //speed* is greater than 0
+  - The *congestionLevel* is NON_CONGESTION and the *speed* is less than 24.14 meters per second (54 MPH)
+  - The *congestionLevel* is LIGHT_CONGESTION and the *speed* is less than 15.2 meters per second (34 MPH) or the *speed* is greater than 25.03 meters per second (56 MPH)
+  - The *congestionLevel* is MEDIUM_CONGESTION and the *speed* is less than 6.3 meters per second (14 MPH) or the *speed* is greater than 16.1 meters per second (36 MPH)
+  - The *congestionLevel* is HEAVY_CONGESTION and the *speed* is greater than 7.1 meters per second (16 MPH)
 
-Only *dataElement* tags that fail these validations will be rejected.
+Only *dataElement* tags that fail these validations will be rejected.
 
 ### VDSReport
 
-The following must be true or the uploaded VDSReport will not be accepted by the GTIS. This applies to each *listOfVDSElement* tag in the VDSReport:
+The following must be true or the uploaded VDSReport will not be accepted by the GTIS. This applies to each *listOfVDSElement* tag in the VDSReport:
 
-- There must be at least one *locationElement* tag in the *location* tag
+- There must be at least one *locationElement* tag in the *location* tag
 - The //fieldDeviceID //must be formatted as state-sourcename-id (there must be at least two dash characters)
-- The *lastUpdateTime* must be less than 2 minutes ahead of the current clock time
-- The *lastUpdateTime* must be less than 7.5 minutes old
-- The *locationTimeStamp* must be less than 2 minutes ahead of the current clock time
+- The *lastUpdateTime* must be less than 2 minutes ahead of the current clock time
+- The *lastUpdateTime* must be less than 7.5 minutes old
+- The *locationTimeStamp* must be less than 2 minutes ahead of the current clock time
 - The *detectorizationRatio* must be less than 0, greater than 0, or less than or equal to 1 (note that -1 means unknown)
-- The *occupancy* must be less than 90 (percent)
-- The *volume* must be less than 8,800 (vehicles/lane/hr)
-- The *speed* must be less than 40.23 meters per second (90 MPH)
+- The *occupancy* must be less than 90 (percent)
+- The *volume* must be less than 8,800 (vehicles/lane/hr)
+- The *speed* must be less than 40.23 meters per second (90 MPH)
 
 ## Troubleshooting
 

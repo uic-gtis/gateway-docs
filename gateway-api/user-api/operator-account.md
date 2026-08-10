@@ -21,7 +21,7 @@ Before using any of the endpoints documented here, users must be [authenticated]
 POST https://travelmidwest.com/lmiga/user/login.json
 ```
 
-See [Authentication](authentication.md) for more information about logging in. All requests to the endpoints in this documentation will return a **401 Unauthorized** error if the user is not properly authenticated.
+See [Authentication](authentication.md) for more information about logging in. All requests to the endpoints in this documentation will return a **401 Unauthorized** error if the user is not properly authenticated.
 
 ## Common Response Format
 
@@ -31,9 +31,9 @@ All API responses follow a standard format:
 
 ```json
 {
-  "success": true,
-  "data": object,
-  "error": null
+  "success": true,
+  "data": object,
+  "error": null
 }
 ```
 
@@ -41,15 +41,15 @@ All API responses follow a standard format:
 
 ```json
 {
-  "success": false,
-  "data": null,
-  "error": {
-    "code": "ERROR_CODE",
-    "message": "Error message description",
-    "fieldErrors": {
-      "fieldName": "Error message for specific field"
-    }
-  }
+  "success": false,
+  "data": null,
+  "error": {
+    "code": "ERROR_CODE",
+    "message": "Error message description",
+    "fieldErrors": {
+      "fieldName": "Error message for specific field"
+    }
+  }
 }
 ```
 
@@ -73,16 +73,16 @@ No parameters required.
 
 ```json
 {
-  "success": true,
-  "data": {
-    "login": "operator123",
-    "name": "John Doe",
-    "email": "john.doe@example.com",
-    "phoneNumber": "555-123-4567",
-    "agencyId": 42,
-    "agencyName": "Travel Agency XYZ"
-  },
-  "error": null
+  "success": true,
+  "data": {
+    "login": "operator123",
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "phoneNumber": "555-123-4567",
+    "agencyId": 42,
+    "agencyName": "Travel Agency XYZ"
+  },
+  "error": null
 }
 ```
 
@@ -90,12 +90,12 @@ No parameters required.
 
 ```json
 {
-  "success": false,
-  "data": null,
-  "error": {
-    "code": "UNAUTHORIZED",
-    "message": "You must be logged in to access this resource"
-  }
+  "success": false,
+  "data": null,
+  "error": {
+    "code": "UNAUTHORIZED",
+    "message": "You must be logged in to access this resource"
+  }
 }
 ```
 
@@ -103,12 +103,12 @@ No parameters required.
 
 ```json
 {
-  "success": false,
-  "data": null,
-  "error": {
-    "code": "FORBIDDEN",
-    "message": "You do not have the required permissions to access this resource"
-  }
+  "success": false,
+  "data": null,
+  "error": {
+    "code": "FORBIDDEN",
+    "message": "You do not have the required permissions to access this resource"
+  }
 }
 ```
 
@@ -126,12 +126,12 @@ POST https://travelmidwest.com/lmiga/admin/account.json
 Content-Type: `application/json`
 
 {
-  "login": "new_login",
-  "password": "new_password",   Optional, only include if changing password
-  "name": "Updated Name",
-  "email": "updated.email@example.com",
-  "phoneNumber": "555-987-6543",
-  "agencyId": 42   Optional, only include if changing agency
+  "login": "new_login",
+  "password": "new_password",   Optional, only include if changing password
+  "name": "Updated Name",
+  "email": "updated.email@example.com",
+  "phoneNumber": "555-987-6543",
+  "agencyId": 42   Optional, only include if changing agency
 }
 ```
 
@@ -150,16 +150,16 @@ Content-Type: `application/json`
 
 ```json
 {
-  "success": true,
-  "data": {
-    "login": "new_login",
-    "name": "Updated Name",
-    "email": "updated.email@example.com",
-    "phoneNumber": "555-987-6543",
-    "agencyId": 42,
-    "agencyName": "Travel Agency XYZ"
-  },
-  "error": null
+  "success": true,
+  "data": {
+    "login": "new_login",
+    "name": "Updated Name",
+    "email": "updated.email@example.com",
+    "phoneNumber": "555-987-6543",
+    "agencyId": 42,
+    "agencyName": "Travel Agency XYZ"
+  },
+  "error": null
 }
 ```
 
@@ -167,12 +167,12 @@ Content-Type: `application/json`
 
 ```json
 {
-  "success": false,
-  "data": null,
-  "error": {
-    "code": "LOGIN_EXISTS",
-    "message": "There already is a user with the login \"new_login\". Please choose another."
-  }
+  "success": false,
+  "data": null,
+  "error": {
+    "code": "LOGIN_EXISTS",
+    "message": "There already is a user with the login \"new_login\". Please choose another."
+  }
 }
 ```
 
@@ -180,12 +180,12 @@ Content-Type: `application/json`
 
 ```json
 {
-  "success": false,
-  "data": null,
-  "error": {
-    "code": "INVALID_PASSWORD",
-    "message": "The password does not meet security requirements"
-  }
+  "success": false,
+  "data": null,
+  "error": {
+    "code": "INVALID_PASSWORD",
+    "message": "The password does not meet security requirements"
+  }
 }
 ```
 
@@ -193,12 +193,12 @@ Content-Type: `application/json`
 
 ```json
 {
-  "success": false,
-  "data": null,
-  "error": {
-    "code": "INVALID_AGENCY",
-    "message": "The specified agency does not exist"
-  }
+  "success": false,
+  "data": null,
+  "error": {
+    "code": "INVALID_AGENCY",
+    "message": "The specified agency does not exist"
+  }
 }
 ```
 
@@ -220,12 +220,12 @@ No parameters required.
 
 ```json
 {
-  "success": true,
-  "data": {
-    "success": true,
-    "message": "Your account has been successfully deleted"
-  },
-  "error": null
+  "success": true,
+  "data": {
+    "success": true,
+    "message": "Your account has been successfully deleted"
+  },
+  "error": null
 }
 ```
 
@@ -252,12 +252,12 @@ GET https://travelmidwest.com/lmiga/admin/check-login.json?login=desired_login&e
 
 ```json
 {
-  "success": true,
-  "data": {
-    "available": true,
-    "login": "desired_login"
-  },
-  "error": null
+  "success": true,
+  "data": {
+    "available": true,
+    "login": "desired_login"
+  },
+  "error": null
 }
 ```
 
@@ -275,7 +275,7 @@ POST https://travelmidwest.com/lmiga/admin/check-password.json
 Content-Type: `application/json`
 
 {
-  "password": "check-this--password"
+  "password": "check-this--password"
 }
 ```
 
@@ -285,13 +285,13 @@ Content-Type: `application/json`
 
 ```json
 {
-  "success": true,
-  "data": {
-    "valid": true,
-    "password": "••••••••",
+  "success": true,
+  "data": {
+    "valid": true,
+    "password": "••••••••",
     "strength": "strong"
-  },
-  "error": null
+  },
+  "error": null
 }
 ```
 
@@ -315,22 +315,22 @@ No parameters required.
 
 ```json
 {
-  "success": true,
-  "data": [
-    {
-      "id": 1,
-      "name": "Travel Agency XYZ"
-    },
-    {
-      "id": 2,
-      "name": "Global Journeys Inc."
-    },
-    {
-      "id": 3,
-      "name": "Midwest Travels"
-    }
-  ],
-  "error": null
+  "success": true,
+  "data": [
+    {
+      "id": 1,
+      "name": "Travel Agency XYZ"
+    },
+    {
+      "id": 2,
+      "name": "Global Journeys Inc."
+    },
+    {
+      "id": 3,
+      "name": "Midwest Travels"
+    }
+  ],
+  "error": null
 }
 ```
 
@@ -338,12 +338,12 @@ No parameters required.
 
 ```json
 {
-  "success": false,
-  "data": null,
-  "error": {
-    "code": "SERVER_ERROR",
-    "message": "An error occurred while retrieving the list of agencies"
-  }
+  "success": false,
+  "data": null,
+  "error": {
+    "code": "SERVER_ERROR",
+    "message": "An error occurred while retrieving the list of agencies"
+  }
 }
 ```
 
@@ -374,37 +374,37 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 const AccountForm = () => {
-  const [accountData, setAccountData] = useState({});
-  const [agencies, setAgencies] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [accountData, setAccountData] = useState({});
+  const [agencies, setAgencies] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  useEffect(() => {
- Fetch account data and agencies when component mounts
-    Promise.all([
-      axios.get('https://travelmidwest.com/lmiga/admin/account.json'),
-      axios.get('https://travelmidwest.com/lmiga/admin/agencies.json')
-    ]).then(([accountRes, agenciesRes]) => {
-      setAccountData(accountRes.data.data);
-      setAgencies(agenciesRes.data.data);
-      setLoading(false);
-    }).catch(err => {
-      setError(err.response?.data?.error || { message: 'An error occurred' });
-      setLoading(false);
-    });
-  }, []);
+  useEffect(() => {
+ Fetch account data and agencies when component mounts
+    Promise.all([
+      axios.get('https://travelmidwest.com/lmiga/admin/account.json'),
+      axios.get('https://travelmidwest.com/lmiga/admin/agencies.json')
+    ]).then(([accountRes, agenciesRes]) => {
+      setAccountData(accountRes.data.data);
+      setAgencies(agenciesRes.data.data);
+      setLoading(false);
+    }).catch(err => {
+      setError(err.response?.data?.error || { message: 'An error occurred' });
+      setLoading(false);
+    });
+  }, []);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await axios.post('https://travelmidwest.com/lmiga/admin/account.json', accountData);
-      setAccountData(response.data.data);
-      alert('Account updated successfully!');
-    } catch (err) {
-      setError(err.response?.data?.error || { message: 'An error occurred' });
-    }
-  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post('https://travelmidwest.com/lmiga/admin/account.json', accountData);
+      setAccountData(response.data.data);
+      alert('Account updated successfully!');
+    } catch (err) {
+      setError(err.response?.data?.error || { message: 'An error occurred' });
+    }
+  };
 
- Implement the rest of the form...
+ Implement the rest of the form...
 };
 ```
