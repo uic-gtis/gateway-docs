@@ -48,6 +48,15 @@ INTERNAL = {
     "/": "site index",
     "/gwbroker": "legacy alias redirecting old gwbroker?handler=... URLs to the "
                  ".xml.gz downloads; superseded, not worth documenting",
+    # ArchiveProxyController: every one of these is marked @Deprecated in the code,
+    # superseded by the /admin/archive/* endpoints that the admin pages document.
+    # (The React admin UI still calls /dmsArchiveLocations.json -- a frontend issue,
+    # not a documentation one.)
+    "/dmsArchiveLocations.json": "@Deprecated, superseded by /admin/archive/dms/locations.json",
+    "/dmsArchiveText.json": "@Deprecated, superseded by /admin/archive/dms/text.json",
+    "/vdsArchiveLocations.json": "@Deprecated, superseded by /admin/archive/vds/locations.json",
+    "/vdsArchive.json": "@Deprecated, superseded by /admin/archive/vds/data.json",
+    "/vdsArchiveReport.json": "@Deprecated, superseded by /admin/archive/vds/report.json",
 }
 
 # Endpoints whose path has no filename leaf, so the filename match cannot see them.
@@ -57,6 +66,8 @@ INTERNAL = {
 # is the file that documents the endpoint, checked once by reading it.
 DOCUMENTED_IN = {
     "/snapshot": "gateway-api/show-camera.md",
+    "/camera": "gateway-api/show-camera.md",
+    "/messageSign": "dms-info-csv.md",
     "/publisher": "xml-upload-manual.md",
     "/*.xml.gz": "user-guides-and-manuals/xml-and-camera-image-download-manual.md",
     "/admin/webfiles/{*filePath}": "gateway-api/admin/admin-web-files.md",
@@ -170,11 +181,14 @@ def main():
             continue
         if name.startswith("{"):
             # A path-parameter leaf such as /admin/incidentEntry/{id}.json. The docs
-            # illustrate these with a concrete id ("/admin/incidentEntry/123.json"), so
-            # match the full path with the placeholder relaxed to either form.
-            pat = re.sub(r"\\?\{[a-zA-Z]+\\?\}", lambda _: r"(?:\{[a-zA-Z]+\}|\d+)",
-                         re.escape(path))
-            hit = any(re.search(pat, t) for t in texts.values())
+            # write these either fully qualified with a concrete id
+            # ("/admin/incidentEntry/123.json") or relative to a stated base
+            # ("GET /{id}.json"). So look for the relaxed leaf inside a file that also
+            # names the controller's base path.
+            base = path[: -len(name) - 1] or "/"
+            leaf_pat = re.sub(r"\\?\{[a-zA-Z]+\\?\}", lambda _: r"(?:\{[a-zA-Z]+\}|\d+)",
+                              re.escape(name))
+            hit = any(re.search(leaf_pat, t) and base in t for t in texts.values())
         else:
             hit = name in docs
         (covered if hit else undocumented).append((path, src))

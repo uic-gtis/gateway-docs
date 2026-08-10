@@ -8,7 +8,19 @@
 
 ## About
 
-The incidentReponse.json API takes one "id" parameter as part of the URL. This is the ID of the incident you want notification response information for. You must be logged in with "admin" or "eventNotificationViewer" privileges for this API.
+The incidentResponse.json API reports which users were notified about an incident, and how they responded. You must be logged in with "admin" or "eventNotificationViewer" privileges for this API.
+
+## Request
+
+```console
+https://travelmidwest.com/lmiga/incidentResponse.json?id=externalIncidentId
+```
+
+This is a GET request with one required query parameter:
+
+- **id** (required) - the external ID of the incident to report on
+
+An id that matches no incident returns an empty response body.
 
 ## Response
 
