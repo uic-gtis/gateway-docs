@@ -746,6 +746,11 @@ def main():
             md = new
         if "\x00PH" in md:
             d.problems.append("placeholder left unresolved after 8 passes")
+        # The wiki is full of U+00A0 and U+200B, including as the leading indentation of
+        # JSON examples. U+00A0 is not legal JSON whitespace and not a shell word
+        # separator, so leaving them in makes examples fail on copy-paste with nothing
+        # visibly wrong in the text. verify.py fails the build on either.
+        md = md.replace(u" ", " ").replace(u"​", "")
         md = re.sub(r"\n{3,}", "\n\n", md).strip() + "\n"
         md, missed = redact(out_for[rel], md)
         for pat in missed:

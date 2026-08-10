@@ -38,7 +38,7 @@ JSON and GeoJSON endpoints serving live traffic data — travel times, incidents
 Longer-form guides for publishing data to, and receiving data from, the Gateway.
 
 - [Camera Upload Manual](user-guides-and-manuals/camera-upload-manual.md)
-- [Gateway External Interface User Guide](user-guides-and-manuals/gateway-external-interface-user-guide.md)
+- [Gateway External Interface User Guide](user-guides-and-manuals/gateway-external-interface-user-guide/README.md)
 - [Gateway Traffic Data Archive](user-guides-and-manuals/gateway-traffic-data-archive.md)
 - [GTIS Smart Work Zone Specifications for Construction Contractors and Vendors](user-guides-and-manuals/gtis-smart-work-zone-specifications.md)
 - [XML and Camera Image Download Manual](user-guides-and-manuals/xml-and-camera-image-download-manual.md)

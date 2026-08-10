@@ -1,13 +1,13 @@
-# XML Upload Manual
-
-## Introduction
+# Publishing Data to the Gateway
 
 Historically, the **Gateway Traveler Information System (GTIS)** has been providing CORBA publish/subscribe and HTTP/XML download based external interfaces for exchanging information with data source systems and data user systems. This document describes an external interface that supports XML uploads.
 
 > [!NOTE]
 > The "datapublisher" role must be granted to your account to upload XML data via the publisher.  Contact [webmaster@travelmidwest.com](mailto:webmaster@travelmidwest.com) for more information.
 
-## Web Service
+
+# Web Service
+
 
 The web service is a simple HTTP POST operation with one parameter — “report” — to the following URL:
 
@@ -22,36 +22,21 @@ Note:
 - Authentication headers with a username + password with XML upload privileges are required. The Gateway will respond with a HTML page containing the word "OK" if the data was accepted.
 - During development, we encourage you to use our testing website: [https://testing.travelmidwest.com/lmiga/publisher](https://testing.travelmidwest.com/lmiga/publisher)
 
-### JSON response variant
 
-The endpoint above answers with an HTML page reading "OK" or "ERROR", which tells you
-whether the report as a whole was accepted but nothing about the individual objects in
-it. A second endpoint publishes exactly the same way — same `report` parameter, same
-processing, same logging — but answers with JSON:
+# Schemas
 
-```
-https://travelmidwest.com/lmiga/publisher/publish.json
-```
-
-The response describes each object that was published, along with any per-object errors,
-so a client can tell which items in a multi-object report succeeded. A request with a
-missing or empty `report` parameter returns a validation error rather than an HTML error
-page.
-
-Both endpoints are current; use whichever suits your client. The `datapublisher` role
-and authentication requirements are identical.
-
-## Schemas
 
 XML schemas for the various types of reports that can be sent to the Gateway via its XML upload service are available in the attachments section at the bottom of this page.
 
-The fields contained in these schemas are described in the [Gateway External Interface User Guide](user-guides-and-manuals/gateway-external-interface-user-guide/README.md) document.
+The fields contained in these schemas are described in the [Gateway External Interface User Guide]() document.
 
-## Examples
+
+# Examples
+
 
 Clients of the Gateway web service may use different programming languages and platforms to develop applications. The demonstration clients provided below serve mostly as tools to test and verify web services the Gateway provides.
 
-### Upload a LinkTrafficReport to the Gateway
+## Upload a LinkTrafficReport to the Gateway
 
 **Perl demo client**
 
@@ -150,7 +135,7 @@ public class UploadClientTest extends TestCase {
 }
 ```
 
-### Example LinkTrafficReport XML
+## Example LinkTrafficReport XML
 
 ```xml
 <com.gcmtravel.LinkTrafficReport>
@@ -413,7 +398,7 @@ HEAVY_CONGESTION - if speed < 10 MPH
 </com.gcmtravel.LinkTrafficReport>
 ```
 
-### Example DMSReport
+## Example DMSReport
 
 ```xml
 <com.gcmtravel.DMSReport>
@@ -464,11 +449,13 @@ HEAVY_CONGESTION - if speed < 10 MPH
 </com.gcmtravel.DMSReport>
 ```
 
-## Validations
+
+# Validations
+
 
 The GTIS will validate uploads to make sure the uploaded data is consistent with itself and the current clock time. The following sections describe the validations done for each uploaded data type.
 
-### LinkTrafficReport
+## LinkTrafficReport
 
 The following must be true or the uploaded travel times will not be displayed by TravelMidwest.com. This applies to each *dataElement* tag separately of the LinkTrafficReport:
 
@@ -490,7 +477,7 @@ The following must be true or the uploaded travel times will not be displayed by
 
 Only *dataElement* tags that fail these validations will be rejected.
 
-### VDSReport
+## VDSReport
 
 The following must be true or the uploaded VDSReport will not be accepted by the GTIS. This applies to each *listOfVDSElement* tag in the VDSReport:
 
@@ -504,13 +491,15 @@ The following must be true or the uploaded VDSReport will not be accepted by the
 - The *volume* must be less than 8,800 (vehicles/lane/hr)
 - The *speed* must be less than 40.23 meters per second (90 MPH)
 
-## Troubleshooting
 
-### HTTP over TLS
+# Troubleshooting
+
+
+## HTTP over TLS
 
 Note that connections over HTTPS are required for authentication and upload. Network connections to port 80 (HTTP) are automatically redirected to port 443 (HTTPS), but if your client application does not support redirection (HTTP status code 301) your application must explicitly specify `https` in the upload URL.
 
-### HTTP Status Code: *413 Payload Too Large*
+## HTTP Status Code: *413 Payload Too Large*
 
 For security and reliability reasons, all modern web servers and related systems typically cap the maximum upload size. We currently support up to **10 MB per upload**. If you experience a HTTP status code 413 — aka. "Content Too Large" / "Payload Too Large" / "Request Entity Too Large" — please confirm the upload size.
 
