@@ -4,7 +4,7 @@
 
 ### About
 
-The **Gateway Traveler Information System (GTIS)** provides access to raw data for traffic, incident, closure and roadway device information via a [XML interface](gateway-external-interface-user-guide.md).
+The **Gateway Traveler Information System (GTIS)** provides access to raw data for traffic, incident, closure and roadway device information via a [XML interface](gateway-external-interface-user-guide/README.md).
 
 In addition, the Gateway system also supports downloading data in [GeoJSON](../gateway-api/README.md) format and roadside camera images.
 
@@ -37,7 +37,7 @@ The following table lists the types of traffic data available in XML format to r
 
 - Download access is via the HTTPS protocol with [basic access authentication](https://en.wikipedia.org/wiki/Basic_access_authentication).
 - The document component of a URL, e.g. `VDSReport.xml.gz`, is the name of the XML file compressed in [gzip](https://en.wikipedia.org/wiki/Gzip) format.
-- See the [Gateway XML Reference](gateway-external-interface-user-guide.md#gateway-xml-reference) section of the [Gateway External Interface User Guide](gateway-external-interface-user-guide.md) for schema information.
+- See the [Gateway XML Reference](gateway-external-interface-user-guide/gateway-xml-reference.md) section of the [Gateway External Interface User Guide](gateway-external-interface-user-guide/README.md) for schema information.
 
 | Data Type | Information | Download URL |
 | --- | --- | --- |
