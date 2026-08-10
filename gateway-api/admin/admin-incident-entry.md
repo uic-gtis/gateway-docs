@@ -522,7 +522,7 @@ POST create.json
 - Either `isDurationOption: true` with `durationMinutes` OR `estimatedClosureTime` string must be provided
 - External ID is automatically generated with format: {sourceIdPrefix}-{VMID}
 - Incident is automatically published to the Gateway upon creation
-- occurrenceTime, detectionTime, and verificationTime can ***null*** if unknown
+- occurrenceTime, detectionTime, and verificationTime can ***null*** if unknown
 
 ### Update Incident
 

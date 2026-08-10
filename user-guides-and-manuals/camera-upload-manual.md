@@ -11,7 +11,7 @@ See also:
 
 ## cctvSnapshots.xml
 
-In addition to camera images, the Gateway also requires a `cctvSnapshots.xml` file that contains [metadata](https://en.wikipedia.org/wiki/Metadata) used to position camera icons and thumbnail images on the TravelMidwest.com website.
+In addition to camera images, the Gateway also requires a `cctvSnapshots.xml` file that contains [metadata](https://en.wikipedia.org/wiki/Metadata) used to position camera icons and thumbnail images on the TravelMidwest.com website.
 
 Sample [XML](https://en.wikipedia.org/wiki/XML) for two cameras:
 
@@ -120,7 +120,7 @@ See also:
 
 ### Uploads via FTPS
 
-1. Install a suitable FTP client that supports the [FTPS](https://en.wikipedia.org/wiki/FTPS) protocol. Compatible clients we have tested include, but are not limited to:
+1. Install a suitable FTP client that supports the [FTPS](https://en.wikipedia.org/wiki/FTPS) protocol. Compatible clients we have tested include, but are not limited to:
 1*. cURL ([https://curl.se/](https://curl.se/))
 1*. FileZilla ([https://filezilla-project.org/](https://filezilla-project.org/))
 1*. lftp ([https://github.com/lavv17/lftp/](https://github.com/lavv17/lftp/))

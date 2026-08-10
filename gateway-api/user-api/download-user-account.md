@@ -27,27 +27,27 @@ POST /lmiga/user/register.json
 #### Request Body
 
 ```json
-​{
- "login":           "string",               // desired login name
- "password":        "string",               // plain‐text password
- "name":            "string",               // full name
- "email":           "string",               // email address
- "company":         "string",               // company name
- "phoneNumber":     "string",               // contact phone
- "faxNumber":       "string",               // contact fax
- "address": {
-   "street":        "string",
-   "city":          "string",
-   "state":         "string",
-   "zip":           "string"
-  },
- "intendedUsage":   "string",               // what user intends to use data for
- "intendedLocation":"string",               // where data will be displayed
- "requestLink":     true,                   // true to request a link
- "requestXml":      false,                  // true to request XML/camera download
- "revenue":         false,                  // true if user will earn revenue
- "recaptchaResponse":"string"               // reCAPTCHA v3 token
-}​
+{
+ "login":           "string",               // desired login name
+ "password":        "string",               // plain‐text password
+ "name":            "string",               // full name
+ "email":           "string",               // email address
+ "company":         "string",               // company name
+ "phoneNumber":     "string",               // contact phone
+ "faxNumber":       "string",               // contact fax
+ "address": {
+   "street":        "string",
+   "city":          "string",
+   "state":         "string",
+   "zip":           "string"
+  },
+ "intendedUsage":   "string",               // what user intends to use data for
+ "intendedLocation":"string",               // where data will be displayed
+ "requestLink":     true,                   // true to request a link
+ "requestXml":      false,                  // true to request XML/camera download
+ "revenue":         false,                  // true if user will earn revenue
+ "recaptchaResponse":"string"               // reCAPTCHA v3 token
+}
 ```
 
 #### Response
@@ -55,30 +55,30 @@ POST /lmiga/user/register.json
 On success:
 
 ```json
-​​​{
-  "success": true,
+{
+  "success": true,
   "data": {
-    "message": "User created successfully",
+    "message": "User created successfully",
     "userId": "long"
   }
-}​​​
+}
 ```
 
 On validation or server error, returns:
 
 ```json
-​​{
- "success": false,
- "data": null,
- "error": {
-   "code": "ERROR_CODE",
-   "message": "Human‑readable message",
-   "fieldErrors": {
-     "password": "must be at least 8 characters",
-     /* … */
-    }
-  }
-}​​
+{
+ "success": false,
+ "data": null,
+ "error": {
+   "code": "ERROR_CODE",
+   "message": "Human‑readable message",
+   "fieldErrors": {
+     "password": "must be at least 8 characters",
+     /* … */
+    }
+  }
+}
 ```
 
 > [!NOTE]
@@ -92,7 +92,7 @@ On validation or server error, returns:
 
 #### Confirmation Email
 
-As part of a successfully submitted registration form, the system will automatically inform the system access approver via email about the registration.  The access approver will be provided a link to approve or deny the request.
+As part of a successfully submitted registration form, the system will automatically inform the system access approver via email about the registration.  The access approver will be provided a link to approve or deny the request.
 
 ### Get User Account Information
 

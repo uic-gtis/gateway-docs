@@ -26,7 +26,7 @@ incidentInfo.csv?idotDistrict=district1&idotDistrict=district2...&idotDistrict=d
 incidentInfo.csv?stationOne=true
 ```
 
-If no parameters are provided for `stateAndCounty,` `idotDistrict, or stationOne`, then all known incidents in District 8 will be returned.
+If no parameters are provided for `stateAndCounty,` `idotDistrict, or stationOne`, then all known incidents in District 8 will be returned.
 
 Note that some incident id's will appear more than once in the listing if the incident has multiple locations. For example, an incident that blocks both sides of the road will have two entries, one for each direction blocked.
 

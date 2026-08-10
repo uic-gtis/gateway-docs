@@ -31,9 +31,9 @@ For successful responses:
 
 ```json
 {
-  "success": true,
-  "data": { ... },
-  "error": null
+  "success": true,
+  "data": { ... },
+  "error": null
 }
 ```
 
@@ -41,13 +41,13 @@ For error responses:
 
 ```json
 {
-  "success": false,
-  "data": null,
-  "error": {
-    "code": "ERROR_CODE",
-    "message": "Error message",
-    "fieldErrors": { ... }  Optional field validation errors
-  }
+  "success": false,
+  "data": null,
+  "error": {
+    "code": "ERROR_CODE",
+    "message": "Error message",
+    "fieldErrors": { ... }  Optional field validation errors
+  }
 }
 ```
 
@@ -67,22 +67,22 @@ Retrieves a list of all operator accounts in the system.
 
 ```json
 {
-  "success": true,
-  "data": [
-    {
-      "id": 123,
-      "login": "operator1",
-      "name": "John Doe",
-      "organization": "IDOT",
-      "email": "john.doe@example.com",
-      "agencyName": "Illinois Department of Transportation",
-      "roles": ["admin", "operator"],
-      "approved": "2025-04-01T10:30:00.000Z",
-      "updated": "2025-04-10T15:45:00.000Z"
-    },
- more operators...
-  ],
-  "error": null
+  "success": true,
+  "data": [
+    {
+      "id": 123,
+      "login": "operator1",
+      "name": "John Doe",
+      "organization": "IDOT",
+      "email": "john.doe@example.com",
+      "agencyName": "Illinois Department of Transportation",
+      "roles": ["admin", "operator"],
+      "approved": "2025-04-01T10:30:00.000Z",
+      "updated": "2025-04-10T15:45:00.000Z"
+    },
+ more operators...
+  ],
+  "error": null
 }
 ```
 
@@ -106,24 +106,24 @@ Retrieves detailed information about a specific operator account.
 
 ```json
 {
-  "success": true,
-  "data": {
-    "id": 123,
-    "login": "operator1",
-    "name": "John Doe",
-    "email": "john.doe@example.com",
-    "company": "IDOT",
-    "phoneNumber": "312-555-1234",
-    "jobTitle": "Traffic Systems Manager",
-    "faxNumber": "312-555-5678",
-    "approved": "2025-04-01T10:30:00.000Z",
-    "updated": "2025-04-10T15:45:00.000Z",
-    "neverExpires": true,
-    "roles": ["admin", "operator"],
-    "agencyId": 5,
-    "agencyName": "Illinois Department of Transportation"
-  },
-  "error": null
+  "success": true,
+  "data": {
+    "id": 123,
+    "login": "operator1",
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "company": "IDOT",
+    "phoneNumber": "312-555-1234",
+    "jobTitle": "Traffic Systems Manager",
+    "faxNumber": "312-555-5678",
+    "approved": "2025-04-01T10:30:00.000Z",
+    "updated": "2025-04-10T15:45:00.000Z",
+    "neverExpires": true,
+    "roles": ["admin", "operator"],
+    "agencyId": 5,
+    "agencyName": "Illinois Department of Transportation"
+  },
+  "error": null
 }
 ```
 
@@ -131,12 +131,12 @@ Retrieves detailed information about a specific operator account.
 
 ```json
 {
-  "success": false,
-  "data": null,
-  "error": {
-    "code": "User not found",
-    "message": "No user exists with ID 123"
-  }
+  "success": false,
+  "data": null,
+  "error": {
+    "code": "User not found",
+    "message": "No user exists with ID 123"
+  }
 }
 ```
 
@@ -144,12 +144,12 @@ Retrieves detailed information about a specific operator account.
 
 ```json
 {
-  "success": false,
-  "data": null,
-  "error": {
-    "code": "Invalid user type",
-    "message": "User with ID 123 is not an Operator"
-  }
+  "success": false,
+  "data": null,
+  "error": {
+    "code": "Invalid user type",
+    "message": "User with ID 123 is not an Operator"
+  }
 }
 ```
 
@@ -166,17 +166,17 @@ Creates a new operator account.
 
 ```json
 {
-  "login": "newoperator",
-  "password": "SecureP@ssword123",
-  "name": "Jane Smith",
-  "email": "jane.smith@example.com",
-  "company": "CDOT",
-  "phoneNumber": "312-555-9876",
-  "jobTitle": "Systems Administrator",
-  "faxNumber": "312-555-4321",
-  "neverExpires": false,
-  "roles": ["operator"],
-  "agencyId": 6
+  "login": "newoperator",
+  "password": "SecureP@ssword123",
+  "name": "Jane Smith",
+  "email": "jane.smith@example.com",
+  "company": "CDOT",
+  "phoneNumber": "312-555-9876",
+  "jobTitle": "Systems Administrator",
+  "faxNumber": "312-555-4321",
+  "neverExpires": false,
+  "roles": ["operator"],
+  "agencyId": 6
 }
 ```
 
@@ -186,24 +186,24 @@ Creates a new operator account.
 
 ```json
 {
-  "success": true,
-  "data": {
-    "id": 456,
-    "login": "newoperator",
-    "name": "Jane Smith",
-    "email": "jane.smith@example.com",
-    "company": "CDOT",
-    "phoneNumber": "312-555-9876",
-    "jobTitle": "Systems Administrator",
-    "faxNumber": "312-555-4321",
-    "approved": "2025-05-13T14:30:00.000Z",
-    "updated": "2025-05-13T14:30:00.000Z",
-    "neverExpires": false,
-    "roles": ["operator"],
-    "agencyId": 6,
-    "agencyName": "Chicago Department of Transportation"
-  },
-  "error": null
+  "success": true,
+  "data": {
+    "id": 456,
+    "login": "newoperator",
+    "name": "Jane Smith",
+    "email": "jane.smith@example.com",
+    "company": "CDOT",
+    "phoneNumber": "312-555-9876",
+    "jobTitle": "Systems Administrator",
+    "faxNumber": "312-555-4321",
+    "approved": "2025-05-13T14:30:00.000Z",
+    "updated": "2025-05-13T14:30:00.000Z",
+    "neverExpires": false,
+    "roles": ["operator"],
+    "agencyId": 6,
+    "agencyName": "Chicago Department of Transportation"
+  },
+  "error": null
 }
 ```
 
@@ -211,12 +211,12 @@ Creates a new operator account.
 
 ```json
 {
-  "success": false,
-  "data": null,
-  "error": {
-    "code": "LOGIN_EXISTS",
-    "message": "A user with the login 'newoperator' already exists"
-  }
+  "success": false,
+  "data": null,
+  "error": {
+    "code": "LOGIN_EXISTS",
+    "message": "A user with the login 'newoperator' already exists"
+  }
 }
 ```
 
@@ -224,15 +224,15 @@ Creates a new operator account.
 
 ```json
 {
-  "success": false,
-  "data": null,
-  "error": {
-    "code": "VALIDATION_ERROR",
-    "message": "Validation error",
-    "fieldErrors": {
-      "password": "Password does not meet security requirements: must be at least 10 characters, must contain at least one number, must contain at least one special character"
-    }
-  }
+  "success": false,
+  "data": null,
+  "error": {
+    "code": "VALIDATION_ERROR",
+    "message": "Validation error",
+    "fieldErrors": {
+      "password": "Password does not meet security requirements: must be at least 10 characters, must contain at least one number, must contain at least one special character"
+    }
+  }
 }
 ```
 
@@ -255,18 +255,18 @@ Updates an existing operator account.
 
 ```json
 {
-  "login": "operator1",
-  "password": "",  Leave empty to keep the current password
-  "name": "John Doe",
-  "email": "john.doe.updated@example.com",
-  "company": "IDOT",
-  "phoneNumber": "312-555-1234",
-  "jobTitle": "Senior Traffic Systems Manager",
-  "faxNumber": "312-555-5678",
-  "neverExpires": true,
-  "roles": ["admin", "operator", "reporter"],
-  "agencyId": 5,
-  "approved": "2025-04-01T10:30:00.000Z"
+  "login": "operator1",
+  "password": "",  Leave empty to keep the current password
+  "name": "John Doe",
+  "email": "john.doe.updated@example.com",
+  "company": "IDOT",
+  "phoneNumber": "312-555-1234",
+  "jobTitle": "Senior Traffic Systems Manager",
+  "faxNumber": "312-555-5678",
+  "neverExpires": true,
+  "roles": ["admin", "operator", "reporter"],
+  "agencyId": 5,
+  "approved": "2025-04-01T10:30:00.000Z"
 }
 ```
 
@@ -276,24 +276,24 @@ Updates an existing operator account.
 
 ```json
 {
-  "success": true,
-  "data": {
-    "id": 123,
-    "login": "operator1",
-    "name": "John Doe",
-    "email": "john.doe.updated@example.com",
-    "company": "IDOT",
-    "phoneNumber": "312-555-1234",
-    "jobTitle": "Senior Traffic Systems Manager",
-    "faxNumber": "312-555-5678",
-    "approved": "2025-04-01T10:30:00.000Z",
-    "updated": "2025-05-13T15:00:00.000Z",
-    "neverExpires": true,
-    "roles": ["admin", "operator", "reporter"],
-    "agencyId": 5,
-    "agencyName": "Illinois Department of Transportation"
-  },
-  "error": null
+  "success": true,
+  "data": {
+    "id": 123,
+    "login": "operator1",
+    "name": "John Doe",
+    "email": "john.doe.updated@example.com",
+    "company": "IDOT",
+    "phoneNumber": "312-555-1234",
+    "jobTitle": "Senior Traffic Systems Manager",
+    "faxNumber": "312-555-5678",
+    "approved": "2025-04-01T10:30:00.000Z",
+    "updated": "2025-05-13T15:00:00.000Z",
+    "neverExpires": true,
+    "roles": ["admin", "operator", "reporter"],
+    "agencyId": 5,
+    "agencyName": "Illinois Department of Transportation"
+  },
+  "error": null
 }
 ```
 
@@ -319,12 +319,12 @@ Deletes an operator account.
 
 ```json
 {
-  "success": true,
-  "data": {
-    "success": true,
-    "message": "Operator account 123 has been successfully deleted"
-  },
-  "error": null
+  "success": true,
+  "data": {
+    "success": true,
+    "message": "Operator account 123 has been successfully deleted"
+  },
+  "error": null
 }
 ```
 
@@ -344,23 +344,23 @@ Retrieves a list of all available roles that can be assigned to operators.
 
 ```json
 {
-  "success": true,
-  "data": [
-    {
-      "name": "admin",
-      "description": "Administrator with full system access"
-    },
-    {
-      "name": "operator",
-      "description": "Standard operator with access to operational functions"
-    },
-    {
-      "name": "reporter",
-      "description": "Can generate and view reports"
-    }
- more roles...
-  ],
-  "error": null
+  "success": true,
+  "data": [
+    {
+      "name": "admin",
+      "description": "Administrator with full system access"
+    },
+    {
+      "name": "operator",
+      "description": "Standard operator with access to operational functions"
+    },
+    {
+      "name": "reporter",
+      "description": "Can generate and view reports"
+    }
+ more roles...
+  ],
+  "error": null
 }
 ```
 
@@ -378,23 +378,23 @@ Retrieves a list of all available agencies that can be assigned to operators.
 
 ```json
 {
-  "success": true,
-  "data": [
-    {
-      "id": 1,
-      "name": "Gary Chicago International Airport"
-    },
-    {
-      "id": 5,
-      "name": "Illinois Department of Transportation"
-    },
-    {
-      "id": 6,
-      "name": "Chicago Department of Transportation"
-    }
- more agencies...
-  ],
-  "error": null
+  "success": true,
+  "data": [
+    {
+      "id": 1,
+      "name": "Gary Chicago International Airport"
+    },
+    {
+      "id": 5,
+      "name": "Illinois Department of Transportation"
+    },
+    {
+      "id": 6,
+      "name": "Chicago Department of Transportation"
+    }
+ more agencies...
+  ],
+  "error": null
 }
 ```
 

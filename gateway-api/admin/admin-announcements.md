@@ -12,7 +12,7 @@ The /lmiga//admin/announcements end points provide REST APIs for managing announ
 
 ## Authentication
 
-Authentication is required for all endpoints in the /admin path. The loggedIn cookie must be present in all requests. See [Authentication](../user-api/authentication.md) for more information.
+Authentication is required for all endpoints in the /admin path. The loggedIn cookie must be present in all requests. See [Authentication](../user-api/authentication.md) for more information.
 
 ## Base URL
 
@@ -356,7 +356,7 @@ The `ids` array contains announcement IDs in the desired display order. The firs
 **Response:**
 
 > [!WARNING]
-> An older version of the API returned two "success" fields.  The data.success field was redundant and was removed.
+> An older version of the API returned two "success" fields.  The data.success field was redundant and was removed.
 
 Success response when all announcements are reordered:
 

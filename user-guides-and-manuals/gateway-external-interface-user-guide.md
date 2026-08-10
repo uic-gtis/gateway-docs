@@ -60,7 +60,7 @@ The GCM Intelligent Transportation System (ITS) Priority Corridor undertook many
 
 #### Lake Michigan Interstate Gateway Alliance
 
-LMIGA was the successor to the former GCM Priority Corridor. LMIGA was a multi-state, multi-disciplinary voluntary organization which used [TravelMidwest.com](https://travelmidwest.com/), email and/or text messaging to distribute information to travelers in the four-state (southern Wisconsin, northern Illinois, northern Indiana, and southwestern Michigan) area.
+LMIGA was the successor to the former GCM Priority Corridor. LMIGA was a multi-state, multi-disciplinary voluntary organization which used [TravelMidwest.com](https://travelmidwest.com/), email and/or text messaging to distribute information to travelers in the four-state (southern Wisconsin, northern Illinois, northern Indiana, and southwestern Michigan) area.
 
 #### Great Lakes Regional Transportation Operations Coalition
 
@@ -95,7 +95,7 @@ Detailed discussions of these specifications are provided in the following secti
 
 ### Uploading and Downloading Traffic Information
 
-See the [XML Upload Manual](../xml-upload-manual.md) for publishing XML to the GTIS and the [XML and Camera Image Download Manual](xml-and-camera-image-download-manual.md) for how to download data from the GTIS. Data may also be downloaded in Javascript Object Notation (JSON) format as specified in [JSON Traffic Information Download Manual](../gateway-api/README.md) or CSV format for [Camera Meta-Data (cameraInfo.csv)](../camera-info-csv.md).
+See the [XML Upload Manual](../xml-upload-manual.md) for publishing XML to the GTIS and the [XML and Camera Image Download Manual](xml-and-camera-image-download-manual.md) for how to download data from the GTIS. Data may also be downloaded in Javascript Object Notation (JSON) format as specified in [JSON Traffic Information Download Manual](../gateway-api/README.md) or CSV format for [Camera Meta-Data (cameraInfo.csv)](../camera-info-csv.md).
 
 ### Basics for Understanding Definitions
 
@@ -343,7 +343,7 @@ The diagram for the address profile is as follows:
 
 ### Mile Marker Profile
 
-A mile marker may be used to locate a point on a road. Mile markers often have decimal parts making for more precise locations. The XSD for this profile requires a FIPSCode to be specified. (See the discussion above of common elements in locations.)  To specify a section based on mile markers we use start and end mile markers and FIPS's.
+A mile marker may be used to locate a point on a road. Mile markers often have decimal parts making for more precise locations. The XSD for this profile requires a FIPSCode to be specified. (See the discussion above of common elements in locations.)  To specify a section based on mile markers we use start and end mile markers and FIPS's.
 
 ```xml
 <xs:complexType name="com.gcmtravel.MilePointPoint">
@@ -572,7 +572,7 @@ The SectionLocationProfile type groups all section location types together as fo
 
 ### Linear Location
 
-A data structure that is one of the above point specifications together with a tag for saying which, i.e. the choice of the point specifications, is called a Point Location Profile (see above). In a similar manner the choice of section specifications with a tag is the Section Location Profile. The choice of point and section specifications is the Linear Location Profile:
+A data structure that is one of the above point specifications together with a tag for saying which, i.e. the choice of the point specifications, is called a Point Location Profile (see above). In a similar manner the choice of section specifications with a tag is the Section Location Profile. The choice of point and section specifications is the Linear Location Profile:
 
 ```xml
 <xs:complexType name="com.gcmtravel.PointSectionUnion">
@@ -700,11 +700,11 @@ The XSD for lane specifies a sequence of LaneDesc in the usual manner:
 | ←Lane 1 |
 | ←Left Shoulder |
 | <Median> |
-| Left Shoulder → |
-| Lane 1 → |
-| Lane 2 → |
-| Lane 3 → |
-| Right Shoulder → |
+| Left Shoulder → |
+| Lane 1 → |
+| Lane 2 → |
+| Lane 3 → |
+| Right Shoulder → |
 
 #### Fully Specified Lane Descriptions
 
@@ -867,7 +867,7 @@ In a similar fashion, the Gateway attempts to resolve locations by finding their
 </xs:simpleType>
 ```
 
-The FieldDataValidationStatus and the Location Resolution Status fields are required because data validation and location resolution are in some cases carried out by data source DSI machines and the Gateway needs an indication of status to know what remains to be done. The time of the entering or updating of a Field Device is kept in the struc. The last time that the location of the device was referenced is also kept in the structure. This is useful because devices are relatively stationary and locations can be used a check on whether the same device has been given more than one FieldDevice identifier. Contrariwise, when the same device id shows up at a different location, the old device is removed from the system because it has been moved.
+The FieldDataValidationStatus and the Location Resolution Status fields are required because data validation and location resolution are in some cases carried out by data source DSI machines and the Gateway needs an indication of status to know what remains to be done. The time of the entering or updating of a Field Device is kept in the struc. The last time that the location of the device was referenced is also kept in the structure. This is useful because devices are relatively stationary and locations can be used a check on whether the same device has been given more than one FieldDevice identifier. Contrariwise, when the same device id shows up at a different location, the old device is removed from the system because it has been moved.
 
 The XSD for a FieldDevice is as follows:
 
@@ -1344,7 +1344,7 @@ In a similar fashion, the Gateway attempts to resolve locations by finding their
 </xs:simpleType>
 ```
 
-The FieldDataValidationStatus and the Location Resolution Status fields are required because data validation and location resolution are in some cases carried out by data source DSI machines and the Gateway needs an indication of status to know what remains to be done. The time of the entering or updating of a Field Device is kept in the struc. The last time that the location of the device was referenced is also kept in the structure. This is useful because devices are relatively stationary and locations can be used a check on whether the same device has been given more than one FieldDevice identifier. Contrariwise, when the same device id shows up at a different location, the old device is removed from the system because it has been moved.
+The FieldDataValidationStatus and the Location Resolution Status fields are required because data validation and location resolution are in some cases carried out by data source DSI machines and the Gateway needs an indication of status to know what remains to be done. The time of the entering or updating of a Field Device is kept in the struc. The last time that the location of the device was referenced is also kept in the structure. This is useful because devices are relatively stationary and locations can be used a check on whether the same device has been given more than one FieldDevice identifier. Contrariwise, when the same device id shows up at a different location, the old device is removed from the system because it has been moved.
 
 The XSD for a FieldDevice is as follows:
 
@@ -1971,7 +1971,7 @@ The FieldDataValidationStatus and the Location Resolution Status fields are requ
 Historically, the **Gateway Traveler Information System (GTIS)** has been providing CORBA publish/subscribe and HTTP/XML download based external interfaces for exchanging information with data source systems and data user systems. This document describes an external interface that supports XML uploads.
 
 > [!NOTE]
-> The "datapublisher" role must be granted to your account to upload XML data via the publisher.  Contact [webmaster@travelmidwest.com](mailto:webmaster@travelmidwest.com) for more information.
+> The "datapublisher" role must be granted to your account to upload XML data via the publisher.  Contact [webmaster@travelmidwest.com](mailto:webmaster@travelmidwest.com) for more information.
 
 ## Web Service
 
@@ -1984,7 +1984,7 @@ https://travelmidwest.com/lmiga/publisher
 Note:
 
 - The report parameter is an XML document containing a LinkTrafficReport, LinkCongestionReport, IncidentReport, RoadWorkReport, HARReport, SpecialEventReport, DMSReport or HARReport.
-- The report objects may, in turn, contain one or more element objects. The report objects will be processed by the Gateway, published to its subscribers and displayed on the Gateway website at [travelmidwest.com](https://travelmidwest.com/) (or [testing.travelmidwest.com](https://testing.travelmidwest.com/) when testing).
+- The report objects may, in turn, contain one or more element objects. The report objects will be processed by the Gateway, published to its subscribers and displayed on the Gateway website at [travelmidwest.com](https://travelmidwest.com/) (or [testing.travelmidwest.com](https://testing.travelmidwest.com/) when testing).
 - Authentication headers with a username + password with XML upload privileges are required. The Gateway will respond with a HTML page containing the word "OK" if the data was accepted.
 - During development, we encourage you to use our testing website: [https://testing.travelmidwest.com/lmiga/publisher](https://testing.travelmidwest.com/lmiga/publisher)
 
@@ -2417,39 +2417,39 @@ The GTIS will validate uploads to make sure the uploaded data is consistent with
 
 ### LinkTrafficReport
 
-The following must be true or the uploaded travel times will not be displayed by TravelMidwest.com. This applies to each *dataElement* tag separately of the LinkTrafficReport:
+The following must be true or the uploaded travel times will not be displayed by TravelMidwest.com. This applies to each *dataElement* tag separately of the LinkTrafficReport:
 
-- There must be at least one *linkElement* tag in the *link* tag
-- The *linkID* must be formatted as state-sourcename-id (there must be at least two dash characters)
-- The *speed* and the *length/travelTime* must not differ by more than +/- 20%
-- The *speed* must be less than 35.76 meters per second (80 MPH)
-- The *lastUpdateTime* must be less than than 2 minutes ahead of the current clock time
-- The *lastUpdateTime* must be less than 7.5 minutes old
-- The *occupancy* must be less than 90 (percent)
-- The *volume* must be less than 8,800 (vehicles/lane/hr)
-- The //length / travelTime //must be greater than 2.2352 meters per second (5 MPH)
+- There must be at least one *linkElement* tag in the *link* tag
+- The *linkID* must be formatted as state-sourcename-id (there must be at least two dash characters)
+- The *speed* and the *length/travelTime* must not differ by more than +/- 20%
+- The *speed* must be less than 35.76 meters per second (80 MPH)
+- The *lastUpdateTime* must be less than than 2 minutes ahead of the current clock time
+- The *lastUpdateTime* must be less than 7.5 minutes old
+- The *occupancy* must be less than 90 (percent)
+- The *volume* must be less than 8,800 (vehicles/lane/hr)
+- The //length / travelTime //must be greater than 2.2352 meters per second (5 MPH)
 - None of the following:
-  - The *congestionLevel //is not UNKNOWN_CONGESTION_LEVEL and the //speed* is greater than 0
-  - The *congestionLevel* is NON_CONGESTION and the *speed* is less than 24.14 meters per second (54 MPH)
-  - The *congestionLevel* is LIGHT_CONGESTION and the *speed* is less than 15.2 meters per second (34 MPH) or the *speed* is greater than 25.03 meters per second (56 MPH)
-  - The *congestionLevel* is MEDIUM_CONGESTION and the *speed* is less than 6.3 meters per second (14 MPH) or the *speed* is greater than 16.1 meters per second (36 MPH)
-  - The *congestionLevel* is HEAVY_CONGESTION and the *speed* is greater than 7.1 meters per second (16 MPH)
+  - The *congestionLevel //is not UNKNOWN_CONGESTION_LEVEL and the //speed* is greater than 0
+  - The *congestionLevel* is NON_CONGESTION and the *speed* is less than 24.14 meters per second (54 MPH)
+  - The *congestionLevel* is LIGHT_CONGESTION and the *speed* is less than 15.2 meters per second (34 MPH) or the *speed* is greater than 25.03 meters per second (56 MPH)
+  - The *congestionLevel* is MEDIUM_CONGESTION and the *speed* is less than 6.3 meters per second (14 MPH) or the *speed* is greater than 16.1 meters per second (36 MPH)
+  - The *congestionLevel* is HEAVY_CONGESTION and the *speed* is greater than 7.1 meters per second (16 MPH)
 
-Only *dataElement* tags that fail these validations will be rejected.
+Only *dataElement* tags that fail these validations will be rejected.
 
 ### VDSReport
 
-The following must be true or the uploaded VDSReport will not be accepted by the GTIS. This applies to each *listOfVDSElement* tag in the VDSReport:
+The following must be true or the uploaded VDSReport will not be accepted by the GTIS. This applies to each *listOfVDSElement* tag in the VDSReport:
 
-- There must be at least one *locationElement* tag in the *location* tag
+- There must be at least one *locationElement* tag in the *location* tag
 - The //fieldDeviceID //must be formatted as state-sourcename-id (there must be at least two dash characters)
-- The *lastUpdateTime* must be less than 2 minutes ahead of the current clock time
-- The *lastUpdateTime* must be less than 7.5 minutes old
-- The *locationTimeStamp* must be less than 2 minutes ahead of the current clock time
+- The *lastUpdateTime* must be less than 2 minutes ahead of the current clock time
+- The *lastUpdateTime* must be less than 7.5 minutes old
+- The *locationTimeStamp* must be less than 2 minutes ahead of the current clock time
 - The *detectorizationRatio* must be less than 0, greater than 0, or less than or equal to 1 (note that -1 means unknown)
-- The *occupancy* must be less than 90 (percent)
-- The *volume* must be less than 8,800 (vehicles/lane/hr)
-- The *speed* must be less than 40.23 meters per second (90 MPH)
+- The *occupancy* must be less than 90 (percent)
+- The *volume* must be less than 8,800 (vehicles/lane/hr)
+- The *speed* must be less than 40.23 meters per second (90 MPH)
 
 ## Troubleshooting
 
@@ -2473,7 +2473,7 @@ The Gateway can provide traffic data in a number of formats depending on the for
 
 ## Versions
 
-There are two versions of the Incident XML content supported and provided by the GTIS.  The XML document version is contained in the root tag:
+There are two versions of the Incident XML content supported and provided by the GTIS.  The XML document version is contained in the root tag:
 
 ```xml
 <com.gcmtravel.IncidentReport version="2.0">
@@ -2493,8 +2493,8 @@ If the version attribute is missing, then the XML is assumed to be version 1.0.
 
 At the time of writing, the only XML file that supports version 2.0 is the Incident file.
 
-- [https://travelmidwest.com/lmiga/IncidentReport.xml.gz](https://travelmidwest.com/lmiga/IncidentReport.xml.gz) is version 1.0
-- [https://travelmidwest.com/lmiga/IncidentReportV2.xml.gz](https://travelmidwest.com/lmiga/IncidentReportV2.xml.gz) is version 2.0
+- [https://travelmidwest.com/lmiga/IncidentReport.xml.gz](https://travelmidwest.com/lmiga/IncidentReport.xml.gz) is version 1.0
+- [https://travelmidwest.com/lmiga/IncidentReportV2.xml.gz](https://travelmidwest.com/lmiga/IncidentReportV2.xml.gz) is version 2.0
 
 ### Sending XML Version 2 Files
 

@@ -8,7 +8,7 @@ The Gateway traffic data archive is a project that was put together for archivin
 
 ### Real-Time Data
 
-Data provided by our real-time feeds are packaged as gzip'd XML files. Please refer to [XML and Camera Image Download Manual](xml-and-camera-image-download-manual.md) for details.
+Data provided by our real-time feeds are packaged as gzip'd XML files. Please refer to [XML and Camera Image Download Manual](xml-and-camera-image-download-manual.md) for details.
 
 To register for a download account:
 
@@ -21,7 +21,7 @@ To register for a download account:
 > [!NOTE]
 > Due to the growing size of our traffic data archive, only the past 24 hours of data are available for immediate download. As of December 31, 2023 the compressed archive contains over 29.5 million files totaling approximately 8.4 TiB (roughly more than 50 TiB uncompressed).
 >
-> Please contact us at [traffic-data-archive@travelmidwest.com](mailto:traffic-data-archive@travelmidwest.com?subject=Traffic%20data%20archive%20bulk%20transfer%20request) to arrange for bulk transfer onto portable storage, e.g. USB drives.
+> Please contact us at [traffic-data-archive@travelmidwest.com](mailto:traffic-data-archive@travelmidwest.com?subject=Traffic%20data%20archive%20bulk%20transfer%20request) to arrange for bulk transfer onto portable storage, e.g. USB drives.
 >
 > When requesting more than a year's worth of data, we recommend:
 >
@@ -343,7 +343,7 @@ This is almost always set to UNKNOWN_ROADWAY_CONDITION.
 
 #### parent
 
-The <parent> tag contains fields that are common to all road way events such as construction, special events and incidents. See the section on RoadwayEvent above.
+The <parent> tag contains fields that are common to all road way events such as construction, special events and incidents. See the section on RoadwayEvent above.
 
 #### times
 
@@ -870,7 +870,7 @@ Sometimes all you have is a description of the point or section, and the Gateway
 
 #### Lane descriptions
 
-A cross-sectional position in the road or off to the right or left of the roadway can be represented with a “lane desc” IDL specification. The cross-sectional LaneDesc location is used for specifying the effect or intensity of effect (LaneImpactType) of an event that is localized to a particular lane or part of the roadway. An example would be the closing of a particular lane because of blockage by a chemical spillage. To specify a location including the lane(s) affected, a location that includes a linear location and one or more LaneDesc(s) is used.
+A cross-sectional position in the road or off to the right or left of the roadway can be represented with a “lane desc” IDL specification. The cross-sectional LaneDesc location is used for specifying the effect or intensity of effect (LaneImpactType) of an event that is localized to a particular lane or part of the roadway. An example would be the closing of a particular lane because of blockage by a chemical spillage. To specify a location including the lane(s) affected, a location that includes a linear location and one or more LaneDesc(s) is used.
 
 The basic part of the LaneDesc struct is the lane number designation. Lane numbers are an index to lanes based on the perspective of a driver going in particular direction on the roadway. The number 1 designates the leftmost lane serving traffic going in the same direction as our driver. The highest lane number is the index of the rightmost lane going in the same direction. A shoulder (right or left) is considered non-indexable and had a lane number of 0. If the lane number is unknown, it is given a negative index.
 
@@ -900,7 +900,7 @@ typedef sequence<LaneDesc> LaneLocation;
 typedef sequence<LaneLocation> LaneLocationList;
 ```
 
-This diagram shows the layout and ordering of lane numbers for each side of an expressway with *n* lanes on one side and *m* lanes on the other:
+This diagram shows the layout and ordering of lane numbers for each side of an expressway with *n* lanes on one side and *m* lanes on the other:
 
 |  |  |  |
 | --- | --- | --- |

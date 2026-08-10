@@ -1,6 +1,6 @@
 # dmsInfo.csv
 
-The [XML and Camera Image Download Manual](https://confluence.travelmidwest.com/display/PUBLIC/XML+and+Camera+Image+Download+Manual) describes detailed dynamic message sign (DMS) data that can be accessed from the TravelMdiwest.com website for registered users while the `dmsInfo.csv` web service provides publicly available DMS data to all users:
+The [XML and Camera Image Download Manual](https://confluence.travelmidwest.com/display/PUBLIC/XML+and+Camera+Image+Download+Manual) describes detailed dynamic message sign (DMS) data that can be accessed from the TravelMdiwest.com website for registered users while the `dmsInfo.csv` web service provides publicly available DMS data to all users:
 
 ```
 https://travelmidwest.com/lmiga/dmsInfo.csv
