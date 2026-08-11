@@ -166,6 +166,7 @@ The response for a type=lines Congestion request is a GeoJSON FeatureCollection 
     - id — the string congestion ID
     - a — true or false, whether the congestion is on an arterial
     - cng — a single character: "N" for not congested, "L" for light congestion, "M" for medium congestion, "H" for heavy congestion, "U" for unknown congestion
+    - e — true when the line should be drawn with an extra offset from the road centreline, false otherwise
 - sourceInformationList — an array of JSON objects with the following fields:
   - name — the source name (Illinois Tollway, IDOT, etc)
   - timestamp — the milliseconds since 1/1/1970
@@ -358,7 +359,8 @@ The POST parameter for the request is a JSON object with the following fields:
   - properties — a JSON object with the following fields
     - id — the real time traffic ID
     - a — true or false, whether the real time traffic is on an arterial
-    - cng — a single character: "N" for not congested, "L" for light congestion, "M" for medium congestion, "H" for heavy congestion, "U" for unknown congestion
+    - cng — a single character: "N" for not congested, "L" for light congestion, "M" for medium congestion, "H" for heavy congestion, "U" for unknown congestion, or "X" when the section is closed (except for the reversible Kennedy lanes, which report their congestion level regardless)
+    - e — true when the line should be drawn with an extra offset from the road centreline, false otherwise
 
 ### Update
 
@@ -391,6 +393,14 @@ The request parameter **id** determines the congestion segment to retreive prope
 - loc — the location description for the real time traffic
 - len — the length in miles of the real time traffic
 - upd — the formatted update time of the real time traffic
+- tt — the travel time
+- spd — the speed
+- stat — the status
+- uncSpd — the uncapped speed
+- jf — the jam factor
+- ffSpd — the free flow speed
+- flKey — the flow key
+- prt — the percent real time
 
 ## Incidents
 
@@ -425,7 +435,7 @@ The response FeatureCollection has the following fields:
     - id — the incident ID
     - locDesc — the location description for the incident
     - desc — the description of the incident
-    - stat — the status: "Major", "Medium", "Minor", "None", or "Unknown"
+    - stat — the incident state: "New", "Updated", "Canceled", "Closed", "Deleted", or "Clearing"
     - closure — the lane closure for the incident
     - lanes — "full", "partial", or "clearing"
     - start — the formatted start time of the incident
@@ -434,6 +444,8 @@ The response FeatureCollection has the following fields:
     - src — the name of the source agency
     - locDir — local direction used for placing icon on correct side of road (NB, SB, EB, WB, NEB, SEB, NWB, SWB)
     - biDir — "true" if the incident is also on the other side of the road, "false" otherwise
+    - ev — true if an emergency vehicle is stopped at the incident, false otherwise
+    - respDet — response details. Populated only for authenticated callers; present but null otherwise
 
 ### Example
 
@@ -509,6 +521,8 @@ The response is a GeoJSON FeatureCollection with additional fields for the const
   - src — the name of the source agency
   - lstUpd — the formatted last update time of the construction
   - mo — true or false, whether the construction is a moving operation
+  - lanes — "full" if the construction is a full closure, "partial" if not, "unknown" if the location cannot be resolved
+  - auth — true if the response was generated for an authenticated caller, false otherwise
   - type — "Feature"
   - geometry — a GeoJSON GeometryCollection object with the following fields:
   - properties — a JSON object with the following fields
@@ -599,6 +613,8 @@ The response for a Camera request is a GeoJSON FeatureCollection with additional
   - yOff — a y offset used to place the icon to the side of the road
   - xJust — an x justification used to place the icon to the side of the road
   - yJust — a y justification used to place the icon to the side of the road
+  - video — true if the camera has live video configured, false otherwise. Drives a distinct map icon
+  - idotDistrict — the IDOT district number for the camera, or null when it is not known
   - type — "Feature"
   - geometry — a GeoJSON Point object with the following fields:
   - properties — a JSON object with the following fields
@@ -763,6 +779,7 @@ The response for a Message Sign request is a GeoJSON FeatureCollection with addi
   - lstRecd — the formatted last received time of the message sign
   - locDir — the local direction for placing the icon to the side of the road ("NB", "SB", etc.)
   - extOff — the extra offset for placing the icon on the map
+  - lstUpd — the formatted last update time of the sign. Populated only for authenticated callers; an empty string otherwise
   - type — "Feature"
   - geometry — a GeoJSON Point object with the following fields:
   - properties — a JSON object with the following fields
@@ -1330,6 +1347,7 @@ The request requires a POST parameter specifying the request bounds as described
 The response is a GeoJSON FeatureCollection with additional fields for the truck parking lot properties. The geometry for a truck parking lot is a GeoJSON Point. The response FeatureCollection has the following fields:
 
 - siteId - unique string identifying the parking lot
+- name - string name of the parking lot
 - timestamp - string timestamp of when lot availability data was last updated is ISO 8601 format
 - availableSpots - string representing number of stalls open for parking
 - capacity - string representing number of stalls in parking lot
@@ -1341,6 +1359,7 @@ The response is a GeoJSON FeatureCollection with additional fields for the truck
 - trustData - boolean true or false
 - open - boolean true or false
 - trend - string Clearing, Steady, Filling, or Unknown
+- lotUrl - string URL for the parking lot's own page, or null when the lot has none
 
 ### Example
 
