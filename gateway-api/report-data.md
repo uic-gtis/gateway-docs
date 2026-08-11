@@ -25,6 +25,8 @@ All reports are organized into hierarchical geographic locations starting with t
   - GATEWAY.REGIONAL
     - GATEWAY.REGIONAL.I-24
 
+This document covers the hierarchical, report-location form of the data; the same underlying data organized spatially by bounding box is described in [Map Data](map-data.md).
+
 ## "path" Parameter and Report Locations
 
 The Travel Times and Incidents JSON download require a path parameter, which indicates a Travel Midwest report location. Reports are organized hierarchically with the "GATEWAY" report including all possible reports, "GATEWAY.IL" containing all Illinois reports, etc.
@@ -124,6 +126,8 @@ The returned array will be sorted by distance, lowest distance first. A GATEWAY.
 
 ## Travel Times
 
+*For the bounding-box/GeoJSON form of this data, see [Map Data → Travel Times](map-data.md#travel-times).*
+
 The GTIS provides a fixed number of travel times that can be downloaded in JSON format.
 
 ### Request
@@ -202,6 +206,8 @@ https://travelmidwest.com/lmiga/travelTime.json?path=GATEWAY.IL.I-55
 ```
 
 ## Incidents
+
+*For the bounding-box/GeoJSON form of this data, see [Map Data → Incidents](map-data.md#incidents).*
 
 ### Request
 
@@ -492,6 +498,8 @@ https://travelmidwest.com/lmiga/incidents.json?path=GATEWAY
 
 ## Construction
 
+*For the bounding-box/GeoJSON form of this data, see [Map Data → Construction](map-data.md#construction).*
+
 The GTIS allows active construction events to be downloaded in JSON format.
 
 ### Request
@@ -703,6 +711,8 @@ https://travelmidwest.com/lmiga/construction.json?path=GATEWAY.IL.I-55.I-55+NB
 
 ## Special Events
 
+*For the bounding-box/GeoJSON form of this data, see [Map Data → Special Events](map-data.md#special-events).*
+
 The GTIS allows active special events like stadium events, festivals, and parades to be downloaded in JSON format.
 
 ### Request
@@ -729,6 +739,8 @@ Returns special events associated with a given report in JSON format with the fo
 - tablePath — see Path section above
 
 ## Congestion
+
+*For the bounding-box/GeoJSON form of this data, see [Map Data → Congestion](map-data.md#congestion).*
 
 The GTIS provides a fixed number of congestion links that can be downloaded in JSON format.
 
@@ -806,6 +818,8 @@ https://travelmidwest.com/lmiga/congestion.json?path=GATEWAY.IL.I-55
 ```
 
 ## Camera Locations and Report
+
+*For the bounding-box/GeoJSON form of this data, see [Map Data → Cameras](map-data.md#cameras).*
 
 There are two end points for the camera report:
 
@@ -1010,6 +1024,8 @@ Returns VDS associated with a given report in JSON format with the following fie
 - tablePath — see Path section above
 
 ## Weather Station Report
+
+*For the bounding-box/GeoJSON form of this data, see [Map Data → Weather Stations](map-data.md#weather-stations).*
 
 Weather Sensor Station (WSS)
 

@@ -6,11 +6,15 @@ GTIS map data is provided in [GeoJSON](https://tools.ietf.org/html/rfc7946) form
 
 Most map data URLs require a POST parameter that is a JSON object specifying a bounding box. Some endpoints use GET requests instead; see the individual sections for details.
 
+This document covers the spatial, bounding-box form of the data; the same underlying data organized by hierarchical report location is described in [Report Data](report-data.md).
+
 ## Bounding Box
 
 `bbox` — A four-element array of numbers `[minlong, minlat, maxlong, maxlat]` declaring the bounding box for the request (typically the visible extent of the map).
 
 ## Travel Times
+
+*For the same data organized by report location, see [Report Data → Travel Times](report-data.md#travel-times).*
 
 ### Request
 
@@ -123,6 +127,8 @@ The response for a Travel Time request is a GeoJSON FeatureCollection with addit
 ```
 
 ## Congestion
+
+*For the same data organized by report location, see [Report Data → Congestion](report-data.md#congestion).*
 
 Since there can be thousands of congestion sections in a major metropolitan area such as Chicago and most users will want to update the congestion coloring on their maps periodically, three types of congestion request are supported:
 
@@ -388,6 +394,8 @@ The request parameter **id** determines the congestion segment to retreive prope
 
 ## Incidents
 
+*For the same data organized by report location, see [Report Data → Incidents](report-data.md#incidents).*
+
 Two types of incident request are supported: the default returns Point + GeometryCollection features, and `type=lines` returns MultiLineString features suitable for highlighting the affected road segment.
 
 ### Request
@@ -465,6 +473,8 @@ The response FeatureCollection has the following fields:
 ```
 
 ## Construction
+
+*For the same data organized by report location, see [Report Data → Construction](report-data.md#construction).*
 
 As with incidents, a `type=lines` variant is supported that returns MultiLineString features.
 
@@ -548,6 +558,8 @@ The response is a GeoJSON FeatureCollection with additional fields for the const
 ```
 
 ## Cameras
+
+*For the same data organized by report location, see [Report Data → Camera Locations and Report](report-data.md#camera-locations-and-report).*
 
 Camera data in JSON format can be accessed in two different files, cameraMap.json and cameras.json:
 
@@ -817,6 +829,8 @@ The response for a Message Sign request is a GeoJSON FeatureCollection with addi
 
 ## Special Events
 
+*For the same data organized by report location, see [Report Data → Special Events](report-data.md#special-events).*
+
 As with incidents and construction, a `type=lines` variant is supported that returns MultiLineString features.
 
 ### Request
@@ -898,6 +912,8 @@ The response is a GeoJSON FeatureCollection with additional fields for the speci
 ```
 
 ## Weather Stations
+
+*For the same data organized by report location, see [Report Data → Weather Station Report](report-data.md#weather-station-report).*
 
 ### Request
 
