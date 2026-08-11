@@ -30,6 +30,39 @@ Endpoints deliberately not documented go in its `INTERNAL` map with a reason, so
 "nobody has documented this yet" and "this is intentionally not public API" stay
 distinct states and a green run means something.
 
+`check_fields.py` is the level below it — same idea, one step further in:
+
+```
+python tools/check_fields.py --gateway /path/to/gateway     # add --endpoint to narrow
+```
+
+`check_coverage.py` asks "is this endpoint documented at all?"; this asks "are the
+*fields* we describe the fields it really returns?". It works because the GeoJSON map
+endpoints all build their `properties` object from a small POJO (`IncidentProperties`,
+`CameraProperties`, …) under Lombok `@Getter`/`@Value` and serialized by Jackson, so the
+wire names are statically extractable from the class — and the docs list them as
+`- name — description` bullets. The doc-section-to-class mapping is written out by hand
+in `MAPPING`, not inferred, and anything it cannot parse is reported as UNMAPPED rather
+than skipped.
+
+It proposes; it does not conclude. It compares **names only** — value sets, types, units
+and null behaviour are invisible to it, and several of the worst errors found in the
+first pass were value-set errors on correctly-named fields (`stat` on `incidentMap.json`
+was documented with a severity vocabulary the code never produces). Read the code before
+editing a document on its say-so.
+
+Three traps it has to handle, all of which produced false findings first:
+
+- **`@JsonProperty` renames.** `SpecialEventPropertiesDto` declares `lastUpdated` and
+  ships it as `lstUpd`. Reading the declaration alone reports correct documentation as
+  wrong — the most dangerous output this tool can produce.
+- **Package-private fields.** Classes under Lombok `@Value` declare `String id;` with no
+  visibility keyword. A regex demanding `private` matches nothing, and an empty field
+  list makes every documented field look undocumented — a page of false findings that
+  reads exactly like a real one.
+- **Constructor locals.** Only declarations at class-body brace depth are fields;
+  otherwise `formatter` and `imageAge` get reported as undocumented wire fields.
+
 Two matching subtleties, both learned the hard way:
 
 - **Match on endpoint filename, not full path.** The docs write endpoints
