@@ -167,9 +167,6 @@ The response for a type=lines Congestion request is a GeoJSON FeatureCollection 
     - a — true or false, whether the congestion is on an arterial
     - cng — a single character: "N" for not congested, "L" for light congestion, "M" for medium congestion, "H" for heavy congestion, "U" for unknown congestion
     - e — true when the line should be drawn with an extra offset from the road centreline, false otherwise
-- sourceInformationList — an array of JSON objects with the following fields:
-  - name — the source name (Illinois Tollway, IDOT, etc)
-  - timestamp — the milliseconds since 1/1/1970
 
 #### Example
 
@@ -232,13 +229,6 @@ The response for a type=lines Congestion request is a GeoJSON FeatureCollection 
          }
      },
      ..... additional congestion features omitted for clarity .....
-  ],
-  "sourceInformationList": [
-    {"name": "Skyway", "timestamp": 1520620298000},
-    {"name": "Chicago DOT", "timestamp": 1520619847096},
-    {"name": "InDOT", "timestamp": 1520620311000},
-    {"name": "Illinois Tollway", "timestamp": 1520620260046},
-    {"name": "IDOT D1", "timestamp": 1520620164098}
   ]
 }
 ```
@@ -264,9 +254,6 @@ The response for a type=update Congestion request is a JSON object with the foll
 - updates — an array of JSON objects with the following fields:
   - id — the congestion ID
   - cng — a single character: "N" for not congested, "L" for light congestion, "M" for medium congestion, "H" for heavy congestion, "U" for unknown congestion
-- sourceInformationList — an array of JSON objects with the following fields:
-  - name — the source name (Illinois Tollway, IDOT, etc)
-  - timestamp — the milliseconds since 1/1/1970
 
 #### Example
 
@@ -279,14 +266,7 @@ The response for a type=update Congestion request is a JSON object with the foll
     {"id": "IL-TESTTSC-I_57-N-9017", "cng": "L"},
     {"id": "IL-CDOT-526", "cng": "L"},
     ..... additional congestion updates omitted for clarity .....
-  ],
-  "sourceInformationList": [
-    {"name": "Skyway", "timestamp": 1520620298000},
-    {"name": "Chicago DOT", "timestamp": 1520619847096},
-    {"name": "InDOT", "timestamp": 1520620311000},
-    {"name": "Illinois Tollway", "timestamp": 1520620260046},
-    {"name": "IDOT D1", "timestamp": 1520620164098}
-  ],
+  ]
 }
 ```
 
