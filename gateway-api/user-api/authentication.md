@@ -197,9 +197,26 @@ export default Login;
 
 ## Logout
 
-Log out the currently logged in user.
+There are two logout endpoints, because the administrative session and the trip alerts session are
+carried by two independent cookies (`loggedIn` and `alertsLoggedIn`) that can both be set at once.
+Call whichever matches the session you mean to end; the server does not guess.
 
-- /user/logout.json
+| Endpoint | Method | Clears | Authentication | Use for |
+| --- | --- | --- | --- | --- |
+| `/user/logout.json` | POST | **both** `loggedIn` and `alertsLoggedIn` | Not required | Logging out completely |
+| `/user/trip/logout.json` | POST | `alertsLoggedIn` only | Not required | Ending a trip alerts session while leaving any admin session intact |
+
+`/user/logout.json` clears both cookies deliberately. An administrator who has used
+[Become User](../admin/admin-my-routes-users.md#become-user-masquerade) holds both cookies at the
+same time, and clearing only the administrative one would leave the browser quietly signed in as the
+trip user being impersonated.
+
+An administrator who wants to stop impersonating but stay signed in as an administrator should call
+[`/user/trip/logout.json`](route-alert-user-api.md#post-logoutjson) instead.
+
+### /user/logout.json
+
+- **Method**: POST
 
 **Response**
 
@@ -209,6 +226,8 @@ Log out the currently logged in user.
   "message": "Logged out" / "User not logged in"
 }
 ```
+
+Returns HTTP 400 with `"code": "NOT_LOGGED_IN"` when neither cookie is present.
 
 ## Session Management
 
