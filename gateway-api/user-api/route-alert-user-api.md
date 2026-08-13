@@ -271,6 +271,34 @@ Successful Response (200 status)
 }
 ```
 
+### POST logout.json
+
+Logs the trip alerts user out by expiring the `alertsLoggedIn` cookie. Any admin session in the
+same browser is left untouched — see [Logout](authentication.md#logout) for how this differs from
+`/user/logout.json`, which ends every session.
+
+Unlike the rest of `/user/trip/`, this endpoint does not require authentication. Expiring a cookie
+the caller may not have is harmless, and logging out should never fail with a 403. Calling it
+without a session returns the same success response.
+
+This is also how an administrator stops [masquerading as a trip
+user](../admin/admin-my-routes-users.md#become-user-masquerade) and returns to being just an
+administrator, with no separate endpoint needed — for an ordinary trip user the same call is a
+plain logout.
+
+Successful Response (200 status)
+
+```json
+{
+  "success": true,
+  "data": {
+    "success": true,
+    "message": "Logged out"
+  },
+  "error": null
+}
+```
+
 ## Custom Routes
 
 Registered trip alert users can create custom routes to receive email alerts on those routes. Route planning is a public endpoint; saving, updating, and deleting routes require authentication.

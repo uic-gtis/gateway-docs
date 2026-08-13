@@ -78,7 +78,7 @@ Returns a JSON array of Trip User summaries with the following structure:
 
 #### Request
 
-Allows an admin to log in as a specific trip user to view and troubleshoot their account. This clears the admin session and creates a new session as the specified trip user.
+Allows an admin to log in as a specific trip user to view and troubleshoot their account. The admin's own session is kept: the target user's `alertsLoggedIn` cookie is added alongside the admin's existing `loggedIn` cookie, so both identities are active at the same time.
 
 URL: `/{id}/becomeUser.json`
 Method: `GET`
@@ -90,7 +90,16 @@ Path Parameters:
 | --- | --- | --- |
 | id | Long | The database ID of the trip user to masquerade as |
 
-**Important:** This endpoint clears your admin session. After calling this endpoint, you will be logged in as the specified trip user and will no longer have admin access. You will need to log in again with admin credentials to regain admin access.
+While masquerading:
+
+- Requests to `/user/trip/**` act on the impersonated user's account, not the admin's.
+- Administrative endpoints continue to work; admin access is not lost.
+- The impersonation is recorded in the server log.
+
+**Ending the masquerade.** Call [`POST /user/trip/logout.json`](../user-api/route-alert-user-api.md#post-logoutjson), which expires only the `alertsLoggedIn` cookie and leaves the admin signed in. Do **not** use `/user/logout.json` for this — it ends every session, including the administrative one. See [Logout](../user-api/authentication.md#logout).
+
+> [!NOTE]
+> Before r25760 this endpoint ended the admin session, requiring a fresh admin login afterwards.
 
 #### Response (Success)
 
@@ -129,4 +138,14 @@ Request:
 GET https://travelmidwest.com/lmiga/admin/users/trip/123/becomeUser.json
 ```
 
-After a successful response, navigate to the Trip Map page to view the user's saved routes and alert settings as if you were that user.
+After a successful response, navigate to the Trip Map page to view the user's saved routes and alert settings as if you were that user. Administrative pages remain available throughout.
+
+### Returning to Your Own Account
+
+Request:
+
+```console
+POST https://travelmidwest.com/lmiga/user/trip/logout.json
+```
+
+Ends the masquerade and leaves you signed in as an administrator.
