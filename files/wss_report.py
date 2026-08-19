@@ -25,7 +25,7 @@ import xml.dom.minidom
 # Provide username and password for TravelMidwest.com account
 username = 'XXX'  #@param {type: "string"}
 password = 'XXX' #@param {type: "string"}
-url = 'https://www.travelmidwest.com/lmiga/WSSReport.xml.gz'
+url = 'https://travelmidwest.com/lmiga/WSSReport.xml.gz'
 package = 'com.gcmtravel.WSSReport'
 
 def columnNameMapper(columnName: str) -> str:
@@ -48,15 +48,19 @@ def columnNameMapper(columnName: str) -> str:
   return columnName
 
 with requests.get(url, auth=HTTPBasicAuth(username, password), stream=True) as r:
+  r.raise_for_status()
   xmlstr = gzip.decompress(data=r.content).decode('utf-8')
-  with open('DMSReport.xml', 'w') as out:
+  with open('WSSReport.xml', 'w') as out:
     dom = xml.dom.minidom.parseString(xmlstr)
     out.write(dom.toprettyxml(indent='  '))
   df = pdx.read_xml(xmlstr, [ package ]).pipe(fully_flatten).rename(columns=columnNameMapper).set_index('fieldDeviceID')
   df['latLongPointLoc|coord|latitude'] = df['latLongPointLoc|coord|latitude'].astype(float) / 100000.0
   df['latLongPointLoc|coord|longitude'] = df['latLongPointLoc|coord|longitude'].astype(float) / 100000.0
-  df['timestamp'] = df['lastUpdateTime'].astype(float).apply(func=lambda t: datetime.fromtimestamp(t/1000., tz=None))
-  df['age'] = datetime.utcnow() - df['timestamp']
+  # errors='coerce' yields NaT for the out-of-range lastUpdateTime values that some
+  # sources publish; datetime.fromtimestamp() raises OSError on those instead.
+  # Both timestamp and age are UTC.
+  df['timestamp'] = pd.to_datetime(df['lastUpdateTime'].astype(float), unit='ms', errors='coerce')
+  df['age'] = pd.Timestamp.utcnow().tz_localize(None) - df['timestamp']
   # some DMS are missing fieldDeviceID values!   Drop those rows because they cause an error in source_data = line below
   df = df[~df.index.isna()]
   # fully_flatten will cause fieldDeviceID duplications when a DMS has more than one location profile, let's merge these together

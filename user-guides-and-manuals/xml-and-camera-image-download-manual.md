@@ -136,7 +136,7 @@ public class XmlClient {
           return new PasswordAuthentication (args[0], args[1].toCharArray());
         }
       });
-      HttpsURLConnection conn = (HttpsURLConnection) new URL(url).openConnection();
+      HttpsURLConnection conn = (HttpsURLConnection) URI.create(url).toURL().openConnection();
       BufferedReader in = new BufferedReader(
         new InputStreamReader(new GZIPInputStream(conn.getInputStream())));
       String line;
@@ -156,7 +156,7 @@ The sample program above performs the usual operations for accessing a file via 
 
 #### Python
 
-Python and its libraries can download and process GTIS XML files directly from the Travel Midwest website. The following code uses the requests, gzip, pandas and minidom libraries to download the `DMSReport.gz` file, convert it into a pandas DataFrame, then save each data source to its own Excel ([Office Open XML](https://en.wikipedia.org/wiki/Office_Open_XML)) spreadsheet file.
+Python and its libraries can download and process GTIS XML files directly from the Travel Midwest website. The following code uses the requests, gzip, pandas and minidom libraries to download the `DMSReport.xml.gz` file, convert it into a pandas DataFrame, then save each data source to its own Excel ([Office Open XML](https://en.wikipedia.org/wiki/Office_Open_XML)) spreadsheet file.
 
 ```python
 import requests
@@ -173,7 +173,7 @@ import xml.dom.minidom
 # Provide username and password for TravelMidwest.com account
 username = 'XXX'
 password = 'XXX'
-url = 'https://testing.travelmidwest.com/lmiga/DMSReport.xml.gz'
+url = 'https://travelmidwest.com/lmiga/DMSReport.xml.gz'
 package = 'com.gcmtravel.DMSReport'
 
 def columnNameMapper(columnName: str) -> str:
@@ -196,6 +196,7 @@ def columnNameMapper(columnName: str) -> str:
   return columnName
 
 with requests.get(url, auth=HTTPBasicAuth(username, password), stream=True) as r:
+  r.raise_for_status()
   xmlstr = gzip.decompress(data=r.content).decode('utf-8')
   with open('DMSReport.xml', 'w') as out:
     dom = xml.dom.minidom.parseString(xmlstr)
@@ -203,8 +204,11 @@ with requests.get(url, auth=HTTPBasicAuth(username, password), stream=True) as r
   df = pdx.read_xml(xmlstr, [ package ]).pipe(fully_flatten).rename(columns=columnNameMapper).set_index('fieldDeviceID')
   df['latLongPointLoc|coord|latitude'] = df['latLongPointLoc|coord|latitude'].astype(float) / 100000.0
   df['latLongPointLoc|coord|longitude'] = df['latLongPointLoc|coord|longitude'].astype(float) / 100000.0
-  df['timestamp'] = df['lastUpdateTime'].astype(float).apply(func=lambda t: datetime.fromtimestamp(t/1000., tz=None))
-  df['age'] = datetime.utcnow() - df['timestamp']
+  # errors='coerce' yields NaT for the out-of-range lastUpdateTime values that some
+  # sources publish; datetime.fromtimestamp() raises OSError on those instead.
+  # Both timestamp and age are UTC.
+  df['timestamp'] = pd.to_datetime(df['lastUpdateTime'].astype(float), unit='ms', errors='coerce')
+  df['age'] = pd.Timestamp.utcnow().tz_localize(None) - df['timestamp']
   # some DMS are missing fieldDeviceID values!   Drop those rows because they cause an error in source_data = line below
   df = df[~df.index.isna()]
   # fully_flatten will cause fieldDeviceID duplications when a DMS has more than one location profile, let's merge these together
@@ -251,7 +255,7 @@ Example Python scripts:
 
 A HTTP HEAD request can be used to retrieve the `Last-Modified` and `Content-Length` headers for a Gateway XML file. The `Last-Modified` timestamp can then be used to determine if the data has changed since your last download. Since a HTTP HEAD request and response use less network bandwidth and system resources, they can be performed more frequently. Alternatively, the `If-Modified-Since` HTTP header can be used on a GET request. If the file on the Gateway is not newer than the date given in the `If-Modified-Since` header, then no content plus a 304 (Not Modified) status code is returned.
 
-Another way to avoid downloading data that has not changed is to use the `~-~-timestamping` option for the [wget](https://en.wikipedia.org/wiki/Wget) utility program. The option checks the time of the file on the local system against the `Last-Modified` header obtained with a HEAD request and only downloads the file if the `Last-Modfied` date/time is newer than the local file's date/time. For example:
+Another way to avoid downloading data that has not changed is to use the `--timestamping` option for the [wget](https://en.wikipedia.org/wiki/Wget) utility program. The option checks the time of the file on the local system against the `Last-Modified` header obtained with a HEAD request and only downloads the file if the `Last-Modified` date/time is newer than the local file's date/time. For example:
 
 ```bash
 $ wget --timestamping --http-user=<login> --http-password=<password> https://travelmidwest.com/lmiga/LinkTrafficReport.xml.gz
