@@ -18,3 +18,4 @@
 - [Truck Parking Reports](truck-parking-reports.md)
 - [Trucker Reports](trucker-reports.md)
 - [User API](user-api/README.md)
+- [Work Zone Data Exchange (WZDx)](work-zone-data-exchange.md)

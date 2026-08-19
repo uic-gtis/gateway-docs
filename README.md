@@ -32,6 +32,20 @@ JSON and GeoJSON endpoints serving live traffic data — travel times, incidents
 - [Truck Parking Reports](gateway-api/truck-parking-reports.md)
 - [Trucker Reports](gateway-api/trucker-reports.md)
 - [User API](gateway-api/user-api/README.md) — Account and authentication endpoints for the various kinds of GTIS user.
+- [Work Zone Data Exchange (WZDx)](gateway-api/work-zone-data-exchange.md)
+
+### [Work Zone Data Exchange (WZDx)](gateway-api/work-zone-data-exchange.md)
+
+GTIS ingests [WZDx](https://github.com/usdot-jpo-ode/wzdx) feeds from the Illinois Tollway
+and WisDOT, converts its own roadwork database to WZDx, and republishes the result through
+three endpoints:
+
+- **constructionWzdxMap.json** — GTIS roadwork and ingested WZDx together, as map-ready GeoJSON.
+- **wzdxData.json** — the combined work zone feed in WZDx document format.
+- **illinoisWzdx.json** — the Illinois-only subset published to the Trihydro SDX.
+
+See [Work Zone Data Exchange](gateway-api/work-zone-data-exchange.md) for request
+parameters, response fields and examples.
 
 ### [User Guides and Manuals](user-guides-and-manuals/README.md)
 

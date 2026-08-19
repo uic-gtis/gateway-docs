@@ -1616,6 +1616,8 @@ The response is a GeoJSON FeatureCollection with Point features for each ferry c
 
 ## Construction (WZDx)
 
+*For the full reference — parameter behaviour, every response field and examples — see [Work Zone Data Exchange → constructionWzdxMap.json](work-zone-data-exchange.md#constructionwzdxmapjson).*
+
 The constructionWzdxMap.json endpoint returns construction data from both the GTIS roadwork database and WZDx (Work Zone Data Exchange) feeds. It extends the standard constructionMap.json with additional WZDx-specific fields.
 
 ### Request
@@ -1628,8 +1630,8 @@ The request is a POST with optional query parameters and a JSON body:
 
 #### Query Parameters
 
-- **agency** (optional) — filter by agency: "TIMS", "WISDOT", or omit for all
 - **type** (optional) — filter by data source: "Roadwork", "WZDx", or omit for all
+- **agency** (optional) — accepted, but not currently applied as a filter
 
 #### POST Body
 
@@ -1654,6 +1656,8 @@ The response is a GeoJSON FeatureCollection with the same construction feature f
 
 ## WZDx Data Feed
 
+*For the full reference — parameter behaviour, every response field and examples — see [Work Zone Data Exchange → wzdxData.json](work-zone-data-exchange.md#wzdxdatajson).*
+
 The wzdxData.json endpoint serves the raw WZDx (Work Zone Data Exchange) feed containing work zone data from Tollway and WisDOT WZDx sources, with optional inclusion of GTIS roadwork data converted to WZDx format.
 
 ### Request
@@ -1666,18 +1670,20 @@ Both GET and POST methods are supported.
 
 #### Query Parameters
 
-- **agency** (optional) — filter by agency
 - **includeRoadWork** (optional, boolean, default false) — set to true to include GTIS roadwork data converted to WZDx format
+- **agency** (optional) — accepted, but not currently applied as a filter
 
 #### POST Body
 
-- bbox — see [Bounding Box](#bounding-box) section (optional — if omitted, all WZDx features are returned)
+- bbox — accepted, but not currently applied; the full feed is returned
 
 ### Response
 
 The response is a WZDx-format GeoJSON FeatureCollection. Each feature represents a work zone in WZDx v4 format. The response has the same structure as the [Illinois WZDx Feed](#illinois-wzdx-feed) but is not filtered to Illinois-only sources.
 
 ## Illinois WZDx Feed
+
+*For the full reference, see [Work Zone Data Exchange → illinoisWzdx.json](work-zone-data-exchange.md#illinoiswzdxjson). This endpoint is not yet deployed on travelmidwest.com.*
 
 The illinoisWzdx.json endpoint serves the Illinois-filtered WZDx (Work Zone Data Exchange) feed. This feed contains the same data that is uploaded to the Trihydro SDX: Illinois sources only, Tollway excluded, with geometry and property corrections applied.
 
