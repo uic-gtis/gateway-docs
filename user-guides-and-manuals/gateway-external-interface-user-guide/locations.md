@@ -323,6 +323,136 @@ The diagram of this profile shows a ramp from "fromRoadwayName" to "toRoadwayNam
 
 ![Ramp Section Profile Diagram](../../images/ramp-section-profile-diagram.svg)
 
+The same profile over a real interchange, the ramp from I-290 North to I-90 East: `startOffset` is drawn in white, `endOffset` in orange, and the ramp section itself in light blue with an arrow giving its direction. A is the start point and B the end point, as above.
+
+**Figure 3-8 Ramp Profile Example**
+
+![Ramp Profile Example](../../images/image2017-11-6_8-36-5.png)
+
+## LatLongRamp Profile
+
+The LatLongRamp profile is the ramp profile with a coordinate attached. It carries the same "from" and "to" roadway designation and the same offset along the ramp as the [Ramp Profile](#ramp-profile), and adds the latitude and longitude of the point itself, so a receiver can place the point without resolving the ramp in its own map database.
+
+This profile belongs to **version 2.0 XML** — see [Versions](versions.md). The Gateway writes `latLongRampPointLoc` and `latLongRampSectionLoc` into version 2.0 documents only. Reading is not quite symmetrical: a document read as version 1.0 passes over `latLongRampSectionLoc`, while `latLongRampPointLoc` is accepted whichever version the document declares.
+
+```xml
+<xs:complexType name="com.gcmtravel.LatLongRampPoint">
+  <xs:sequence>
+    <xs:element name="fromRoadName" type="com.gcmtravel.RoadwayName"/>
+    <xs:element name="fromDirection" type="com.gcmtravel.RoadwayDirectionType"/>
+    <xs:element name="fromRoadwayType" type="com.gcmtravel.RoadwayType"/>
+    <xs:element name="fips" type="com.gcmtravel.FIPSCode"/>
+    <xs:element name="toRoadName" type="com.gcmtravel.RoadwayName"/>
+    <xs:element name="toDirection" type="com.gcmtravel.RoadwayDirectionType"/>
+    <xs:element name="toRoadwayType" type="com.gcmtravel.RoadwayType"/>
+    <xs:element name="offset" type="xs:double"/>  <!-- in meters along ramp's direction -->
+    <xs:element name="coord" type="com.gcmtravel.LatLong"/>
+  </xs:sequence>
+</xs:complexType>
+<xs:complexType name="com.gcmtravel.LatLongRampSection">
+  <xs:sequence>
+    <xs:element name="fromRoadName" type="com.gcmtravel.RoadwayName"/>
+    <xs:element name="fromDirection" type="com.gcmtravel.RoadwayDirectionType"/>
+    <xs:element name="fromRoadwayType" type="com.gcmtravel.RoadwayType"/>
+    <xs:element name="fromFips" type="com.gcmtravel.FIPSCode"/>
+    <xs:element name="startOffset" type="xs:double"/>  <!-- in meters along ramp's direction -->
+    <xs:element name="toRoadName" type="com.gcmtravel.RoadwayName"/>
+    <xs:element name="toDirection" type="com.gcmtravel.RoadwayDirectionType"/>
+    <xs:element name="toRoadwayType" type="com.gcmtravel.RoadwayType"/>
+    <xs:element name="toFips" type="com.gcmtravel.FIPSCode"/>
+    <xs:element name="endOffset" type="xs:float"/>  <!-- in meters along ramp's direction -->
+    <xs:element name="startLatLong" type="com.gcmtravel.LatLong"/>
+    <xs:element name="endLatLong" type="com.gcmtravel.LatLong"/>
+  </xs:sequence>
+</xs:complexType>
+```
+
+A point is reported as `latLongRampPointLoc`. A location that carries one normally carries the plain [ramp point](#ramp-profile) for the same spot as well, each in its own element:
+
+```xml
+<latLongRampPointLoc>
+  <fromRoadName>
+    <name>I-94</name>
+    <prefix>NONE</prefix>
+    <suffix>NONE</suffix>
+    <streetType/>
+  </fromRoadName>
+  <fromDirection>WEST_BOUND</fromDirection>
+  <fromRoadwayType>UNKNOWN_ROADWAY_TYPE</fromRoadwayType>
+  <fips>
+    <stateCode>17</stateCode>
+    <countyCode>31</countyCode>
+    <cityCode>14000</cityCode>
+  </fips>
+  <toRoadName>
+    <name>I-294</name>
+    <prefix>NONE</prefix>
+    <suffix>NONE</suffix>
+    <streetType/>
+  </toRoadName>
+  <toDirection>SOUTH_BOUND</toDirection>
+  <toRoadwayType>UNKNOWN_ROADWAY_TYPE</toRoadwayType>
+  <offset>250.75</offset>
+  <coord>
+    <latitude>4190000</latitude>
+    <longitude>-8770000</longitude>
+    <hDatum>NAD83</hDatum>
+  </coord>
+</latLongRampPointLoc>
+```
+
+The coordinate is in microdegrees, as everywhere else in these profiles, and the FIPS code carries state, county and city only — no zip code. The offset is in meters along the ramp, measured from the "from" roadway.
+
+A section is reported as `latLongRampSectionLoc`, and its fields are not simply a start point followed by an end point: the "from" name, direction, type and FIPS come from the **start** point and the "to" set from the **end** point, both ends being understood to lie on the same ramp. The Gateway emits the section only when both ends carry a LatLongRamp point and the two agree on the ramp's name; where they disagree it omits the section rather than report it wrong.
+
+```xml
+<latLongRampSectionLoc>
+  <fromRoadName>
+    <name>I-65</name>
+    <prefix>NONE</prefix>
+    <suffix>NONE</suffix>
+    <streetType/>
+  </fromRoadName>
+  <fromDirection>SOUTH_BOUND</fromDirection>
+  <fromRoadwayType>UNKNOWN_ROADWAY_TYPE</fromRoadwayType>
+  <fromFips>
+    <stateCode>18</stateCode>
+    <countyCode>89</countyCode>
+    <cityCode>32818</cityCode>
+  </fromFips>
+  <startOffset>100.0</startOffset>
+  <toRoadName>
+    <name>I-94</name>
+    <prefix>NONE</prefix>
+    <suffix>NONE</suffix>
+    <streetType/>
+  </toRoadName>
+  <toDirection>EAST_BOUND</toDirection>
+  <toRoadwayType>UNKNOWN_ROADWAY_TYPE</toRoadwayType>
+  <toFips>
+    <stateCode>18</stateCode>
+    <countyCode>89</countyCode>
+    <cityCode>32818</cityCode>
+  </toFips>
+  <endOffset>3.4028235E38</endOffset>
+  <startLatLong>
+    <latitude>4158030</latitude>
+    <longitude>-8718330</longitude>
+    <hDatum>NAD83</hDatum>
+  </startLatLong>
+  <endLatLong>
+    <latitude>4158100</latitude>
+    <longitude>-8718200</longitude>
+    <hDatum>NAD83</hDatum>
+  </endLatLong>
+</latLongRampSectionLoc>
+```
+
+> [!IMPORTANT]
+> `endOffset` is a float where `startOffset` is a double, and the value `3.4028235E38` — the largest float there is — is a flag meaning "to the end of the ramp", not a distance of 340 undecillion meters. The example above is a section that runs from 100 meters along the I-65 South to I-94 East ramp to wherever that ramp ends.
+
+Both elements are among the choices listed under [Point Location Profile](#point-location-profile) and [Section Location Profile](#section-location-profile) below.
+
 ## Between Cross Streets Profile
 
 The XSD specification for the cross streets profile provides for locating a point on a roadway as being a percentage (float) of the way between two cross streets specified by name, direction, and type. The direction of the roadway causes one cross street to be designated the "from' street and the other the "to" street. A start percent and an end percent are used to define a start point and an end point for the section.
@@ -376,6 +506,22 @@ A geometry point is defined by reference to a "segment ID". This allows us to fi
 
 The offsets for the geometry profiles are specified in meters from the start of the segment. For segments that represent two directions of a road, the start may be either the "Ref" or "Non-Ref" depending on the SegmentDirectionType. Most interstates are digitized as uni-directional (one segment per direction) so their offset will always be from the "Ref" node of the segment.
 
+A geometry point over a real segment, `1168585328R` in the Dan Ryan express lanes near 35th Street. The white outline is the segment, and the arrow is the offset measured from its Ref node in the `REF_TO_NONREF` direction — the direction the `R` suffix on the segment label stands for.
+
+**Figure 3-10 Geometry Profile Example**
+
+![Geometry Profile Example](../../images/image2017-11-6_8-38-10.png)
+
+The figure rounds the offset; the point it draws is reported as:
+
+```xml
+<geometryPointLoc>
+  <direction>REF_TO_NONREF</direction>
+  <segmentID>1168585328</segmentID>
+  <offset>25.341177804894947</offset>
+</geometryPointLoc>
+```
+
 ## Text Profile
 
 Sometimes all you have is a description of the point or section, and the Gateway includes this possibility in its profile for designation by text. If none of the other profiles are possible, reports are submitted using a text description. The text profile may also be used to return a humanly accessible message to Gateway users. The XSD is as follows:
@@ -415,6 +561,7 @@ The PointLocationProfile type groups all point location types together as follow
     <xs:element name="rampPointLoc" type="com.gcmtravel.RampPoint"/>
     <xs:element name="betweenStreetPointLoc" type="com.gcmtravel.BetweenStreetPoint"/>
     <xs:element name="geometryPointLoc" type="com.gcmtravel.GeometryPoint"/>
+    <xs:element name="latLongRampPointLoc" type="com.gcmtravel.LatLongRampPoint"/>  <!-- version 2.0 only -->
   </xs:choice>
 </xs:complexType>
 ```
@@ -435,6 +582,7 @@ The SectionLocationProfile type groups all section location types together as fo
     <xs:element name="betweenStreetSectionLoc" type="com.gcmtravel.BetweenStreetSection"/>
     <xs:element name="geometrySectionLoc" type="com.gcmtravel.GeometrySection"/>
     <xs:element name="genericSectionLoc" type="com.gcmtravel.GenericSection"/>
+    <xs:element name="latLongRampSectionLoc" type="com.gcmtravel.LatLongRampSection"/>  <!-- version 2.0 only -->
   </xs:choice>
 </xs:complexType>
 ```
@@ -559,7 +707,7 @@ The XSD for lane specifies a sequence of LaneDesc in the usual manner:
 </xs:element>
 ```
 
-**Figure 3-10 Lane Positions**
+**Figure 3-11 Lane Positions**
 
 |  |
 | --- |

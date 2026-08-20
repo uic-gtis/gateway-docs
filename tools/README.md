@@ -112,9 +112,16 @@ language tags.
 - The Smart Work Zone Specifications page named individual third-party vendor staff with
   direct e-mail and phone; those are replaced with the GTIS team address (see
   `REDACTIONS` in `xwiki2md.py`). The rules fail the build if they stop matching.
-- Two passages in `gateway-traffic-data-archive.md` no longer match the wiki, on
-  purpose. The wiki calls the LinkPoint figure a ramp from I-355 North where the
-  recovered map plainly shows I-290 North, so the sentence was corrected against the
-  figure; and the GeometryPoint figure, which arrives with no caption of its own, was
-  given one along with the XML the drawing depicts. Both edits live in the markdown
-  only, as edits to this repository should.
+- `gateway-traffic-data-archive.md` used to carry a copy of the data definitions from
+  the External Interface User Guide, in CORBA IDL where the guide gives XSD. That copy
+  is gone; the section is now a table of links into the guide, and the five diagrams it
+  duplicated (`lat-long-diagram.svg` and friends, cosmetic variants of figures the guide
+  already shows) went with it.
+- Two passages in `locations.md` no longer match the wiki, on purpose. The wiki calls
+  the ramp figure a ramp from I-355 North where the recovered map plainly shows I-290
+  North, so the caption was written against the figure; and the geometry point figure,
+  which arrives with no caption of its own, was given one along with the XML the drawing
+  depicts. Both edits live in the markdown only, as edits to this repository should.
+- `locations.md` also documents the LatLongRamp profile, which the wiki never covered:
+  it is a version 2.0 addition, written from `LatLongRampPoint` and `GenericSection` in
+  the gateway source rather than from any wiki page.
