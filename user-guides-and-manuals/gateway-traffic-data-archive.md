@@ -827,11 +827,9 @@ struct RampSection {
 };
 ```
 
-The diagram of this profile shows a ramp from I-355 North to I-90 East. The start point is A and the end point is B.
+The diagram of this profile shows the ramp from I-290 North to I-90 East. The start point is labeled A and the end point B; `startOffset` is drawn in white, `endOffset` in orange, and the ramp section itself in light blue with an arrow giving its direction.
 
-> [!NOTE]
-> The figure that belongs here (`image2017-11-6_8-36-5.png`) is unavailable: the image was
-> lost from the source wiki before this documentation was migrated.
+![image2017-11-6_8-36-5.png](../images/image2017-11-6_8-36-5.png)
 
 #### BetweenStreetPoint and BetweenStreetSection
 
@@ -864,9 +862,17 @@ struct GeometrySection {
 
 The profile is represented as follows:
 
-> [!NOTE]
-> The figure that belongs here (`image2017-11-6_8-38-10.png`) is unavailable: the image was
-> lost from the source wiki before this documentation was migrated.
+![image2017-11-6_8-38-10.png](../images/image2017-11-6_8-38-10.png)
+
+The point drawn above lies on segment `1168585328R` in the Dan Ryan express lanes near 35th Street. The white outline is the segment, and the arrow is the offset measured from its Ref node in the `REF_TO_NONREF` direction — the direction the `R` suffix on the segment label stands for. The figure rounds the offset; the report itself carries the full value:
+
+```xml
+<geometryPointLoc>
+  <direction>REF_TO_NONREF</direction>
+  <segmentID>1168585328</segmentID>
+  <offset>25.341177804894947</offset>
+</geometryPointLoc>
+```
 
 #### Text
 

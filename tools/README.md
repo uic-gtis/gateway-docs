@@ -102,13 +102,19 @@ language tags.
 
 ## Known content gaps
 
-- Three images are referenced by the source pages but no longer exist on the wiki (they
-  404, and their pages report zero attachments). Each is now a visible "figure
-  unavailable" note in the page — a hidden HTML comment left the surrounding prose
-  referring to something the reader could not see was missing. If the originals turn up,
-  drop them in `images/` and replace the notes.
-- `xwiki2md.py` re-runs will reintroduce the `<!-- TODO(docs) -->` form of those markers;
-  see `MISSING_IMAGES` in that script.
+- Three images the source pages reference are gone from the wiki (they 404, and their
+  pages report zero attachments). All three were recovered from elsewhere and are
+  committed under `images/`, so the pages are whole. The conversion scripts still record
+  the loss as it stood — `MISSING_IMAGES` in `xwiki2md.py` names all three, and
+  `fetch_assets.py` cannot download them — which is history, not a live gap. It is also
+  one more reason not to re-run the conversion over these documents: it would bury the
+  restored figures under "figure unavailable" markers again.
 - The Smart Work Zone Specifications page named individual third-party vendor staff with
   direct e-mail and phone; those are replaced with the GTIS team address (see
   `REDACTIONS` in `xwiki2md.py`). The rules fail the build if they stop matching.
+- Two passages in `gateway-traffic-data-archive.md` no longer match the wiki, on
+  purpose. The wiki calls the LinkPoint figure a ramp from I-355 North where the
+  recovered map plainly shows I-290 North, so the sentence was corrected against the
+  figure; and the GeometryPoint figure, which arrives with no caption of its own, was
+  given one along with the XML the drawing depicts. Both edits live in the markdown
+  only, as edits to this repository should.
