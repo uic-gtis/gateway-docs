@@ -587,7 +587,7 @@ The response for a Camera request is a GeoJSON FeatureCollection with additional
   - dis — true or false, whether the camera is disabled
   - age — the formatted image age in minutes and seconds
   - src — the name of the source agency
-  - dirs — for a multi-directional camera, an array of the directions ("N", "S", "E", or "W")
+  - dirs — for a multi-directional camera, the directions it currently has a recent image for: "N", "NE", "NW", "S", "SE", "SW", "E" or "W". The four diagonals appear for IDOT's downstate cameras from 2026; before that only the cardinal four were carried, and a few cameras publish nothing but diagonals. Single-direction cameras have an **empty** array — never a "NONE" entry, unlike the other camera endpoints. A direction whose image has aged past the report maximum is left out of the array entirely
   - remUrls — an array of image URLs for the camera if Travel Midwest accesses the camera remotely
   - xOff — an x offset used to place the icon to the side of the road
   - yOff — a y offset used to place the icon to the side of the road
@@ -603,6 +603,9 @@ The response for a Camera request is a GeoJSON FeatureCollection with additional
 
 Cameras have a small 176 pixel wide thumbnail for map popup and report purposes and a full-size snapshot image. The URLs for the thumbnail and snapshot depends on whether the remUrls array is empty or not. Cameras with a non-empty remUrls are considered to be "remote" in that another agency is hosting the images for it. Multi-directional cameras have dirs.length > 1.
 The follow table details the camera thumbnail and snapshot URLs for each case. The "i" represents the camera direction index into the dirs and remUrls arrays.
+
+> [!WARNING]
+> `dirs` and `remUrls` are **not reliably index-aligned**. `remUrls` carries every image the camera has, while `dirs` drops any direction whose image has aged out, so a camera with a single stale view yields `dirs.length < remUrls.length` and every index past the gap names the wrong direction. Use `dirs[i]` to label an image only when the two arrays are the same length; otherwise fall back to the `/camera` and `/snapshot` endpoints, which take the direction explicitly.
 
 |  | Multi-directional?<br>(dirs.length > 0) | Thumbnail | Snapshot |
 | --- | --- | --- | --- |
@@ -692,7 +695,7 @@ The following parameters are optional:
 | Parameter | Description | Default Value |
 | --- | --- | --- |
 | state | Name of the state to download camera data for. Supports the following values:<br>Illinois, Indiana, Wisconsin, Michigan, Missouri, Iowa, Missouri, Iowa or Kentucky | Illinois |
-| idPrefix | Allows filtering the cameras — only cameras whose ID starts with this value will be returned. Can be specified multiple times to include cameras matching any of the given prefixes. | IL-IDOTD4 |
+| idPrefix | Allows filtering the cameras — only cameras whose ID starts with this value will be returned. Can be specified multiple times to include cameras matching any of the given prefixes. Note that `IL-IDOTD4` covers **all** of IDOT's downstate cameras, districts 2 through 9, not District 4 alone — it is a source key, not a description. Use the `district` property to select a single district. | IL-IDOTD4 |
 | maintenance | Whether to return only cameras that need maintenance (images are more than 15 minutes old). | false (POST parameters as specified in the [Bounding Box](#bounding-box) section are not required.) |
 
 #### Response
@@ -710,9 +713,9 @@ The cameras.json file is automatically updated with new camera data as the data 
     - description — description of camera's location
     - onRoad – interstate, route, or street name the camera is located on (e.g., “I-474”, “US-24”, “IL-8”, “University St”, etc.)
     - crossRoad — cross road, bridge name, or landmark name the camera is near
-    - age — the formatted image age in minutes and seconds
+    - lastUpdateTime — when the camera last sent an image, in milliseconds since 1970-01-01T00:00:00Z; `0` if that is not known
     - urls – an array of
-      - direction – n, s, e, w that the camera can face
+      - direction – the direction the camera was facing for this image: "N", "NE", "NW", "S", "SE", "SW", "E" or "W", or "NONE" for a single-direction camera. The four diagonals appear for IDOT's downstate cameras from 2026
       - thumbnail – url of a thumbnail sized image for the given direction
       - url – of the full-sized camera image for the given direction
     - state – state camera is in (i.e., “Illinois”)
@@ -721,6 +724,7 @@ The cameras.json file is automatically updated with new camera data as the data 
     - city – name of city camera is located in (e.g., “Peoria”, “Springfield”, etc.)
     - bridge – “true” if the camera is on a river bridge, “false” otherwise
     - mileMarker — a decimal amount, the approximate mile marker location of the camera along the 'onRoad'
+    - videoUrl — the public HLS stream URL when the camera has live video and its feed is currently allowed; `null` otherwise
 The camera properties in cameras.json are sufficient to allow camera filtering in a report. Note that the file is in GeoJSON format.
 The camera properties will be sorted based on the *onRoad* and *mileMarker* properties as follows:
 

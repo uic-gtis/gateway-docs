@@ -943,18 +943,36 @@ The response will be a JSON object with the following fields:
   - path — report location path, e.g. "GATEWAY.IL.ARTERIALS.LAKE"
   - displayName — human readable name for table, e.g. "Lake County"
   - cells — an array of objects, each with the following:
-    - externalId — unique id for camera
-    - name — agency's name for camera
-    - agency — name of the agency, e.g. "Lake County"
+    - externalId — unique id for camera, URL-encoded (Tollway ids contain `/` and `=`)
+    - name — agency's name for camera, URL-encoded
+    - agency — name of the agency, e.g. "Lake County". Spaces are written as `&nbsp;`, so this
+      value is meant to be placed into HTML rather than read as text
     - location — location of camera
-    - idotDistrict — district number from 1 to 9 if known
-    - imageAge  — "M minutes, S seconds old" for camera
-    - imageDirections — an array of objects for each direction the camera can point:
-      - age — "M minutes, S seconds old" for this direction
+    - idotDistrict — the string "District N" for an IDOT camera when the request is
+      authenticated, otherwise the empty string. It is never a bare number, and it is empty
+      for every camera an anonymous request sees
+    - imageAge  — "M minutes, S seconds ago" for camera
+    - imageDirections — a JSON **object keyed by direction code**, with one entry for each
+      direction the camera published an image for; `null` for a single-view camera. The keys
+      are "N", "NE", "NW", "S", "SE", "SW", "E" and "W", in that order. The four diagonals
+      appear for IDOT's downstate cameras from 2026; earlier responses carried only the
+      cardinal four, and a few of these cameras publish nothing but diagonals.
+      Each value is an object with:
+      - age — "M minutes, S seconds ago" for this direction
       - url — image URL
       - encodedUrl — same as URL but encoded
-    - direction — default direction for camera
-    - url — url if camera does not have any imageDirections
+
+      ```json
+      "imageDirections": {
+        "NE": { "age": "2 minutes, 6 seconds ago", "url": "…", "encodedUrl": "…" },
+        "NW": { "age": "2 minutes, 8 seconds ago", "url": "…", "encodedUrl": "…" }
+      }
+      ```
+
+    - direction — the direction to show first, which is the first key of `imageDirections` in
+      the order given above; `null` for a single-view camera, and also for a multi-direction
+      camera that currently has no images at all
+    - url — url if camera does not have any imageDirections; `null` otherwise
     - singleView — "true" to use url, "false" to use imageDirections
     - latitude — latitude of the camera in decimal degrees
     - longitude — longitude of the camera in decimal degrees
