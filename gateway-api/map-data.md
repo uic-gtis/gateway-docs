@@ -587,7 +587,7 @@ The response for a Camera request is a GeoJSON FeatureCollection with additional
   - dis — true or false, whether the camera is disabled
   - age — the formatted image age in minutes and seconds
   - src — the name of the source agency
-  - dirs — for a multi-directional camera, the directions it currently has a recent image for: "N", "NE", "NW", "S", "SE", "SW", "E" or "W". The four diagonals appear for IDOT's downstate cameras from 2026; before that only the cardinal four were carried, and a few cameras publish nothing but diagonals. Single-direction cameras have an **empty** array — never a "NONE" entry, unlike the other camera endpoints. A direction whose image has aged past the report maximum is left out of the array entirely
+  - dirs — for a multi-directional camera, every direction it publishes an image for: "N", "NE", "NW", "S", "SE", "SW", "E" or "W", in the same order as `remUrls`. The four diagonals appear for IDOT's downstate cameras from 2026; before that only the cardinal four were carried, and a few cameras publish nothing but diagonals. Single-direction cameras have an **empty** array — never a "NONE" entry, unlike the other camera endpoints
   - remUrls — an array of image URLs for the camera if Travel Midwest accesses the camera remotely
   - xOff — an x offset used to place the icon to the side of the road
   - yOff — a y offset used to place the icon to the side of the road
@@ -604,8 +604,12 @@ The response for a Camera request is a GeoJSON FeatureCollection with additional
 Cameras have a small 176 pixel wide thumbnail for map popup and report purposes and a full-size snapshot image. The URLs for the thumbnail and snapshot depends on whether the remUrls array is empty or not. Cameras with a non-empty remUrls are considered to be "remote" in that another agency is hosting the images for it. Multi-directional cameras have dirs.length > 1.
 The follow table details the camera thumbnail and snapshot URLs for each case. The "i" represents the camera direction index into the dirs and remUrls arrays.
 
-> [!WARNING]
-> `dirs` and `remUrls` are **not reliably index-aligned**. `remUrls` carries every image the camera has, while `dirs` drops any direction whose image has aged out, so a camera with a single stale view yields `dirs.length < remUrls.length` and every index past the gap names the wrong direction. Use `dirs[i]` to label an image only when the two arrays are the same length; otherwise fall back to the `/camera` and `/snapshot` endpoints, which take the direction explicitly.
+> [!NOTE]
+> `dirs[i]` is the direction of `remUrls[i]`, and the two arrays are always the same length for
+> a remote multi-directional camera. Deployments before 2026 filled `dirs` from only those
+> directions whose image was still fresh while `remUrls` kept them all, so a camera with one
+> stale view returned a shorter `dirs` and every index past the gap named the wrong direction.
+> If you are reading an older deployment, check the lengths before pairing them.
 
 |  | Multi-directional?<br>(dirs.length > 0) | Thumbnail | Snapshot |
 | --- | --- | --- | --- |
