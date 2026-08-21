@@ -73,7 +73,7 @@ The <`cctvCameras>` element contains one or more `<camera>` sub-elements:
   - **id** — Unique identifier for the camera. Used by the Gateway to store a camera in its database and to reference a camera in website URLs.
   - **description** — Short description of where a camera is and what it is looking at.
   - **approaches** — Contains one or more sub-elements describing a view a camera has of its surroundings. For instance, a camera may be programmed to look in two directions down a road, each direction would be an approach:
-    - direction — Direction a camera is pointing: north, south, east, west
+    - direction — Direction a camera is pointing: `north`, `south`, `east` or `west`. The suffixed forms `north_far`, `south_far`, `east_far` and `west_far` are also accepted and are treated as the same four directions. Any other value is rejected, so the diagonals cannot be uploaded through this file.
     - description — Not presently used.
     - filename — Name of the file uploaded to the same directory as the `cctvSnapshots.xml` file where this approach of this camera is stored.
     - lastUpdated — Time in milliseconds since midnight on 1/1/1970 until a camera image was last updated.

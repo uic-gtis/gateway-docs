@@ -9,6 +9,27 @@ The Show Camera JSON endpoint provides metadata for a single camera, including i
 
 ![1773264511401-584.png](../images/1773264511401-584.png)
 
+## Camera identifiers
+
+An external ID is `[state]-[source]-[agency id]`. The `[agency id]` part is whatever the
+operating agency calls the camera, so its shape varies by source and it is opaque — parse
+nothing out of it.
+
+> [!IMPORTANT]
+> **IDOT's downstate camera IDs are changing.** They were named after the directory the
+> old roster file pointed at, as in `IL-IDOTD4-camera_305`. IDOT has moved each camera to
+> uploading its own images under its own camera number, so the ID becomes that number:
+> `IL-IDOTD4-3005`. The number is the one already shown in the location description —
+> `I-39 at I-80 Interchange (#3005)`.
+>
+> Cameras are matched by ID in `cameraInfo.csv`, `cameras.json`, `cameraMap.json` and
+> `cameraReport.json` alike, so anything holding stored IDs for these cameras will need to
+> re-read them. The change lands with the release that introduces the per-district image
+> layout; production still serves the `camera_N` form until then.
+>
+> `IL-IDOTD4` covers **all** of IDOT's downstate cameras, districts 2 through 9 — it is a
+> source key, not a description. `IL-IDOTD4-3005` is a District 3 camera.
+
 ## Request
 
 ```console
@@ -18,41 +39,42 @@ https://travelmidwest.com/lmiga/showCamera.json?id=cameraExternalId
 Parameters:
 
 - id (required)
-  - The external ID of the camera (e.g., `IL-IDOTD4-4219`, `IL-ISTHA-OYVF2%2FCdGpuYwBNqc%3D`)
+  - The external ID of the camera (e.g., `IL-IDOTD4-3005`, `IL-ISTHA-OYVF2%2FCdGpuYwBNqc%3D`)
   - Note: the ID must be URL-encoded if it contains special characters
 
 ## Response
 
 ```json
 {
-    "id": "IL-IDOTD4-4219",
-    "locationDescription": "I-74 at Maher Rd. (Exit 75)",
+    "id": "IL-IDOTD4-3005",
+    "locationDescription": "I-39 at I-80 Interchange (#3005)",
     "sourceName": "IDOT D4",
     "remote": true,
+    "videoUrl": null,
     "directions": [
-        {
-            "code": "E",
-            "displayName": "East",
-            "remoteUrl": "https://cctv.travelmidwest.com/IL-IDOTD4-4219_E.jpg",
-            "ageMs": 181042
-        },
         {
             "code": "N",
             "displayName": "North",
-            "remoteUrl": "https://cctv.travelmidwest.com/IL-IDOTD4-4219_N.jpg",
-            "ageMs": 183519
+            "remoteUrl": "https://cctv.travelmidwest.com/snapshots/IL-IDOTD4_3_LaSalle_NWB_I-39_4136695_-8905979_1_N.jpg",
+            "ageMs": 572162
         },
         {
             "code": "S",
             "displayName": "South",
-            "remoteUrl": "https://cctv.travelmidwest.com/IL-IDOTD4-4219_S.jpg",
-            "ageMs": 179204
+            "remoteUrl": "https://cctv.travelmidwest.com/snapshots/IL-IDOTD4_3_LaSalle_NWB_I-39_4136695_-8905979_1_S.jpg",
+            "ageMs": 93303
+        },
+        {
+            "code": "E",
+            "displayName": "East",
+            "remoteUrl": "https://cctv.travelmidwest.com/snapshots/IL-IDOTD4_3_LaSalle_NWB_I-39_4136695_-8905979_1_E.jpg",
+            "ageMs": 61044
         },
         {
             "code": "W",
             "displayName": "West",
-            "remoteUrl": "https://cctv.travelmidwest.com/IL-IDOTD4-4219_W.jpg",
-            "ageMs": 185101
+            "remoteUrl": "https://cctv.travelmidwest.com/snapshots/IL-IDOTD4_3_LaSalle_NWB_I-39_4136695_-8905979_1_W.jpg",
+            "ageMs": 330187
         }
     ]
 }
@@ -64,7 +86,12 @@ Data fields:
 - locationDescription — a text description of where the camera is located (e.g., "I-74 at Maher Rd. (Exit 75)")
 - sourceName — the name of the source agency that operates the camera (e.g., "IDOT D4", "Illinois Tollway", "IDOT D1")
 - remote — `true` if the camera images are served from an external URL (e.g., cctv.travelmidwest.com), `false` if served via the `/snapshot` endpoint
-- directions — an array of available camera directions, sorted alphabetically by direction code. Single-direction cameras (BasicCamera, IdotCamera) will have one entry with code `NONE`.
+- videoUrl — the public HLS stream URL when the camera has live video and its feed is currently allowed; `null` otherwise
+- directions — an array of available camera directions. Single-direction cameras (BasicCamera, IdotCamera) will have one entry with code `NONE`.
+
+  The order is fixed and is **not** alphabetical: `N`, `NE`, `NW`, `S`, `SE`, `SW`, `E`, `W`.
+  A camera facing all four cardinal directions is therefore returned as N, S, E, W. The
+  first entry is the one to show by default.
   - code — the direction code: `N`, `S`, `E`, `W`, `NE`, `NW`, `SE`, `SW`, or `NONE`
   - displayName — the human-readable direction name: "North", "South", "East", "West", "Northeast", "Northwest", "Southeast", "Southwest", or "None"
   - remoteUrl — the direct URL to the camera image if the camera is remote; `null` if the camera is not remote (use the `/snapshot` endpoint instead)
