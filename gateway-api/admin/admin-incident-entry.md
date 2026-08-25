@@ -184,6 +184,7 @@ GET /new.json
     "laneImpacts": [],
     "leftShoulder": "Open",
     "rightShoulder": "Open",
+    "unspecifiedShoulder": null,
     "laneType": "Lane",
     "fullClosure": false,
     "variousLanes": false,
@@ -269,7 +270,10 @@ GET /{id}.json
             "laneNumber": 3,
             "impact": "Open"
           }
-        ]
+        ],
+        "leftShoulder": "Open",
+        "rightShoulder": "Closed",
+        "unspecifiedShoulder": null
       }
     ],
     "maxLaneCount": 3,
@@ -288,7 +292,8 @@ GET /{id}.json
       }
     ],
     "leftShoulder": "Open",
-    "rightShoulder": "Open",
+    "rightShoulder": "Closed",
+    "unspecifiedShoulder": null,
     "laneType": "Lane",
     "fullClosure": false,
     "variousLanes": false
@@ -615,10 +620,41 @@ PUT /{id}/close.json
   - impact - String - "Open", "Closed", or "Shifted"
 - **leftShoulder** - String - "Open", "Closed", or "None"
 - **rightShoulder** - String - "Open", "Closed", or "None"
+- **unspecifiedShoulder** - String - "Open", "Closed", or "None". A shoulder closure whose side the
+  reporting source never named. Optional, and **omitting it is not the same as sending "Open"**: an
+  absent value publishes no shoulder description at all, so a client that does not know about this
+  field cannot accidentally add one to every incident it saves. See
+  [Shoulders without a side](#shoulders-without-a-side).
 - **laneType** - String - "Lane", "Express", "HOV", "Reversible", "Local", "Cash", "IPO", or "ORT"
 - **fullClosure** - Boolean - True if all lanes are closed
 - **variousLanes** - Boolean - True for various lane impacts
 - **userLaneCount** - Integer - Manual lane count for unresolved locations
+
+### Shoulders without a side
+
+Several upstream feeds report a shoulder closure without saying which side — "shoulder closed"
+rather than "left shoulder closed". That impact cannot be attributed to a side without inventing
+information, so it is carried in its own field rather than guessed at.
+
+Two consequences that are easy to miss:
+
+- **In a response, when `unspecifiedShoulder` is set, `leftShoulder` and `rightShoulder` both read
+  `"None"`.** The source described "the shoulder" without a side, so neither sided value applies. A
+  client that renders only the two sided fields will show nothing at all for such an incident, which
+  is exactly the failure this field exists to prevent.
+- **In a request, omitting `unspecifiedShoulder` is not the same as sending `"Open"`.** For the two
+  sided fields an omitted value publishes an open shoulder; for this one it publishes no shoulder
+  description at all.
+
+An incident whose shoulder has no side comes back like this:
+
+```json
+"leftShoulder": "None",
+"rightShoulder": "None",
+"unspecifiedShoulder": "Closed"
+```
+
+All three fields appear on the incident and on each entry in `locations[]`.
 
 ### Incident Details
 
