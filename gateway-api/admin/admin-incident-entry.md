@@ -618,13 +618,17 @@ PUT /{id}/close.json
 - **laneImpacts** - Array of LaneImpactDto - Lane impact information for each lane
   - laneNumber - Integer - Lane number (1-based)
   - impact - String - "Open", "Closed", or "Shifted"
-- **leftShoulder** - String - "Open", "Closed", or "None"
-- **rightShoulder** - String - "Open", "Closed", or "None"
+- **leftShoulder** - String - "Open", "Closed", or "None". An omitted value, and an empty string,
+  both mean "not set": they publish an open shoulder, unless `unspecifiedShoulder` is set, in which
+  case they publish no shoulder description at all. See
+  [Shoulders without a side](#shoulders-without-a-side).
+- **rightShoulder** - String - the same values and the same rules as `leftShoulder`.
 - **unspecifiedShoulder** - String - "Open", "Closed", or "None". A shoulder closure whose side the
   reporting source never named. Optional, and **omitting it is not the same as sending "Open"**: an
   absent value publishes no shoulder description at all, so a client that does not know about this
-  field cannot accidentally add one to every incident it saves. See
-  [Shoulders without a side](#shoulders-without-a-side).
+  field cannot accidentally add one to every incident it saves. **Mutually exclusive with
+  `leftShoulder` and `rightShoulder`** — sending it together with either of them is a validation
+  error. See [Shoulders without a side](#shoulders-without-a-side).
 - **laneType** - String - "Lane", "Express", "HOV", "Reversible", "Local", "Cash", "IPO", or "ORT"
 - **fullClosure** - Boolean - True if all lanes are closed
 - **variousLanes** - Boolean - True for various lane impacts
@@ -636,8 +640,35 @@ Several upstream feeds report a shoulder closure without saying which side — "
 rather than "left shoulder closed". That impact cannot be attributed to a side without inventing
 information, so it is carried in its own field rather than guessed at.
 
-Two consequences that are easy to miss:
+**A shoulder is described either by side or without one, never both.** `unspecifiedShoulder` means
+the source did not say which side, so it cannot stand beside a side that was named. The Map Editor
+enforces the same rule: choosing a side clears its unspecified impact, and choosing an unspecified
+impact clears both sides.
 
+Five consequences that are easy to miss:
+
+- **A request may not name both.** Sending a real value ("Open" or "Closed") for
+  `unspecifiedShoulder` together with a real value for `leftShoulder` or `rightShoulder` returns
+  **400 Bad Request** with a field error on `unspecifiedShoulder`:
+
+  ```json
+  {
+    "success": false,
+    "errors": {
+      "unspecifiedShoulder": "An unspecified shoulder means the side is unknown, so it cannot be combined with a left or right shoulder. Set the unspecified shoulder to None, or set the left and right shoulders to None."
+    }
+  }
+  ```
+
+  `"None"` is the absence of a shoulder description, so it never conflicts: `unspecifiedShoulder`
+  with both sided fields `"None"` is the normal way to record a side-less closure.
+- **The empty string means "not set", for all three fields.** It is not a value, and it is not
+  `"Open"`. Sending `"unspecifiedShoulder": ""` records no side-less shoulder, and sending
+  `"leftShoulder": ""` is the same as omitting it.
+- **Beside a set `unspecifiedShoulder`, an omitted or empty side records nothing.** On its own an
+  absent `leftShoulder` publishes an open shoulder, because an ordinary incident's shoulders are open
+  unless something says otherwise. That default does not apply next to a shoulder whose side is
+  unknown, since it would invent the very contradiction the rule above rejects.
 - **In a response, when `unspecifiedShoulder` is set, `leftShoulder` and `rightShoulder` both read
   `"None"`.** The source described "the shoulder" without a side, so neither sided value applies. A
   client that renders only the two sided fields will show nothing at all for such an incident, which
@@ -701,6 +732,8 @@ All three fields appear on the incident and on each entry in `locations[]`.
 - Location must be resolved with lane impacts OR userLaneCount must be specified
 - Estimated closure time must be in valid format if not using duration option
 - Vehicle counts must be between 0-8
+- `unspecifiedShoulder` cannot be combined with `leftShoulder` or `rightShoulder` (see
+  [Shoulders without a side](#shoulders-without-a-side))
 - Required fields: sourceName, confidenceLevel, occurrenceTime, detectionTime, verificationTime
 
 ## Error Handling
