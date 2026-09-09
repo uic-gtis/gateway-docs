@@ -56,25 +56,29 @@ Parameters:
             "code": "N",
             "displayName": "North",
             "remoteUrl": "https://cctv.travelmidwest.com/snapshots/IL-IDOTD4_3_LaSalle_NWB_I-39_4136695_-8905979_1_N.jpg",
-            "ageMs": 572162
+            "ageMs": 572162,
+            "lastUpdated": "2026-09-09T11:52:03-05:00"
         },
         {
             "code": "S",
             "displayName": "South",
             "remoteUrl": "https://cctv.travelmidwest.com/snapshots/IL-IDOTD4_3_LaSalle_NWB_I-39_4136695_-8905979_1_S.jpg",
-            "ageMs": 93303
+            "ageMs": 93303,
+            "lastUpdated": "2026-09-09T11:52:03-05:00"
         },
         {
             "code": "E",
             "displayName": "East",
             "remoteUrl": "https://cctv.travelmidwest.com/snapshots/IL-IDOTD4_3_LaSalle_NWB_I-39_4136695_-8905979_1_E.jpg",
-            "ageMs": 61044
+            "ageMs": 61044,
+            "lastUpdated": "2026-09-09T11:52:03-05:00"
         },
         {
             "code": "W",
             "displayName": "West",
             "remoteUrl": "https://cctv.travelmidwest.com/snapshots/IL-IDOTD4_3_LaSalle_NWB_I-39_4136695_-8905979_1_W.jpg",
-            "ageMs": 330187
+            "ageMs": 330187,
+            "lastUpdated": "2026-09-09T11:52:03-05:00"
         }
     ]
 }
@@ -95,7 +99,15 @@ Data fields:
   - code — the direction code: `N`, `S`, `E`, `W`, `NE`, `NW`, `SE`, `SW`, or `NONE`
   - displayName — the human-readable direction name: "North", "South", "East", "West", "Northeast", "Northwest", "Southeast", "Southwest", or "None"
   - remoteUrl — the direct URL to the camera image if the camera is remote; `null` if the camera is not remote (use the `/snapshot` endpoint instead)
-  - ageMs — the age of the most recent image in milliseconds; `-1` if the age is unknown
+  - ageMs — the age of the most recent image in milliseconds; `-1` if the age is unknown.
+    **Deprecated** — see the note below
+  - lastUpdated — the time this image was taken, ISO-8601 with an explicit UTC offset, e.g.
+    `"2026-09-09T11:52:03-05:00"`; `null` if unknown
+
+> **Deprecated: `ageMs`.** It is computed at request time, so the response differs on every request
+> even when nothing about the camera has changed and can never be cached or answered with a `304`.
+> Use `lastUpdated` and subtract from your own clock. `ageMs` is still served and will be removed
+> once the Travel Midwest web app has switched over.
 
 ## Image URLs
 

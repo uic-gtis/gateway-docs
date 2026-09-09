@@ -585,7 +585,10 @@ The response for a Camera request is a GeoJSON FeatureCollection with additional
   - id — the string camera ID
   - locDesc — the location description for the camera
   - dis — true or false, whether the camera is disabled
-  - age — the formatted image age in minutes and seconds
+  - age — the formatted image age in minutes and seconds, or "Unknown" for a disabled camera or one
+    with no image. **Deprecated** — see the note below
+  - lastUpdated — the time this camera's newest image was taken, ISO-8601 with an explicit UTC
+    offset, e.g. `"2026-09-09T11:52:03-05:00"`; `null` wherever `age` would say "Unknown"
   - src — the name of the source agency
   - dirs — for a multi-directional camera, every direction it publishes an image for: "N", "NE", "NW", "S", "SE", "SW", "E" or "W", in the same order as `remUrls`. The four diagonals appear for IDOT's downstate cameras from 2026; before that only the cardinal four were carried, and a few cameras publish nothing but diagonals. Single-direction cameras have an **empty** array — never a "NONE" entry, unlike the other camera endpoints
   - remUrls — an array of image URLs for the camera if Travel Midwest accesses the camera remotely
@@ -598,6 +601,12 @@ The response for a Camera request is a GeoJSON FeatureCollection with additional
   - type — "Feature"
   - geometry — a GeoJSON Point object with the following fields:
   - properties — a JSON object with the following fields
+
+
+> **Deprecated: `age`.** It is rendered at request time, so the response differs on every request
+> even when nothing about the camera has changed and it can never be cached or answered with a
+> `304`, and it wraps at 60 minutes because the formatter has no hour field. Use `lastUpdated`. The
+> `age` field is still served and will be removed once the Travel Midwest web app has switched over.
 
 ### Image URLs
 
@@ -636,6 +645,7 @@ The follow table details the camera thumbnail and snapshot URLs for each case. T
           "xOff": 0,
           "yOff": 0,
           "age": "6 minutes, 43 seconds ago",
+          "lastUpdated": "2026-09-09T11:52:03-05:00",
           "src": "Lake County",
           "dis": false,
           "remUrls":["https://www.lakecountypassage.com/snapshots/IL_21_@_S._Artaius_cctv_North_Leg.jpg",
