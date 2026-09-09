@@ -439,7 +439,12 @@ A GeoJSON FeatureCollection of Point features, one per camera. Feature propertie
 - id — the camera external ID
 - locDesc — the location description for the camera
 - src — the name of the source agency operating the camera
-- age — the formatted age of the most recent image
+- age — the formatted age of the most recent image, or "Unknown" for a disabled camera or one with
+  no image. **Deprecated** — computed at request time, so the response can never be cached, and it
+  wraps at 60 minutes; use `lastUpdated`. Still served, and will be removed once the Travel Midwest
+  web app has switched over
+- lastUpdated — the time this camera's newest image was taken, ISO-8601 with an explicit UTC offset,
+  e.g. `"2026-09-09T11:52:03-05:00"`; `null` wherever `age` would say "Unknown"
 - dis — true if the camera is disabled
 - dirs — the available direction codes for the camera
 - remUrls — direct image URLs for remote cameras, parallel to **dirs**; use the

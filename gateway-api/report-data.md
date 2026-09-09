@@ -937,7 +937,10 @@ The "path"// //parameter must match one of the parameter values from cameraRepor
 
 The response will be a JSON object with the following fields:
 
-- updatedMessage — "Updated: m/d/yyyy h:MM AM/PM"
+- updatedMessage — "Updated: m/d/yyyy h:MM AM/PM", or `&nbsp;` when there are no cameras to report.
+  **Deprecated** — see the note below; use `lastUpdated` and choose your own wording
+- lastUpdated — the time of the newest image across every camera in this report, ISO-8601 with an
+  explicit UTC offset, e.g. `"2026-09-09T11:52:03-05:00"`; `null` when the report has no cameras
 - noDataMessage — a message to explain the lack of cameras, or empty if there are cameras
 - reportTables — an array of objects, each with the following fields:
   - path — report location path, e.g. "GATEWAY.IL.ARTERIALS.LAKE"
@@ -951,21 +954,27 @@ The response will be a JSON object with the following fields:
     - idotDistrict — the string "District N" for an IDOT camera when the request is
       authenticated, otherwise the empty string. It is never a bare number, and it is empty
       for every camera an anonymous request sees
-    - imageAge  — "M minutes, S seconds ago" for camera
+    - imageAge  — "M minutes, S seconds ago" for camera. **Deprecated** — see the note below
+    - lastUpdated — the time this camera's newest image was taken, ISO-8601 with an explicit UTC
+      offset, e.g. `"2026-09-09T11:52:03-05:00"`. For a multi-direction camera this is the newest of
+      its directions
     - imageDirections — a JSON **object keyed by direction code**, with one entry for each
       direction the camera published an image for; `null` for a single-view camera. The keys
       are "N", "NE", "NW", "S", "SE", "SW", "E" and "W", in that order. The four diagonals
       appear for IDOT's downstate cameras from 2026; earlier responses carried only the
       cardinal four, and a few of these cameras publish nothing but diagonals.
       Each value is an object with:
-      - age — "M minutes, S seconds ago" for this direction
+      - age — "M minutes, S seconds ago" for this direction. **Deprecated** — see the note below
+      - lastUpdated — the time this direction's image was taken, ISO-8601 with an explicit UTC offset
       - url — image URL
       - encodedUrl — same as URL but encoded
 
       ```json
       "imageDirections": {
-        "NE": { "age": "2 minutes, 6 seconds ago", "url": "…", "encodedUrl": "…" },
-        "NW": { "age": "2 minutes, 8 seconds ago", "url": "…", "encodedUrl": "…" }
+        "NE": { "age": "2 minutes, 6 seconds ago", "lastUpdated": "2026-09-09T11:52:03-05:00",
+                "url": "…", "encodedUrl": "…" },
+        "NW": { "age": "2 minutes, 8 seconds ago", "lastUpdated": "2026-09-09T11:52:01-05:00",
+                "url": "…", "encodedUrl": "…" }
       }
       ```
 
@@ -976,6 +985,14 @@ The response will be a JSON object with the following fields:
     - singleView — "true" to use url, "false" to use imageDirections
     - latitude — latitude of the camera in decimal degrees
     - longitude — longitude of the camera in decimal degrees
+
+> **Deprecated: the pre-rendered age fields.** `updatedMessage`, `imageAge` and each direction's
+> `age` are computed at request time, which makes every response differ even when nothing about the
+> camera has changed — so these responses cannot be cached or answered with a `304`. They are also
+> wrong past an hour: the formatter that builds them has no hour field, so a 19-hour-old image reads
+> `"19 minutes, 6 seconds ago"`. Use `lastUpdated` and format for display yourself. The age fields
+> are still served and will remain until the Travel Midwest web app has switched over; they will be
+> removed after that, so do not write new integrations against them.
 
 ## DMS Report
 
