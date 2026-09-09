@@ -290,13 +290,35 @@ Each camera image filename adheres to the following naming scheme:
 
 - **[state-agency]** — Source agency providing the camera image.
 - **[district]** — IDOT district the camera is in or "0" for other states that don't have districts.
-- **[county_name]** — Name of the county the camera is in, e.g. "Cook", "DuPage", etc.
-- **[road_direction]** — "NB", "SB", "EB", "WB", "NEB", NWB", SEB", "SWB".
-- **[road_name]** — Name of the road the camera is placed closest to and is viewing.
+- **[county_name]** — Name of the county the camera is in, e.g. "Cook", "DuPage", etc., or "Unknown"
+  if the camera is outside the covered area.
+- **[road_direction]** — "NB", "SB", "EB", "WB", "NEB", NWB", SEB", "SWB", **or empty**; see
+  "Cameras that are not on a named road" below.
+- **[road_name]** — Name of the road the camera is placed closest to and is viewing, or "unknown"
+  if no road could be named.
 - **[lat]** — Decimal latitude in microdegrees.
 - **[long]** — Decimal longitude in microdegrees.
 - **[number]** — For locations with multiple cameras, 1 is for the first camera, 2 for the second, etc.
 - **[dir]** — Direction camera is facing "N", "S", "E", "W", "NE", "NW", "SE", "SW", or "NONE".
+
+#### Cameras that are not on a named road
+
+A few cameras cannot be placed on a named road — a camera on a campus, in a yard or on a parking
+structure may be metres from pavement and still have nothing named around it. Those still get a
+filename, built from the facts that hold for the point itself, and the parts that could not be
+determined are left empty or "Unknown":
+
+```
+IL-IDOTD1_1_Cook__I-290_4187397_-8765102_1_NONE.jpg
+                ^^
+                road_direction is empty
+```
+
+**The number of `_`-separated parts does not change**, so a positional parser keeps working; an
+empty `[road_direction]` is the signal that the location was only partially resolved. The direction
+is deliberately left empty rather than filled from the nearest unnamed road, which would be the
+direction of a service road rather than of the road the camera watches — and would make a partial
+name indistinguishable from a complete one.
 
 An assembled camera image filename is appended to `https://cctv.travelmidwest.com/snapshots/` for a complete URL, e.g.:
 
