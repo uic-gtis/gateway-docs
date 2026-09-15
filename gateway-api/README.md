@@ -14,6 +14,7 @@
 - [Projects](projects.md)
 - [Report Data](report-data.md)
 - [Show Camera](show-camera.md)
+- [Simulation Mode](simulation-mode.md)
 - [Travel Time Statistics Graph](travel-time-statistics-graph.md)
 - [Truck Parking Reports](truck-parking-reports.md)
 - [Trucker Reports](trucker-reports.md)
