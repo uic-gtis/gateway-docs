@@ -36,7 +36,7 @@ The response is a JSON object with the following fields:
   - end - estimated end date/time, if known, insane format as start
   - source - agency that reported the incident
   - sourceId - identifier for source (not really needed but may be used in a future API)
-  - features - list of things that happened in text form, e.g. "Accident with collision, road block"
+  - features - list of things that happened in text form, e.g. "Crash with collision, road block"
   - notificationDistance - estimate of how many miles of road this incident will block
   - latitude, longitude - in degrees for incident location
 - **notifications **- array of objects representing users that were notified, each with the following fields:

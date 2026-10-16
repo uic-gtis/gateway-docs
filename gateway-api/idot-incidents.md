@@ -111,7 +111,7 @@ The returned file is in GeoJSON format with both polyline and point features dep
       },
       "properties": {
         "id": "IL-IDOTD6-INCIDENT.2025.3.20.2.6392174",
-        "desc": "Accident",
+        "desc": "Crash",
         "location": "Partial closure WB I-72 at I-172, Hull, Pike, IL",
         "status": "Updated",
         "start": "2025-03-20T07:53:52.899Z",
