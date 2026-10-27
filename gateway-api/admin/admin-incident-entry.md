@@ -141,7 +141,8 @@ GET /dropdowns.json
         "minutes": 60
       }
     ],
-    "counts": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+    "counts": [0, 1, 2, 3, 4, 5, 6, 7, 8],
+    "capabilities": ["multiLocation"]
   }
 }
 ```
@@ -150,6 +151,10 @@ GET /dropdowns.json
 
 - Gateway users see all event sources; a future update for agency users will provide them only their agency's sources
 - Duration options range from 15 minutes to 6 hours
+- `capabilities` lists what this Gateway supports beyond the single-location form. `multiLocation` means
+  create and update accept a `locations` array and [Resolve Opposite Direction](#resolve-opposite-direction)
+  exists. **Check for it before sending `locations`:** a Gateway without it rejects the unknown field with a
+  400, so a client that checks can be deployed before or after the Gateway.
 
 ### Get New Incident Form
 
@@ -273,7 +278,25 @@ GET /{id}.json
         ],
         "leftShoulder": "Open",
         "rightShoulder": "Closed",
-        "unspecifiedShoulder": null
+        "unspecifiedShoulder": null,
+        "laneImpacts": [
+          {
+            "laneNumber": 1,
+            "impact": "Open"
+          },
+          {
+            "laneNumber": 2,
+            "impact": "Closed"
+          },
+          {
+            "laneNumber": 3,
+            "impact": "Open"
+          }
+        ],
+        "laneType": "Lane",
+        "fullClosure": false,
+        "variousLanes": false,
+        "resolvedLocation": { "...": "the LinearLocation, to send back on update" }
       }
     ],
     "maxLaneCount": 3,
@@ -300,6 +323,15 @@ GET /{id}.json
   }
 }
 ```
+
+**Notes:**
+
+- `locations` holds every location of the incident: both directions of a closure entered as two locations,
+  for example. Each entry carries its own lanes, in two forms: `lanes`, every lane description including the
+  shoulders (at lane number 0 or -1), and the edit form's fields `laneImpacts` (numbered lanes only),
+  `leftShoulder`, `rightShoulder`, `unspecifiedShoulder`, `laneType`, `fullClosure` and `variousLanes`.
+- The top-level lane fields (`maxLaneCount`, `laneImpacts`, the shoulders, `laneType`, `fullClosure`,
+  `variousLanes`) describe the **first** location only. They are kept for clients that edit one location.
 
 **Error Response:**
 
@@ -437,6 +469,74 @@ POST /resolve.json
 - If location cannot be resolved, user can specify `userLaneCount` to proceed with unresolved location
 - Ambiguous locations return multiple options for user to choose from
 
+### Resolve Opposite Direction
+
+Find the opposite direction of a location already resolved, for a closure in both directions. This is the
+Map Editor's **Select Opposite**: each end of the section is turned to the other carriageway.
+
+```console
+POST /resolve/opposite.json
+```
+
+**Method:** POST
+**Content-Type:** application/json
+**Authentication:** Required (Operator with incidentEntry or admin role)
+**Requires:** `multiLocation` in the [dropdown data](#get-dropdown-data) `capabilities`
+
+**Request Body:**
+
+The `resolvedLocation` from a [Resolve Location](#resolve-location) response, or from a location of a fetched
+incident, sent back unchanged:
+
+```json
+{
+  "resolvedLocation": { "...": "the LinearLocation as received" }
+}
+```
+
+**Response (Found):**
+
+The same shape as Resolve Location. `laneCount` is the opposite direction's own, which can differ from the
+direction asked about.
+
+```json
+{
+  "success": true,
+  "data": {
+    "resolved": true,
+    "ambiguous": false,
+    "laneCount": 2,
+    "locations": [
+      {
+        "description": "WB IL-116 from IL-115 to IL-47",
+        "textProfile": "IL-116 from IL-47 to IL-115",
+        "laneCount": 2,
+        "resolvedLocation": { "...": "send this as the second location's resolvedLocation" }
+      }
+    ]
+  }
+}
+```
+
+**Response (Ramp):**
+
+```json
+{
+  "success": true,
+  "data": {
+    "resolved": false,
+    "ambiguous": false,
+    "errorMessage": "The opposite direction cannot be found for a ramp."
+  }
+}
+```
+
+**Notes:**
+
+- A ramp has no opposite direction, so it is refused, as in the Map Editor
+- When the opposite cannot be found for another reason, `resolved` is false and `errorMessage` says why
+- `textProfile` is the operator's original text, carried over unchanged
+
 ### Create Incident
 
 Create a new incident.
@@ -529,6 +629,57 @@ POST create.json
 - Incident is automatically published to the Gateway upon creation
 - occurrenceTime, detectionTime, and verificationTime can ***null*** if unknown
 
+#### More than one location (both directions)
+
+**Requires:** `multiLocation` in the [dropdown data](#get-dropdown-data) `capabilities`.
+
+An incident can have several locations, as the Map Editor enters a closure in both directions: one location
+per direction. Send them as `locations`, each with its own `resolvedLocation` and lanes. Get the second
+direction from [Resolve Opposite Direction](#resolve-opposite-direction).
+
+```json
+{
+  "locationDescription": "IL-116 from IL-47 to IL-115",
+  "description": "Road closed",
+  "sourceName": "IDOT",
+  "severity": "MAJOR_EVENT_SEVERITY",
+  "detectionType": "MANUAL_DETECTION_TYPE",
+  "isDurationOption": true,
+  "durationMinutes": 120,
+  "shareLaneInformation": false,
+  "locations": [
+    {
+      "resolvedLocation": { "...": "from resolve.json" },
+      "locationDescription": "EB IL-116 from IL-47 to IL-115",
+      "fullClosure": true
+    },
+    {
+      "resolvedLocation": { "...": "from resolve/opposite.json" },
+      "locationDescription": "WB IL-116 from IL-115 to IL-47",
+      "laneImpacts": [
+        {"laneNumber": 1, "impact": "Closed"},
+        {"laneNumber": 2, "impact": "Open"}
+      ],
+      "leftShoulder": "Open",
+      "rightShoulder": "Open",
+      "laneType": "Lane"
+    }
+  ]
+}
+```
+
+- When `locations` is present it is the **complete** list of the incident's locations. The single-location
+  fields (`resolvedLocation`, `laneImpacts`, the shoulders, `laneType`, `fullClosure`, `variousLanes`,
+  `createUnresolved`, `userLaneCount`) are then ignored.
+- Every entry must have a `resolvedLocation`. An incident whose location cannot be resolved uses the
+  single-location fields with `createUnresolved`.
+- `shareLaneInformation: true` is the Map Editor's "Duplicate lane information across all locations": every
+  location gets the first entry's lanes and shoulders, and the lane fields of the other entries are ignored.
+  Each location still stores its own copy. A shared lane numbered higher than another location's lane count
+  is a validation error, because the two directions of a road can have different numbers of lanes.
+- An entry's `locationDescription` defaults to the top-level `locationDescription`, and the top-level one
+  defaults to the first entry's.
+
 ### Update Incident
 
 Update an existing incident.
@@ -571,6 +722,10 @@ Same structure as Create Incident request body
 - Incident state is automatically set to EVENT_UPDATED_MANUAL
 - Updated incident is automatically published to the Gateway
 - All validation rules from Create Incident apply
+- **With `locations`**, the incident's locations are replaced by exactly that list.
+- **Without `locations`** (the single-location shape), the request edits the incident's **first** location and
+  keeps any others. An incident entered in the Map Editor with both directions therefore keeps its second
+  direction when it is saved from a client that edits only one location.
 
 ### Close Incident
 
@@ -633,6 +788,19 @@ PUT /{id}/close.json
 - **fullClosure** - Boolean - True if all lanes are closed
 - **variousLanes** - Boolean - True for various lane impacts
 - **userLaneCount** - Integer - Manual lane count for unresolved locations
+
+### Multiple Location Fields
+
+Available when `capabilities` includes `multiLocation`; see
+[More than one location](#more-than-one-location-both-directions).
+
+- **locations** - Array - Every location of the incident. Omit it to use the single-location fields above.
+  Each entry has:
+  - resolvedLocation - Object - Required. The `resolvedLocation` from resolve.json or resolve/opposite.json
+  - locationDescription - String - The text for this location
+  - laneImpacts, leftShoulder, rightShoulder, unspecifiedShoulder, laneType, fullClosure, variousLanes - this
+    location's lanes, with the same meanings and rules as the single-location fields
+- **shareLaneInformation** - Boolean - Give every location the first entry's lanes and shoulders
 
 ### Shoulders without a side
 
@@ -735,6 +903,9 @@ All three fields appear on the incident and on each entry in `locations[]`.
 - `unspecifiedShoulder` cannot be combined with `leftShoulder` or `rightShoulder` (see
   [Shoulders without a side](#shoulders-without-a-side))
 - Required fields: sourceName, confidenceLevel, occurrenceTime, detectionTime, verificationTime
+- With `locations`: every entry needs a `resolvedLocation` and lane impacts, a full closure or various lanes
+  (only the first entry when `shareLaneInformation` is true). With `shareLaneInformation`, no shared lane may be
+  numbered higher than another location's lane count. Errors name the entry, e.g. `locations[1].laneImpacts`.
 
 ## Error Handling
 
@@ -811,6 +982,50 @@ curl -X POST \
     "leftShoulder": "Open",
     "rightShoulder": "Open",
     "laneType": "Lane"
+  }' \
+  https://travelmidwest.com/lmiga/admin/incidentEntry/create.json
+```
+
+### Creating a Closure in Both Directions
+
+```console
+# Step 1: Check that the Gateway supports more than one location
+curl -X GET \
+  -H "Cookie: loggedIn=true" \
+  https://travelmidwest.com/lmiga/admin/incidentEntry/dropdowns.json
+# ... "capabilities": ["multiLocation"]
+
+# Step 2: Resolve the first direction, and keep data.locations[0].resolvedLocation
+curl -X POST \
+  -H "Content-Type: application/json" \
+  -H "Cookie: loggedIn=true" \
+  -d '{"locationDescription": "EB IL-116 from IL-47 to IL-115"}' \
+  https://travelmidwest.com/lmiga/admin/incidentEntry/resolve.json
+
+# Step 3: Ask for the opposite direction, and keep its resolvedLocation too
+curl -X POST \
+  -H "Content-Type: application/json" \
+  -H "Cookie: loggedIn=true" \
+  -d '{"resolvedLocation": <resolvedLocation from step 2>}' \
+  https://travelmidwest.com/lmiga/admin/incidentEntry/resolve/opposite.json
+
+# Step 4: Create the incident with both locations, sharing one full closure
+curl -X POST \
+  -H "Content-Type: application/json" \
+  -H "Cookie: loggedIn=true" \
+  -d '{
+    "locationDescription": "IL-116 from IL-47 to IL-115",
+    "description": "Road closed",
+    "sourceName": "IDOT",
+    "severity": "MAJOR_EVENT_SEVERITY",
+    "detectionType": "MANUAL_DETECTION_TYPE",
+    "isDurationOption": true,
+    "durationMinutes": 120,
+    "shareLaneInformation": true,
+    "locations": [
+      {"resolvedLocation": <from step 2>, "fullClosure": true},
+      {"resolvedLocation": <from step 3>}
+    ]
   }' \
   https://travelmidwest.com/lmiga/admin/incidentEntry/create.json
 ```
