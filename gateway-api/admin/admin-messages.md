@@ -78,7 +78,6 @@ POST /motd.json
   "priority": "HIGH", 
   "lastUpdate": "2025-03-25T10:15:30.000Z", 
   "incidentId": null, 
-  "tripReportTableId": null, 
   "metroAreaId": 5, 
   "latitude": 41.85003, 
   "longitude": -87.65005 
@@ -131,7 +130,6 @@ PUT /lmiga/admin/messages/{id}/motd.json
   "priority": "LOW", 
   "lastUpdate": "2025-03-25T11:45:22.000Z", 
   "incidentId": null, 
-  "tripReportTableId": null, 
   "metroAreaId": 5, 
   "latitude": 41.85003, 
   "longitude": -87.65005 
