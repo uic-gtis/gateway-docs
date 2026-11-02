@@ -386,7 +386,7 @@ The request parameter **id** determines the congestion segment to retreive prope
 
 *For the same data organized by report location, see [Report Data → Incidents](report-data.md#incidents).*
 
-Two types of incident request are supported: the default returns Point + GeometryCollection features, and `type=lines` returns MultiLineString features suitable for highlighting the affected road segment.
+Two types of incident request are supported: the default returns a Point for the incident icon, and `type=lines` adds the affected road section as a MultiLineString suitable for highlighting it.
 
 ### Request
 
@@ -399,18 +399,29 @@ The request requires a POST parameter specifying the request bounds as described
 
 ### Response
 
-The response is a GeoJSON FeatureCollection with additional fields for the incident properties. The geometry for an incident event is a GeoJSON FeatureCollection which contains two elements, a Point and a MultiLineString. The location of the MultiLineString is the actual extent of the incident. If the incident is a point location, then the MultiLineString will contain a singe polyline with the same start and end point. The location of the point geometry is midway along that section and is suitable for an incident icon. (Many maps would place an icon at the point and highlight the MultiLineString when the incident is selected.)
+The response is a GeoJSON FeatureCollection with additional fields for the incident properties. Each feature's geometry is a GeometryCollection:
+
+- Default request — one Point, at the center of the incident location, suitable for the incident icon.
+- `type=lines` — for a location that is a road section, a MultiLineString giving the extent of the incident followed by the icon Point midway along it; for a point location, only the Point. The MultiLineString's coordinates are encoded polylines, one string per line, see [Google's encoded polyline algorithm](https://developers.google.com/maps/documentation/utilities/polylinealgorithm). (Many maps place an icon at the Point and highlight the MultiLineString when the incident is selected.)
+
+An incident with several locations is returned as several features, one per location, each carrying the incident's properties and the same `id`. The exception is an incident on both sides of one road at one place — two locations, neither on a ramp, on the same road, each starting within 50 meters of where the other ends. It is returned as one feature with:
+
+- one icon Point at the center of the pair (and, for `type=lines`, both sides' MultiLineStrings)
+- a `locDesc` naming both sides, such as "NB and SB IL-47 at County Road 3300, ..."
+- a `closure` for both sides; when the sides differ, each side's is prefixed by its direction, such as "NB: ...; SB: ..."
+- an empty `locDir`, since the icon belongs to neither side, and `biDir` "true"
+
 The response FeatureCollection has the following fields:
 
 - type — "FeatureCollection"
 - timestamp — the timestamp in yyyy-MM-dd HH:mm:ss format
 - features — an array of GeoJSON features each with the following fields:
   - type — "Feature"
-  - geometry — an array containing the following fields for its elements:
+  - geometry — a GeoJSON GeometryCollection with the following fields:
     - type — "GeometryCollection"
-    - geometries — an one item array
-      - type — "Point"
-      - coordinates — an array [lng, lat] giving the point in decimal degrees
+    - geometries — an array of the geometries described above, each with the following fields:
+      - type — "Point" or "MultiLineString"
+      - coordinates — for a Point, an array [lng, lat] giving the point in decimal degrees; for a MultiLineString, an array of encoded polylines
   - properties — a JSON object with the following fields
     - id — the incident ID
     - locDesc — the location description for the incident
@@ -422,12 +433,14 @@ The response FeatureCollection has the following fields:
     - end — the formatted estimated end time of the incident
     - dur — the estimated duration of the incident
     - src — the name of the source agency
-    - locDir — local direction used for placing icon on correct side of road (NB, SB, EB, WB, NEB, SEB, NWB, SWB)
-    - biDir — "true" if the incident is also on the other side of the road, "false" otherwise
+    - locDir — local direction used for placing icon on correct side of road (NB, SB, EB, WB, NEB, SEB, NWB, SWB); empty for an incident on both sides of a road, whose icon belongs to neither side
+    - biDir — "true" if the incident is on both sides of one road at one place, in which case it is one feature (see above), "false" otherwise
     - ev — true if an emergency vehicle is stopped at the incident, false otherwise
     - respDet — response details. Populated only for authenticated callers; present but null otherwise
 
 ### Example
+
+A point incident, which has only the icon Point with or without `type=lines`:
 
 ```json
 {
@@ -440,8 +453,7 @@ The response FeatureCollection has the following fields:
         {
           "type": "GeometryCollection",
           "geometries": [
-            {"type": "Point ", "coordinates": [-87.82228,41.73606]},
-            {"type ": "MultiLineString", "coordinates":[[[-87.82228,41.73606],[-87.82228,41.73606]]]}
+            {"type": "Point", "coordinates": [-87.82228,41.73606]}
           ]
         },
       "properties":
