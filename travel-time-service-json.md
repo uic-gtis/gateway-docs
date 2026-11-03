@@ -66,9 +66,6 @@ where
 
 ### JSON Request Body
 
-> [!NOTE]
-> The JSON Request Body parameter is not available for use on TravelMidwest.com at present.  It is currently being tested and will be deployed soon.
-
 Alternatively, the request may be sent as an HTTP POST with a Content-Type of "application/json" and a JSON body with the following fields:
 
 - locations: optional array of free-form location strings, resolved the same way as the "locations" request parameters (see Locations above)
