@@ -92,6 +92,9 @@ Note:
 
 ### Downloading Gateway XML Data
 
+> [!NOTE]
+> Email authentication and the 10-failure lockout described below are not yet available in production. They are deployed on testing81 and will become available in production when [gateway #418](https://github.com/uic-gtis/gateway/pull/418) is deployed there. Until then, use the account's login ID for Basic authentication.
+
 Any compatible [HTTPS](https://en.wikipedia.org/wiki/HTTPS) client can be used for downloading Gateway XML data. This section provides tips and examples using a variety of methods.
 
 #### Web Browser
@@ -107,6 +110,8 @@ The following command downloads and saves the current travel times data (substit
 ```console
 wget --http-user=<login> --http-password=<password> https://travelmidwest.com/lmiga/LinkTrafficReport.xml.gz
 ```
+
+The name can be the account's login or the email address on the account (in any case). Prefer the login for a program: an email address can belong to several accounts, and if two of them share the password too, the email cannot say which is meant and the request is refused. After 10 failed attempts from one address with one name in 15 minutes, secured files answer `429 Too Many Requests` with a `Retry-After` header until the count expires; a correct request before then clears it. Downloads are logged under the account's login whichever name is used.
 
 #### Java
 

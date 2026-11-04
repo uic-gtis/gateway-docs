@@ -149,7 +149,12 @@ Note that requests that POST "locations" as request parameters together with a C
 
 ### Credentials
 
+> [!NOTE]
+> Email authentication and the 10-failure lockout described below are not yet available in production. They are deployed on testing81 and will become available in production when [gateway #418](https://github.com/uic-gtis/gateway/pull/418) is deployed there. Until then, use the account's login ID for Basic authentication.
+
 TravelMidwest.com will respond with a 401 status code indicating that authentication is required to access travelTimeService.json. The "Authorization" request header should be included to avoid this response. See [RFC 7235](https://tools.ietf.org/html/rfc7235) for more information on Basic authentication.
+
+The name can be the account's login or the email address on the account (in any case). Prefer the login for a program: an email address can belong to several accounts, and if two of them share the password too, the email cannot say which is meant and the request is refused. After 10 failed attempts from one address with one name in 15 minutes, secured files answer `429 Too Many Requests` with a `Retry-After` header until the count expires; a correct request before then clears it.
 
 ## Response
 

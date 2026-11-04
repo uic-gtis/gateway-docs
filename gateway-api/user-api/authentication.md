@@ -32,8 +32,27 @@ The authentication request should include the following JSON payload:
 
 | Field | Type | Description |
 | --- | --- | --- |
-| username | String | The user's login ID or email address |
+| username | String | The user's login ID or email address (see below) |
 | password | String | The user's password |
+
+#### How the username is matched
+
+> [!NOTE]
+> Email login for staff, download, incident entry and notification accounts and the updated authentication error message below are not yet available in production. They are deployed on testing81 and will become available in production when [gateway #418](https://github.com/uic-gtis/gateway/pull/418) is deployed there. Until then, use the account's login ID; trip (alerts) accounts can continue to use their email address.
+
+The server tries, in order, and the first match wins:
+
+1. a staff, download, incident entry or notification account by its **login**, exactly as stored;
+2. a trip (alerts) account by its **email address**, ignoring case;
+3. a staff, download, incident entry or notification account by its **email address**, ignoring case and
+   surrounding spaces. Only when what was typed contains `@`.
+
+An email address can belong to several accounts. In step 3 it identifies an account only if exactly one
+of them has the password given; when two share both the email and the password, the login must be used.
+Whichever name was typed, the response and the `loggedIn` cookie name the account by its `login`.
+
+Failed attempts are counted per client address and per name typed (lowercased and trimmed) for 15 minutes.
+After 4 failures, further attempts answer `429 Too Many Requests` with the code `TOO_MANY_ATTEMPTS` until the count expires; a successful login clears it.
 
 ### Response
 
@@ -92,7 +111,7 @@ For failed authentication, the server returns HTTP 401 Unauthorized with a JSON 
 ```json
 {
   "success": false,
-  "message": "Invalid username or password"
+  "message": "Invalid username, email or password"
 }
 ```
 
