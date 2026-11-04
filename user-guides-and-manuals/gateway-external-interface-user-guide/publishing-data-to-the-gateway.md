@@ -8,6 +8,9 @@ Historically, the **Gateway Traveler Information System (GTIS)** has been provid
 
 # Web Service
 
+> [!NOTE]
+> Email authentication and the 10-failure lockout described below are not yet available in production. They are deployed on testing81 and will become available in production when [gateway #418](https://github.com/uic-gtis/gateway/pull/418) is deployed there. Until then, use the account's login ID for Basic authentication.
+
 
 The web service is a simple HTTP POST operation with one parameter — “report” — to the following URL:
 

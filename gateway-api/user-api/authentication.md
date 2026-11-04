@@ -37,6 +37,9 @@ The authentication request should include the following JSON payload:
 
 #### How the username is matched
 
+> [!NOTE]
+> Email login for staff, download, incident entry and notification accounts and the updated authentication error message below are not yet available in production. They are deployed on testing81 and will become available in production when [gateway #418](https://github.com/uic-gtis/gateway/pull/418) is deployed there. Until then, use the account's login ID; trip (alerts) accounts can continue to use their email address.
+
 The server tries, in order, and the first match wins:
 
 1. a staff, download, incident entry or notification account by its **login**, exactly as stored;

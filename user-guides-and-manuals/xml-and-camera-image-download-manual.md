@@ -92,6 +92,9 @@ Note:
 
 ### Downloading Gateway XML Data
 
+> [!NOTE]
+> Email authentication and the 10-failure lockout described below are not yet available in production. They are deployed on testing81 and will become available in production when [gateway #418](https://github.com/uic-gtis/gateway/pull/418) is deployed there. Until then, use the account's login ID for Basic authentication.
+
 Any compatible [HTTPS](https://en.wikipedia.org/wiki/HTTPS) client can be used for downloading Gateway XML data. This section provides tips and examples using a variety of methods.
 
 #### Web Browser
