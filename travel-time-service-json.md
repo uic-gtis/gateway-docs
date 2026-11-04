@@ -151,6 +151,8 @@ Note that requests that POST "locations" as request parameters together with a C
 
 TravelMidwest.com will respond with a 401 status code indicating that authentication is required to access travelTimeService.json. The "Authorization" request header should be included to avoid this response. See [RFC 7235](https://tools.ietf.org/html/rfc7235) for more information on Basic authentication.
 
+The name can be the account's login or the email address on the account (in any case). Prefer the login for a program: an email address can belong to several accounts, and if two of them share the password too, the email cannot say which is meant and the request is refused. After 10 failed attempts from one address with one name in 15 minutes, secured files answer `429 Too Many Requests` with a `Retry-After` header until the count expires; a correct request before then clears it.
+
 ## Response
 
 The service will respond with GeoJSON as follows:

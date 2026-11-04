@@ -19,7 +19,7 @@ Note:
 
 - The report parameter is an XML document containing a LinkTrafficReport, LinkCongestionReport, IncidentReport, RoadWorkReport, HARReport, SpecialEventReport, DMSReport or HARReport.
 - The report objects may, in turn, contain one or more element objects. The report objects will be processed by the Gateway, published to its subscribers and displayed on the Gateway website at [travelmidwest.com](https://travelmidwest.com/) (or [testing.travelmidwest.com](https://testing.travelmidwest.com/) when testing).
-- Authentication headers with a username + password with XML upload privileges are required. The Gateway will respond with a HTML page containing the word "OK" if the data was accepted.
+- Authentication headers with a username + password with XML upload privileges are required. The username can be the account's login or the email address on the account; prefer the login, since an email address can belong to several accounts. After 10 failed attempts in 15 minutes the Gateway answers `429 Too Many Requests` until the count expires. The Gateway will respond with a HTML page containing the word "OK" if the data was accepted.
 - During development, we encourage you to use our testing website: [https://testing.travelmidwest.com/lmiga/publisher](https://testing.travelmidwest.com/lmiga/publisher)
 
 

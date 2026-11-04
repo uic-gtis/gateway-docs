@@ -108,6 +108,8 @@ The following command downloads and saves the current travel times data (substit
 wget --http-user=<login> --http-password=<password> https://travelmidwest.com/lmiga/LinkTrafficReport.xml.gz
 ```
 
+The name can be the account's login or the email address on the account (in any case). Prefer the login for a program: an email address can belong to several accounts, and if two of them share the password too, the email cannot say which is meant and the request is refused. After 10 failed attempts from one address with one name in 15 minutes, secured files answer `429 Too Many Requests` with a `Retry-After` header until the count expires; a correct request before then clears it. Downloads are logged under the account's login whichever name is used.
+
 #### Java
 
 Any programming libraries that support HTTPS, HTTP basic access authentication and gzip compression can be used to download and uncompress the XML data. The following sample Java program accesses a Gateway XML feed and displays it on standard output:
