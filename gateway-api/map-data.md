@@ -1431,7 +1431,7 @@ This service is designed to support multi-state feeds, including states with dif
 ### Request
 
 ```console
-[https://travelmidwest.com/lmiga/winterConditionMap.json](https://travelmidwest.com/lmiga/winterConditionMap.json)
+https://travelmidwest.com/lmiga/winterConditionMap.json
 ```
 
 Both GET and POST methods are supported. A POST body specifying the geographic bounding box is optional — if omitted (or when using GET), all winter condition features are returned. Optional query parameters can be used to filter the results.
@@ -1439,8 +1439,21 @@ Both GET and POST methods are supported. A POST body specifying the geographic b
 #### Query Parameters
 
 - **minimumConditionLevel** (optional, integer)
-  Filters returned features to only those at or above the specified severity level.
-  Typical values range from `1` (least severe) upward, depending on the source data.
+  Drops features whose condition ranks below the given value.  The ranking is the internal order
+  of the `type` values listed under [Feature Properties](#feature-properties), counting from
+  `Clear` = 0: `Seasonal` 1, `Partially covered by snow` 2, `Partly covered by ice or snow` 3,
+  `Partly covered by ice` 4, `Mostly Covered by snow or ice` 5, `All covered by snow` 6,
+  `All covered by snow or ice` 7, `All covered by ice` 8, `Travel not advised` 9,
+  `Impassible or closed` 10, `Towing not recommended` 11, `Unknown` 12.
+
+  **It is an ordering, not a severity scale, and the two part company at the top.** `Unknown`
+  ranks highest, so it survives every threshold — `minimumConditionLevel=9` returns impassable
+  roads together with every segment nobody reported on.  `Towing not recommended` likewise outranks
+  `Impassible or closed`.  A client that wants "the serious ones" should filter on `type` rather
+  than on this parameter.
+
+  The number itself is not in the response, so a client cannot reproduce or refine this filter
+  locally without the table above.  `0` is treated as no filter.
 
 #### POST Body
 
@@ -1455,9 +1468,12 @@ The POST body must include a bounding box as described in the [Bounding Box](#bo
 ### Response
 
 The response is a **GeoJSON FeatureCollection** containing winter road condition features.
-Each feature represents a roadway segment affected by winter conditions.
+Each feature is one roadway segment and its reported condition — including segments reported as
+`Clear` or `Seasonal`, which are the majority outside a storm and are not omitted.  A road that
+clears is *reported* as clear rather than dropping out of the collection, so a segment vanishing
+between polls means the source retired it, not that the weather improved.
 
-The geometry type is typically **MultiLineString**, representing one or more connected roadway segments.
+The geometry type is always **MultiLineString**, even where a segment is a single line.
 
 ```json
 {
@@ -1468,51 +1484,63 @@ The geometry type is typically **MultiLineString**, representing one or more con
 
 ### Feature Properties
 
-Each Feature in the FeatureCollection contains a `properties` object with the following fields:
+Each Feature in the FeatureCollection contains a `properties` object with exactly these seven
+fields.  They come from `WinterConditionMapJsonController.WinterConditionProperties`, which is a
+deliberately narrower view than the stored record: the database's `gid` and `object_id` are not
+exposed, and neither is the integer behind `minimumConditionLevel`.
 
-- **gid**
-  Internal unique identifier.
+- **externalId**
+  The only identifier a client is given.  Formed as `<state prefix>-WINTER_CONDITION-<source
+  object id>`, with a `-<n>` suffix when one source feature was split.  A source feature whose
+  geometry is a MultiLineString becomes one condition per line string, so `IL-WINTER_CONDITION-313-0`
+  and `IL-WINTER_CONDITION-313-1` are two features of this API that share one IDOT record.
+  Stable across polls, which is what makes it usable as a key.
 
-- **objectId**
-  Identifier provided by the source agency.
+- **type**
+  The condition classification, **normalized** — not the source feed's wording.  Every state's
+  vocabulary is mapped onto one of the thirteen values below, so a client never has to know which
+  DOT a feature came from.  The full set, and the only strings this field ever holds:
 
-- **conditionType**
-  String describing the reported winter road condition classification.  Examples include:
-  - Clear
-  - Partially Covered
-  - Mostly Covered by Snow or Ice
-  - Covered by Snow or Ice
-  - Partially Covered with Ice
-  - Completely Covered with Ice
-  - Travel Not Advised
-  - Impassable or Closed
-  - Towing Not Recommended (Availability varies by state.)
+  | `type` | meaning |
+  |---|---|
+  | `Clear` | no winter condition reported.  Also what a feed sends off-season, and what an empty or absent source value becomes |
+  | `Seasonal` | the Iowa and Wisconsin equivalent of `Clear` |
+  | `Partially covered by snow` | |
+  | `Partly covered by ice or snow` | |
+  | `Partly covered by ice` | |
+  | `Mostly Covered by snow or ice` | |
+  | `All covered by snow` | |
+  | `All covered by snow or ice` | |
+  | `All covered by ice` | |
+  | `Travel not advised` | |
+  | `Impassible or closed` | spelled this way in the API; it is the value, not a typo to correct in a client |
+  | `Towing not recommended` | |
+  | `Unknown` | the source reported something this API does not recognise, or reported `No Report`.  Drawn rather than hidden on purpose, so unmapped vendor data is visible instead of silently absent |
+
+  **Match these exactly.**  They are case-sensitive and several differ from the wording the state
+  feeds use — `Impassible or closed` is not `Impassable or Closed`, and `Travel not advised` is not
+  `Travel Not Advised`.  A client that tests for the source wording silently falls through to its
+  default style.
+
 - **state**
-  Two-letter state abbreviation (e.g., `IL`, `IA`).
-
-- **district**
-  Administrative district, if provided by the source feed.
+  The full state name: `Illinois`, `Iowa` or `Wisconsin`.  Not a two-letter abbreviation.
 
 - **adminLevel1**
-  Administrative level 1 area (commonly county).
-  Used instead of explicit county naming to support states with differing schemas.
+  The source feed's largest administrative grouping, which is **not** the same thing in each state:
+  `District 1` for Illinois, the district name for Iowa, the area name for Wisconsin.  Named
+  generically precisely because the states do not agree on what it is; do not read it as a county.
 
 - **adminLevel2**
-  Administrative level 2 area (commonly city or sub-county area), when available.
+  The next grouping down, where the feed provides one: `COOK County` for Illinois, the subarea for
+  Iowa, absent for Wisconsin.  For Illinois this is a county — the reverse of `adminLevel1`.
 
 - **location**
-  Human-readable location description as provided or derived from the source feed.
-  Formatting is source-dependent and may not be normalized.
+  Human-readable location description, as provided or derived from the source feed.  Formatting is
+  source-dependent and is not normalized.
 
-- **segmentIds**
-  Array of roadway segment identifiers associated with the condition.
-
-- **lastUpdated**
-  Timestamp indicating when the condition was last updated by the source system, in ISO 8601 format.
-
-- **conditionLevel**
-  Integer representing the severity level of the condition.
-  Used for filtering via the `minimumConditionLevel` request parameter.
+- **lastUpdateTime**
+  ISO 8601 timestamp.  For Illinois and Iowa this is **when this server parsed the feed**, not a
+  timestamp the DOT supplied — neither layer carries one.  Wisconsin's is the source's own.
 
 ### Geometry
 
@@ -1539,17 +1567,13 @@ The following is a simplified example excerpt of the response structure:
         ]
       },
       "properties": {
-        "gid": 12345,
-        "objectId": "IL-DOT-98765",
-        "conditionType": "Partially Covered",
-        "conditionLevel": 2,
-        "state": "IL",
-        "district": "1",
-        "adminLevel1": "Lake",
-        "adminLevel2": "Waukegan",
-        "location": "I-94 between IL 132 and IL 173",
-        "segmentIds": ["SEG123", "SEG124"],
-        "lastUpdated": "2025-12-22T14:31:09Z"
+        "externalId": "IL-WINTER_CONDITION-313-0",
+        "type": "Partly covered by ice or snow",
+        "state": "Illinois",
+        "adminLevel1": "District 1",
+        "adminLevel2": "LAKE County",
+        "location": "011 - ARLINGTON HEIGHTS (COOK)",
+        "lastUpdateTime": "2025-12-22T14:31:09Z"
       }
     }
   ]
@@ -1565,17 +1589,29 @@ The following is a simplified example excerpt of the response structure:
 
 ### Recommended Colors
 
-The following colors are recommended for consistent rendering across multiple traffic information web portals.
+For consistent rendering across portals.  **Key these off the `type` value**, spelled exactly as
+in [Feature Properties](#feature-properties) — the names below are the API's, not the source
+feeds'.
 
-- Seasonal (green / not displayed) - matches IDOT Clear
-- Partially Covered (blue) - matches IDOT Partly covered by snow or ice
-- Partially Covered with Ice (blue with white dots) - IaDOT only
-- Mostly covered by snow or ice (dark blue?) - IDOT only
-- Completely Covered (pink) - matches IDOT Covered by snow or ice
-- Completely Covered with Ice (pink with white dots) - IaDOT only
-- Travel Not Advised (purple) - IaDOT only
-- Impassable or Closed (red with black dots) - IaDOT only
-- Towing Not Recommended (light blue shaded county shape) - IaDOT only
+| `type` | Suggested rendering |
+|---|---|
+| `Clear` | not drawn |
+| `Seasonal` | not drawn.  Iowa and Wisconsin's equivalent of `Clear`; hiding one and drawing the other would show a false border at the state line |
+| `Partially covered by snow` | blue `#818DB3` |
+| `Partly covered by ice or snow` | blue `#818DB3` |
+| `Partly covered by ice` | blue `#818DB3`, dashed |
+| `Mostly Covered by snow or ice` | dark blue `#3078C1` |
+| `All covered by snow` | pink `#FFB6D9` |
+| `All covered by snow or ice` | pink `#FFB6D9` |
+| `All covered by ice` | pink `#FFB6D9`, dashed |
+| `Travel not advised` | purple |
+| `Impassible or closed` | red, dashed |
+| `Towing not recommended` | light blue `#ADD8E6` |
+| `Unknown` | grey `#808080`.  Drawn, not hidden — an unrecognised source value should be visible |
+
+Availability varies by state: Illinois reports only `Clear`, `Partly covered by ice or snow`,
+`Mostly Covered by snow or ice` and `All covered by snow or ice`.  `Travel not advised`,
+`Impassible or closed` and `Towing not recommended` come from Iowa and Wisconsin only.
 
 ## Alerts
 
