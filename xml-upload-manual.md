@@ -82,7 +82,7 @@ foreach $dataline (@datalines) {
 close(MYINPUTFILE);
 
 my $request = POST $uri, [ report => $DATA_XML ];
-my $authorization = 'Basic ' . encode_base64('skyway:bsskyway');
+my $authorization = 'Basic ' . encode_base64('<login>:<password>');
 $request->header("Authorization" => $authorization);
 
 my $response = $userAgent->request($request);
