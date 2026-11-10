@@ -622,8 +622,13 @@ The response for a Camera request is a GeoJSON FeatureCollection with additional
 
 ### Image URLs
 
-Cameras have a small 176 pixel wide thumbnail for map popup and report purposes and a full-size snapshot image. The URLs for the thumbnail and snapshot depends on whether the remUrls array is empty or not. Cameras with a non-empty remUrls are considered to be "remote" in that another agency is hosting the images for it. Multi-directional cameras have dirs.length > 1.
-The follow table details the camera thumbnail and snapshot URLs for each case. The "i" represents the camera direction index into the dirs and remUrls arrays.
+Each camera view has one image, the full-size snapshot; shrink it with CSS where a smaller picture is wanted. Where the image comes from depends on whether the remUrls array is empty or not. Cameras with a non-empty remUrls are considered to be "remote" in that another agency is hosting the images for it. Multi-directional cameras have dirs.length > 1.
+The following table gives the image URL for each case. The "i" represents the camera direction index into the dirs and remUrls arrays.
+
+> [!NOTE]
+> Older deployments also listed a 176-pixel-wide thumbnail at `camera?type=thumbnail&id=[id]`.
+> That endpoint has been removed: the thumbnails were never stored, so it answered every request with
+> HTTP 500.
 
 > [!NOTE]
 > `dirs[i]` is the direction of `remUrls[i]`, and the two arrays are always the same length for
@@ -632,11 +637,11 @@ The follow table details the camera thumbnail and snapshot URLs for each case. T
 > stale view returned a shorter `dirs` and every index past the gap named the wrong direction.
 > If you are reading an older deployment, check the lengths before pairing them.
 
-|  | Multi-directional?<br>(dirs.length > 0) | Thumbnail | Snapshot |
-| --- | --- | --- | --- |
-| Not Remote<br>remUrls.length==0 | No | camera?type=thumbnail&id=[id] | snapshot?id=[id] |
-| Yes | camera?type=thumbnail?id=[id]&direction=[dir] | snapshot?id=[id]&direction=[dir] |  |
-| Remote | N/A | remUrls[i] (CSS width set to 176 pixels) | remUrls[i] |
+|  | Multi-directional?<br>(dirs.length > 0) | Image |
+| --- | --- | --- |
+| Not Remote<br>remUrls.length==0 | No | snapshot?id=[id] |
+| Not Remote<br>remUrls.length==0 | Yes | snapshot?id=[id]&direction=[dir] |
+| Remote | N/A | remUrls[i] |
 
 #### Example
 
@@ -742,7 +747,7 @@ The cameras.json file is automatically updated with new camera data as the data 
     - lastUpdateTime — when the camera last sent an image, in milliseconds since 1970-01-01T00:00:00Z; `0` if that is not known
     - urls – an array of
       - direction – the direction the camera was facing for this image: "N", "NE", "NW", "S", "SE", "SW", "E" or "W", or "NONE" for a single-direction camera. The four diagonals appear for IDOT's downstate cameras from 2026
-      - thumbnail – url of a thumbnail sized image for the given direction
+      - thumbnail – **deprecated**, always the same as `url`. It used to name a small 176-pixel-wide copy of the image at `/camera?type=thumbnail`, an endpoint that has been removed. It is kept so existing readers don't break; use `url`
       - url – of the full-sized camera image for the given direction
     - state – state camera is in (i.e., “Illinois”)
     - district – IDOT district camera is located in (1, 2, 3, 4, 5, 6, 7, 8, or 9) or “null” if not in Illinois
