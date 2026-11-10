@@ -122,24 +122,19 @@ https://travelmidwest.com/lmiga/snapshot?id=cameraExternalId&direction=direction
 
 The `direction` parameter is required for multi-direction cameras and should be omitted for single-direction cameras (code = `NONE`).
 
-### Thumbnails and reference images
+### Thumbnails and reference images (removed)
 
-The `/camera` endpoint serves the smaller thumbnail image, and the IDOT reference image
-where one exists. It returns the image bytes directly, so it can be used as an
-`<img src>`.
+There is no separate thumbnail. Show the full-size image and size it with CSS.
 
-```console
-https://travelmidwest.com/lmiga/camera?type=thumbnail&id=cameraExternalId&direction=directionCode
-```
+The `/camera` endpoint (`camera?type=thumbnail` and `camera?type=reference`) has been removed. It
+served two things:
 
-- **type** (required) — `thumbnail` for the camera thumbnail, or `reference` for the
-  IDOT reference image showing the camera's normal view
-- **id** (required) — the camera external ID
-- **direction** (required for multi-direction cameras) — the direction code, omitted for
-  single-direction cameras
-
-Responses are cached for one minute and carry an ETag, so a conditional request returns
-304 while the image is unchanged.
+- **Thumbnails**: 176-pixel-wide copies of each image. They were never stored in the database, so
+  the endpoint answered every request with HTTP 500.
+- **Reference images**: hand-saved views of a District 1 camera, one per compass direction. D1
+  snapshots carried no direction, and a viewer compared the snapshot with these to work out which
+  way the camera was pointing. District 1 cameras now come from the idot-cameras roster, which
+  supplies no reference images.
 
 ## Error Responses
 
