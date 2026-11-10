@@ -1478,9 +1478,18 @@ The geometry type is always **MultiLineString**, even where a segment is a singl
 ```json
 {
 "type": "FeatureCollection",
+"timestamp": "2026-11-09T12:30:00Z",
 "features": [ ... ]
 }
 ```
+
+- **timestamp**
+  The newest `lastUpdateTime` among all stored conditions, in UTC (`yyyy-MM-ddTHH:mm:ssZ`). It
+  is taken across the whole table, not just the features this request returns, so it is the same
+  for every bounding box and `minimumConditionLevel`. Conditions with no update time are ignored.
+  When no conditions are stored at all, for example on a newly built or restored host before the
+  first feed pass, the response is an empty collection (`"features": []`, HTTP 200) whose
+  timestamp is the time of the response.
 
 ### Feature Properties
 
