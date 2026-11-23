@@ -18,17 +18,12 @@ To register for a download account:
 
 ### Archived Data
 
-> [!NOTE]
-> Due to the growing size of our traffic data archive, only the past 24 hours of data are available for immediate download. As of December 31, 2023 the compressed archive contains over 29.5 million files totaling approximately 8.4 TiB (roughly more than 50 TiB uncompressed).
+> [!IMPORTANT]
+> The historical traffic data archive is no longer available. It has been taken offline, and we are not able to fulfill requests for archived data, bulk transfers, custom data extractions, or analysis support.
 >
-> Please contact us at [traffic-data-archive@travelmidwest.com](mailto:traffic-data-archive@travelmidwest.com?subject=Traffic%20data%20archive%20bulk%20transfer%20request) to arrange for bulk transfer onto portable storage, e.g. USB drives.
->
-> When requesting more than a year's worth of data, we recommend:
->
-> - Formatting drives as [FAT](https://en.wikipedia.org/wiki/File_Allocation_Table) or [BTRFS](https://en.wikipedia.org/wiki/Btrfs) instead of [NTFS](https://en.wikipedia.org/wiki/NTFS) if at all possible because NTFS does not perform as well with large numbers of small files.
-> - [CMR](https://en.wikipedia.org/wiki/Perpendicular_recording) instead of [SMR](https://en.wikipedia.org/wiki/Shingled_magnetic_recording) hard drives, or even better, [solid-state drives (SSD)](https://en.wikipedia.org/wiki/Solid-state_drive).
-> - Consider using internal SATA HDD/SSD drives instead of USB connected drives if transfer speed is important.
-> - Allow for a turnaround time of at least a few days, perhaps more, depending on the volume of data requested, transfer method and/or storage medium.
+> The only supported way to obtain Gateway data is the real-time XML feed described under [Real-Time Data](#real-time-data) above. If you need data over a period of time, register for a download account and collect the feed yourself going forward.
+
+The rest of this page describes how the archive was organized and is kept for reference only.
 
 Navigating the data archive:
 
