@@ -45,7 +45,7 @@ The first line is a header row providing field/column labels for the remaining r
 | WarningAge | "true" if no image has been received from the camera for 15 minutes, otherwise "false". |
 | TooOld | "true" if no image has been received from the camera for 30 minutes, otherwise "false". |
 | AgeInMinutes | This is the number of minutes that have elapsed between the time the `cameraInfo.csv` file was downloaded and when the camera last sent an image to the Gateway/TravelMidwest.com. |
-| VideoUrl | Public HLS stream URL for cameras that have live video and whose feed is currently allowed. Empty for every other camera, which is most of them. |
+| VideoUrl | HLS link to the live video for cameras that have live video and whose feed is currently allowed. Empty for every other camera, which is most of them. The link expires about two minutes after the file is downloaded (2 to 3 minutes), after which the CDN refuses it with HTTP 403: download the file again for a fresh one, and do not store or republish it. There is no expiry column; the expiry is the `expires=` value inside the link, in Unix seconds. |
 
 ## ArcGIS Online Integration
 

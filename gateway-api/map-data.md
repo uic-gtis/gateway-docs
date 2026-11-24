@@ -755,7 +755,8 @@ The cameras.json file is automatically updated with new camera data as the data 
     - city – name of city camera is located in (e.g., “Peoria”, “Springfield”, etc.)
     - bridge – “true” if the camera is on a river bridge, “false” otherwise
     - mileMarker — a decimal amount, the approximate mile marker location of the camera along the 'onRoad'
-    - videoUrl — the public HLS stream URL when the camera has live video and its feed is currently allowed; `null` otherwise
+    - videoUrl — an HLS link to the live video when the camera has live video and its feed is currently allowed; `null` otherwise. The link **expires about two minutes after it is handed out** (between 2 and 3 minutes: expiries fall on whole minutes, so everyone asking in the same minute gets the same link). After that the CDN refuses the playlist and its segments with HTTP 403, even mid-stream. Fetch the document again for a fresh link; do not store or republish one.
+    - videoUrlExpires — when `videoUrl` stops working, in Unix seconds; `null` when there is no link
 The camera properties in cameras.json are sufficient to allow camera filtering in a report. Note that the file is in GeoJSON format.
 The camera properties will be sorted based on the *onRoad* and *mileMarker* properties as follows:
 
