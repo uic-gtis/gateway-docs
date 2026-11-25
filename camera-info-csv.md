@@ -47,6 +47,17 @@ The first line is a header row providing field/column labels for the remaining r
 | AgeInMinutes | This is the number of minutes that have elapsed between the time the `cameraInfo.csv` file was downloaded and when the camera last sent an image to the Gateway/TravelMidwest.com. |
 | VideoUrl | HLS link to the live video for cameras that have live video and whose feed is currently allowed. Empty for every other camera, which is most of them. The link expires about two minutes after the file is downloaded (2 to 3 minutes), after which the CDN refuses it with HTTP 403: download the file again for a fresh one, and do not store or republish it. There is no expiry column; the expiry is the `expires=` value inside the link, in Unix seconds. |
 
+## Long-lived video links for approved partners
+
+The video links above expire after 2 to 3 minutes for everyone. A partner approved to embed or relay live video - after IDOT's "Agreement for Use of Transportation Data and Video Images" is in place - is given the `long_video_allowed` role on its Travel Midwest account. Requests made as that account get **long-lived links** instead, lasting several hours (set by the Gateway's `videoTokenLongSeconds`, currently 4 hours; it may change as IDOT's policy is settled).
+
+- **How:** fetch with HTTP Basic authentication, using the account's login (or email) and password, e.g. `curl -u LOGIN:PASSWORD https://travelmidwest.com/lmiga/cameraInfo.csv`. A browser logged in to travelmidwest.com as that account gets the same long links in the site's own video player.
+- **Same documents, same fields.** Only the lifetime differs; the expiry is the `expires=` value inside each link (and `videoUrlExpires` in the JSON documents).
+- **Refresh before expiry.** Fetch the document again before a link's `expires=` time; an expired link is refused (HTTP 403) even mid-stream.
+- **Wrong or missing credentials** are not an error: the request is treated as anonymous and gets the ordinary short links.
+- **Not for republishing.** Long links are for that partner's own use under the agreement. Responses carrying them are marked `Cache-Control: private, no-store`; do not cache them in a shared cache or publish them.
+- **Revoking** the role stops new long links at once; links already issued work until their expiry.
+
 ## ArcGIS Online Integration
 
 ArcGIS Online provides an "Add Layer from Web" function that can be used along with `cameraInfo.csv` to provide a camera layer for use on web sites.
