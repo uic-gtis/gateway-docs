@@ -93,6 +93,7 @@ Data fields:
 - remote — `true` if the camera images are served from an external URL (e.g., cctv.travelmidwest.com), `false` if served via the `/snapshot` endpoint
 - videoUrl — an HLS link to the live video when the camera has live video and its feed is currently allowed; `null` otherwise. The link **expires about two minutes after it is handed out** (between 2 and 3 minutes: expiries fall on whole minutes, so everyone asking in the same minute gets the same link). After that the CDN refuses the playlist and its segments with HTTP 403, even mid-stream. Fetch the document again for a fresh link; do not store or republish one. The website's player asks this endpoint again when the viewer presses Resume.
 - videoUrlExpires — when `videoUrl` stops working, in Unix seconds (server clock); `null` when there is no link, or on a server that does not sign links
+- For a user with the `long_video_allowed` role (logged in, or HTTP Basic), `videoUrl` is a long-lived link (hours) and the player never asks "Still watching?"; see [Long-lived video links for approved partners](../camera-info-csv.md#long-lived-video-links-for-approved-partners).
 - directions — an array of available camera directions. Single-direction cameras (BasicCamera, IdotCamera) will have one entry with code `NONE`.
 
   The order is fixed and is **not** alphabetical: `N`, `NE`, `NW`, `S`, `SE`, `SW`, `E`, `W`.
